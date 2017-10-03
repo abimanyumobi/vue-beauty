@@ -151,7 +151,7 @@ export default {
     created() {
         this.options = this.pageSizeOptions.map(item => ({
             value: item,
-            label: `${item}条/页`,
+            label: `${item} per page`,
         }));
     },
     computed: {

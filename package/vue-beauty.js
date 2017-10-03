@@ -9279,7 +9279,7 @@ if (false) {(function () {
         this.options = this.pageSizeOptions.map(function (item) {
             return {
                 value: item,
-                label: item + '\u6761/\u9875'
+                label: item + ' per page'
             };
         });
     },
