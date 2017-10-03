@@ -220,9 +220,15 @@ if(typeof __g == 'number')__g = global; // eslint-disable-line no-undef
 /* 6 */
 /***/ (function(module, exports, __webpack_require__) {
 
+module.exports = { "default": __webpack_require__(132), __esModule: true };
+
+/***/ }),
+/* 7 */
+/***/ (function(module, exports, __webpack_require__) {
+
 var global = __webpack_require__(18);
 var core = __webpack_require__(2);
-var hide = __webpack_require__(23);
+var hide = __webpack_require__(24);
 var redefine = __webpack_require__(69);
 var ctx = __webpack_require__(96);
 var PROTOTYPE = 'prototype';
@@ -264,12 +270,6 @@ $export.U = 64;  // safe
 $export.R = 128; // real proto method for `library`
 module.exports = $export;
 
-
-/***/ }),
-/* 7 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = { "default": __webpack_require__(132), __esModule: true };
 
 /***/ }),
 /* 8 */
@@ -373,7 +373,7 @@ module.exports = function(it){
 /***/ (function(module, exports, __webpack_require__) {
 
 // Thank's IE8 for his funny defineProperty
-module.exports = !__webpack_require__(21)(function(){
+module.exports = !__webpack_require__(22)(function(){
   return Object.defineProperty({}, 'a', {get: function(){ return 7; }}).a != 7;
 });
 
@@ -479,6 +479,12 @@ module.exports = function (it) {
 
 /***/ }),
 /* 20 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = { "default": __webpack_require__(196), __esModule: true };
+
+/***/ }),
+/* 21 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var isDate = __webpack_require__(122)
@@ -804,7 +810,7 @@ module.exports = parse
 
 
 /***/ }),
-/* 21 */
+/* 22 */
 /***/ (function(module, exports) {
 
 module.exports = function(exec){
@@ -816,13 +822,13 @@ module.exports = function(exec){
 };
 
 /***/ }),
-/* 22 */
+/* 23 */
 /***/ (function(module, exports) {
 
 module.exports = {};
 
 /***/ }),
-/* 23 */
+/* 24 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var dP = __webpack_require__(66);
@@ -834,12 +840,6 @@ module.exports = __webpack_require__(42) ? function (object, key, value) {
   return object;
 };
 
-
-/***/ }),
-/* 24 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = { "default": __webpack_require__(197), __esModule: true };
 
 /***/ }),
 /* 25 */
@@ -1019,7 +1019,7 @@ module.exports = function(key){
 __webpack_require__(133);
 var global        = __webpack_require__(5)
   , hide          = __webpack_require__(15)
-  , Iterators     = __webpack_require__(22)
+  , Iterators     = __webpack_require__(23)
   , TO_STRING_TAG = __webpack_require__(4)('toStringTag');
 
 for(var collections = ['NodeList', 'DOMTokenList', 'MediaList', 'StyleSheetList', 'CSSRuleList'], i = 0; i < 5; i++){
@@ -1077,7 +1077,7 @@ module.exports = function (it) {
 // 22.1.3.31 Array.prototype[@@unscopables]
 var UNSCOPABLES = __webpack_require__(13)('unscopables');
 var ArrayProto = Array.prototype;
-if (ArrayProto[UNSCOPABLES] == undefined) __webpack_require__(23)(ArrayProto, UNSCOPABLES, {});
+if (ArrayProto[UNSCOPABLES] == undefined) __webpack_require__(24)(ArrayProto, UNSCOPABLES, {});
 module.exports = function (key) {
   ArrayProto[UNSCOPABLES][key] = true;
 };
@@ -1348,7 +1348,7 @@ module.exports = (
 
 var classof   = __webpack_require__(64)
   , ITERATOR  = __webpack_require__(4)('iterator')
-  , Iterators = __webpack_require__(22);
+  , Iterators = __webpack_require__(23);
 module.exports = __webpack_require__(3).getIteratorMethod = function(it){
   if(it != undefined)return it[ITERATOR]
     || it['@@iterator']
@@ -1516,7 +1516,7 @@ module.exports = function (exec) {
 /***/ (function(module, exports, __webpack_require__) {
 
 var global = __webpack_require__(18);
-var hide = __webpack_require__(23);
+var hide = __webpack_require__(24);
 var has = __webpack_require__(35);
 var SRC = __webpack_require__(70)('src');
 var TO_STRING = 'toString';
@@ -1983,7 +1983,7 @@ module.exports = startOfISOWeek
 /* 85 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = !__webpack_require__(11) && !__webpack_require__(21)(function(){
+module.exports = !__webpack_require__(11) && !__webpack_require__(22)(function(){
   return Object.defineProperty(__webpack_require__(55)('div'), 'a', {get: function(){ return 7; }}).a != 7;
 });
 
@@ -2051,7 +2051,7 @@ var LIBRARY        = __webpack_require__(40)
   , redefine       = __webpack_require__(90)
   , hide           = __webpack_require__(15)
   , has            = __webpack_require__(17)
-  , Iterators      = __webpack_require__(22)
+  , Iterators      = __webpack_require__(23)
   , $iterCreate    = __webpack_require__(136)
   , setToStringTag = __webpack_require__(41)
   , getPrototypeOf = __webpack_require__(93)
@@ -2441,7 +2441,7 @@ module.exports = function (that, maxLength, fillString, left) {
 /* 107 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var $export = __webpack_require__(6);
+var $export = __webpack_require__(7);
 var defined = __webpack_require__(19);
 var fails = __webpack_require__(68);
 var spaces = __webpack_require__(181);
@@ -2481,7 +2481,7 @@ var $iterators = __webpack_require__(45);
 var getKeys = __webpack_require__(101);
 var redefine = __webpack_require__(69);
 var global = __webpack_require__(18);
-var hide = __webpack_require__(23);
+var hide = __webpack_require__(24);
 var Iterators = __webpack_require__(72);
 var wks = __webpack_require__(13);
 var ITERATOR = wks('iterator');
@@ -2559,7 +2559,7 @@ module.exports = function(iterator, fn, value, entries){
 /***/ (function(module, exports, __webpack_require__) {
 
 // check on default Array iterator
-var Iterators  = __webpack_require__(22)
+var Iterators  = __webpack_require__(23)
   , ITERATOR   = __webpack_require__(4)('iterator')
   , ArrayProto = Array.prototype;
 
@@ -2600,7 +2600,7 @@ module.exports = function(exec, skipClosing){
 // most Object methods by ES6 should accept primitives
 var $export = __webpack_require__(8)
   , core    = __webpack_require__(3)
-  , fails   = __webpack_require__(21);
+  , fails   = __webpack_require__(22);
 module.exports = function(KEY, exec){
   var fn  = (core.Object || {})[KEY] || Object[KEY]
     , exp = {};
@@ -2856,7 +2856,7 @@ module.exports = isDate
 /* 123 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var parse = __webpack_require__(20)
+var parse = __webpack_require__(21)
 var startOfISOWeek = __webpack_require__(84)
 
 /**
@@ -3024,7 +3024,7 @@ var values = __webpack_require__(127);
 var values_default = /*#__PURE__*/__webpack_require__.n(values);
 
 // EXTERNAL MODULE: ./node_modules/babel-runtime/core-js/get-iterator.js
-var get_iterator = __webpack_require__(7);
+var get_iterator = __webpack_require__(6);
 var get_iterator_default = /*#__PURE__*/__webpack_require__.n(get_iterator);
 
 // EXTERNAL MODULE: ./vb/style/index.less
@@ -3329,13 +3329,13 @@ var breadcrumb_style_default = /*#__PURE__*/__webpack_require__.n(breadcrumb_sty
 
 
 /* harmony default export */ var breadcrumb = ({
-  name: 'Breadcrumb',
-  props: {
-    separator: {
-      type: String,
-      default: '/'
+    name: 'Breadcrumb',
+    props: {
+        separator: {
+            type: String,
+            default: '/'
+        }
     }
-  }
 });
 // CONCATENATED MODULE: ./node_modules/vue-loader/lib/template-compiler?{"id":"data-v-75c0577b","hasScoped":false}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./vb/components/breadcrumb/breadcrumb.vue
 var breadcrumb_render = function() {
@@ -3400,18 +3400,18 @@ if (false) {(function () {
 
 
 /* harmony default export */ var breadcrumb_item = ({
-  name: 'BreadcrumbItem',
-  data: function data() {
-    return {
-      separator: ''
-    };
-  },
-  props: {
-    href: String
-  },
-  mounted: function mounted() {
-    this.separator = this.$parent.separator;
-  }
+    name: 'BreadcrumbItem',
+    data: function data() {
+        return {
+            separator: ''
+        };
+    },
+    props: {
+        href: String
+    },
+    mounted: function mounted() {
+        this.separator = this.$parent.separator;
+    }
 });
 // CONCATENATED MODULE: ./node_modules/vue-loader/lib/template-compiler?{"id":"data-v-603ee055","hasScoped":false}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./vb/components/breadcrumb/breadcrumb-item.vue
 var breadcrumb_item_render = function() {
@@ -3548,11 +3548,11 @@ var button_style_default = /*#__PURE__*/__webpack_require__.n(button_style);
                 ghost = this.ghost;
 
             var btnClass = {};
-            var tmpSize = "";
-            if (size == "small") {
-                tmpSize = "sm";
-            } else if (size == "large") {
-                tmpSize = "lg";
+            var tmpSize = '';
+            if (size === 'small') {
+                tmpSize = 'sm';
+            } else if (size === 'large') {
+                tmpSize = 'lg';
             }
             btnClass[prefixCls] = true;
             btnClass[prefixCls + '-' + type] = type;
@@ -3664,6 +3664,13 @@ var define_property_default = /*#__PURE__*/__webpack_require__.n(define_property
 
 function _defineProperty(obj, key, value) { if (key in obj) { define_property_default()(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
+//
+//
+//
+//
+//
+//
+
 /* harmony default export */ var button_group = ({
     name: 'ButtonGroup',
     data: function data() {
@@ -3753,6 +3760,13 @@ vb_components_button_button.group = components_button_button_group;
 
 
 function icon__defineProperty(obj, key, value) { if (key in obj) { define_property_default()(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ var icon = ({
     name: 'Icon',
@@ -4105,17 +4119,47 @@ components_card_card.grid = components_card_card_grid;
 var rate_style = __webpack_require__(195);
 var rate_style_default = /*#__PURE__*/__webpack_require__.n(rate_style);
 
-// CONCATENATED MODULE: ./vb/mixins/emitter.js
-function _broadcast(componentName, eventName, params) {
-    this.$children.forEach(function (child) {
-        var name = child.$options.name;
+// EXTERNAL MODULE: ./node_modules/babel-runtime/core-js/array/from.js
+var from = __webpack_require__(20);
+var from_default = /*#__PURE__*/__webpack_require__.n(from);
 
-        if (name === componentName) {
-            child.$emit.apply(child, [eventName].concat(params));
-        } else {
-            _broadcast.apply(child, [componentName, eventName].concat([params]));
+// CONCATENATED MODULE: ./vb/mixins/emitter.js
+
+
+
+function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return from_default()(arr); } }
+
+function _broadcast(componentName, eventName, params) {
+    var _iteratorNormalCompletion = true;
+    var _didIteratorError = false;
+    var _iteratorError = undefined;
+
+    try {
+        for (var _iterator = get_iterator_default()(this.$children), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
+            var child = _step.value;
+
+            var name = child.$options.name;
+
+            if (name === componentName) {
+                child.$emit.apply(child, _toConsumableArray([eventName].concat(params)));
+            } else {
+                _broadcast.apply(child, [componentName, eventName].concat([params]));
+            }
         }
-    });
+    } catch (err) {
+        _didIteratorError = true;
+        _iteratorError = err;
+    } finally {
+        try {
+            if (!_iteratorNormalCompletion && _iterator.return) {
+                _iterator.return();
+            }
+        } finally {
+            if (_didIteratorError) {
+                throw _iteratorError;
+            }
+        }
+    }
 }
 /* harmony default export */ var emitter = ({
     methods: {
@@ -4131,7 +4175,9 @@ function _broadcast(componentName, eventName, params) {
                 }
             }
             if (parent) {
-                parent.$emit.apply(parent, [eventName].concat(params));
+                var _parent;
+
+                (_parent = parent).$emit.apply(_parent, _toConsumableArray([eventName].concat(params)));
             }
         },
         broadcast: function broadcast(componentName, eventName, params) {
@@ -4140,7 +4186,17 @@ function _broadcast(componentName, eventName, params) {
     }
 });
 // CONCATENATED MODULE: ./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/selector.js?type=script&index=0!./vb/components/rate/rate.vue
-
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 
@@ -4178,23 +4234,25 @@ function _broadcast(componentName, eventName, params) {
     },
     computed: {
         lightArr: function lightArr() {
-            var arr = new Array();
-            for (var i = 0; i < this.count; i++) {
+            var arr = [];
+            for (var _i = 0; _i < this.count; _i++) {
                 arr.push({});
             }
             /* 显示当前值 */
-            for (var i = 0; i < parseInt(this.currentValue); i++) {
+            var i = 0;
+            for (; i < parseInt(this.currentValue, 10); i++) {
                 arr[i].valueCls = this.prefixCls + '-star-full';
             }
-            if (parseInt(this.currentValue) !== this.currentValue) {
+            if (parseInt(this.currentValue, 10) !== this.currentValue) {
                 arr[i].valueCls = this.prefixCls + '-star-half';
             }
             /* 当用户hover时，高亮 */
-            for (var i = 0; i < parseInt(this.hoverValue); i++) {
-                arr[i].hoverCls = this.prefixCls + '-star-full';
+            var j = 0;
+            for (; j < parseInt(this.hoverValue, 10); j++) {
+                arr[j].hoverCls = this.prefixCls + '-star-full';
             }
-            if (parseInt(this.hoverValue) !== this.hoverValue) {
-                arr[i].hoverCls = this.prefixCls + '-star-half';
+            if (parseInt(this.hoverValue, 10) !== this.hoverValue) {
+                arr[j].hoverCls = this.prefixCls + '-star-half';
             }
             return arr;
         }
@@ -4224,21 +4282,20 @@ function _broadcast(componentName, eventName, params) {
             /* 如果允许半选 整数直接返回  小数将小数部分变成.5 */
             if (val > this.count) {
                 /* 强制转换 */
-                this.$emit("change", this.count);
-                this.$emit("input", this.count);
+                this.$emit('change', this.count);
+                this.$emit('input', this.count);
                 this.dispatch('FormItem', 'form.change', [this.count]);
                 return this.count;
             }
             if (this.allowHalf) {
-                var _v = parseInt(val);
+                var _v = parseInt(val, 10);
                 if (_v !== val) {
                     val = _v + 0.5;
                 }
                 return val;
-            } else {
-                /* 不允许半选直接四舍五入 */
-                return Math.round(val);
             }
+            /* 不允许半选直接四舍五入 */
+            return Math.round(val);
         }
     },
     watch: {
@@ -4246,8 +4303,8 @@ function _broadcast(componentName, eventName, params) {
             this.currentValue = _value;
         },
         currentValue: function currentValue(value) {
-            this.$emit("change", value);
-            this.$emit("input", value);
+            this.$emit('change', value);
+            this.$emit('input', value);
             this.dispatch('FormItem', 'form.change', [value]);
         }
     }
@@ -4365,12 +4422,8 @@ if (false) {(function () {
 
 /* harmony default export */ var components_rate = (components_rate_rate);
 // EXTERNAL MODULE: ./vb/components/slider/style/index.less
-var slider_style = __webpack_require__(196);
+var slider_style = __webpack_require__(199);
 var slider_style_default = /*#__PURE__*/__webpack_require__.n(slider_style);
-
-// EXTERNAL MODULE: ./node_modules/babel-runtime/core-js/array/from.js
-var from = __webpack_require__(24);
-var from_default = /*#__PURE__*/__webpack_require__.n(from);
 
 // EXTERNAL MODULE: ./node_modules/babel-runtime/core-js/object/keys.js
 var object_keys = __webpack_require__(46);
@@ -4553,8 +4606,8 @@ var popper_default = /*#__PURE__*/__webpack_require__.n(src_popper);
             options.offset = this.offset;
 
             this.popperJS = new popper_default.a(reference, popper, options);
-            this.popperJS.onCreate(function (popper) {
-                _this.resetTransformOrigin(popper);
+            this.popperJS.onCreate(function (pop) {
+                _this.resetTransformOrigin(pop);
                 _this.$nextTick(_this.updatePopper);
                 _this.$emit('created', _this);
             });
@@ -4606,7 +4659,7 @@ var popper_default = /*#__PURE__*/__webpack_require__.n(src_popper);
 
 var placements = ['top', 'topLeft', 'topRight', 'bottom', 'bottomLeft', 'bottomRight', 'left', 'leftTop', 'leftBottom', 'right', 'rightTop', 'rightBottom'];
 
-/* harmony default export */ var tooltip_tooltip = ({
+/* harmony default export */ var tooltip = ({
     name: 'Tooltip',
     mixins: [mixins_popper],
     props: {
@@ -4726,7 +4779,7 @@ var tooltip_render = function() {
 var tooltip_staticRenderFns = []
 tooltip_render._withStripped = true
 var tooltip_esExports = { render: tooltip_render, staticRenderFns: tooltip_staticRenderFns }
-/* harmony default export */ var components_tooltip_tooltip = (tooltip_esExports);
+/* harmony default export */ var tooltip_tooltip = (tooltip_esExports);
 if (false) {
   module.hot.accept()
   if (module.hot.data) {
@@ -4747,8 +4800,8 @@ var tooltip___vue_scopeId__ = null
 /* moduleIdentifier (server only) */
 var tooltip___vue_module_identifier__ = null
 var tooltip_Component = tooltip_normalizeComponent(
+  tooltip,
   tooltip_tooltip,
-  components_tooltip_tooltip,
   tooltip___vue_styles__,
   tooltip___vue_scopeId__,
   tooltip___vue_module_identifier__
@@ -4773,13 +4826,13 @@ if (false) {(function () {
   })
 })()}
 
-/* harmony default export */ var vb_components_tooltip_tooltip = (tooltip_Component.exports);
+/* harmony default export */ var components_tooltip_tooltip = (tooltip_Component.exports);
 
 // CONCATENATED MODULE: ./vb/components/tooltip/index.js
 
 
 
-/* harmony default export */ var components_tooltip = (vb_components_tooltip_tooltip);
+/* harmony default export */ var components_tooltip = (components_tooltip_tooltip);
 // CONCATENATED MODULE: ./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/selector.js?type=script&index=0!./vb/components/slider/handle.vue
 
 
@@ -5129,7 +5182,7 @@ if (false) {(function () {
 
 
 
-function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return from_default()(arr); } }
+function slider__toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return from_default()(arr); } }
 
 function slider__defineProperty(obj, key, value) { if (key in obj) { define_property_default()(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
@@ -5470,7 +5523,7 @@ function addEventListener(target, eventName, eventListener) {
             var diffs = points.map(function (point) {
                 return Math.abs(val - point);
             });
-            var closestPoint = points[diffs.indexOf(Math.min.apply(Math, _toConsumableArray(diffs)))];
+            var closestPoint = points[diffs.indexOf(Math.min.apply(Math, slider__toConsumableArray(diffs)))];
             return step !== null ? parseFloat(closestPoint.toFixed(this.getPrecision())) : closestPoint;
         },
         calcOffset: function calcOffset(value) {
@@ -5667,295 +5720,368 @@ function menu__defineProperty(obj, key, value) { if (key in obj) { define_proper
 
 function menu__toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return from_default()(arr); } }
 
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
 
 
 var menu_IsAllMatch = function IsAllMatch(obj, conditions) {
-  var res = true;
-  var _iteratorNormalCompletion = true;
-  var _didIteratorError = false;
-  var _iteratorError = undefined;
+    var res = true;
+    var _iteratorNormalCompletion = true;
+    var _didIteratorError = false;
+    var _iteratorError = undefined;
 
-  try {
-    for (var _iterator = get_iterator_default()(object_entries_default()(conditions)), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
-      var _ref = _step.value;
-
-      var _ref2 = _slicedToArray(_ref, 2);
-
-      var key = _ref2[0];
-      var val = _ref2[1];
-
-      if (obj[key] !== val) {
-        res = false;
-        break;
-      }
-    }
-  } catch (err) {
-    _didIteratorError = true;
-    _iteratorError = err;
-  } finally {
     try {
-      if (!_iteratorNormalCompletion && _iterator.return) {
-        _iterator.return();
-      }
-    } finally {
-      if (_didIteratorError) {
-        throw _iteratorError;
-      }
-    }
-  }
+        for (var _iterator = get_iterator_default()(object_entries_default()(conditions)), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
+            var _ref = _step.value;
 
-  return res;
+            var _ref2 = _slicedToArray(_ref, 2);
+
+            var key = _ref2[0];
+            var val = _ref2[1];
+
+            if (obj[key] !== val) {
+                res = false;
+                break;
+            }
+        }
+    } catch (err) {
+        _didIteratorError = true;
+        _iteratorError = err;
+    } finally {
+        try {
+            if (!_iteratorNormalCompletion && _iterator.return) {
+                _iterator.return();
+            }
+        } finally {
+            if (_didIteratorError) {
+                throw _iteratorError;
+            }
+        }
+    }
+
+    return res;
 };
 
 /* harmony default export */ var menu = ({
-  name: 'Menu',
-  mixins: [emitter],
-  data: function data() {
-    return {
-      prefix: 'ant-menu',
-      timer: []
-    };
-  },
-  props: {
-    type: {
-      type: String,
-      default: 'root'
+    name: 'Menu',
+    mixins: [emitter],
+    data: function data() {
+        return {
+            prefix: 'ant-menu',
+            timer: []
+        };
     },
-    id: Number,
-    isItemGroup: {
-      type: Boolean,
-      default: false
-    },
-    expand: {
-      type: Boolean,
-      default: false
-    },
-    data: {
-      type: Array,
-      default: function _default() {
-        return [];
-      }
-    },
-    mode: {
-      type: String,
-      default: 'vertical'
-    },
-    theme: {
-      type: String,
-      default: 'light'
-    },
-    level: {
-      type: Number,
-      default: 1
-    }
-  },
-  created: function created() {
-    var _this = this;
-
-    if (this.expand) {
-      var _iteratorNormalCompletion2 = true;
-      var _didIteratorError2 = false;
-      var _iteratorError2 = undefined;
-
-      try {
-        for (var _iterator2 = get_iterator_default()(this.data), _step2; !(_iteratorNormalCompletion2 = (_step2 = _iterator2.next()).done); _iteratorNormalCompletion2 = true) {
-          var item = _step2.value;
-
-          this.$set(item, 'expand', true);
-        }
-      } catch (err) {
-        _didIteratorError2 = true;
-        _iteratorError2 = err;
-      } finally {
-        try {
-          if (!_iteratorNormalCompletion2 && _iterator2.return) {
-            _iterator2.return();
-          }
-        } finally {
-          if (_didIteratorError2) {
-            throw _iteratorError2;
-          }
-        }
-      }
-    } else {
-      var _iteratorNormalCompletion3 = true;
-      var _didIteratorError3 = false;
-      var _iteratorError3 = undefined;
-
-      try {
-        for (var _iterator3 = get_iterator_default()(this.data), _step3; !(_iteratorNormalCompletion3 = (_step3 = _iterator3.next()).done); _iteratorNormalCompletion3 = true) {
-          var _item = _step3.value;
-
-          if (_item.expand === undefined) {
-            this.$set(_item, 'expand', false);
-          }
-        }
-      } catch (err) {
-        _didIteratorError3 = true;
-        _iteratorError3 = err;
-      } finally {
-        try {
-          if (!_iteratorNormalCompletion3 && _iterator3.return) {
-            _iterator3.return();
-          }
-        } finally {
-          if (_didIteratorError3) {
-            throw _iteratorError3;
-          }
-        }
-      }
-    }
-    this.$on('nodeSelected', function (ori, id, dataPath) {
-      if (_this.type == 'root') {
-        _this.setAllSelected(false);
-        _this.$emit('item-click', [_this.data[id]].concat(menu__toConsumableArray(dataPath)));
-        _this.broadcast('Menu', 'cancelSelected', [ori]);
-      } else {
-        _this.dispatch('Menu', 'nodeSelected', [ori, _this.id, [_this.data[id]].concat(menu__toConsumableArray(dataPath))]);
-      }
-    });
-    this.$on('cancelSelected', function (ori) {
-      _this.broadcast('Menu', 'cancelSelected', [ori]);
-      if (_this !== ori) {
-        _this.setAllSelected(false);
-      }
-    });
-  },
-
-  computed: {
-    menuCls: function menuCls() {
-      if (this.type == 'root' || this.type == 'sub') {
-        return [this.prefix, this.prefix + '-' + this.type, this.prefix + '-' + this.mode, menu__defineProperty({}, this.prefix + '-' + this.theme, this.type == 'root')];
-      } else if (this.type == 'item-group-list') {
-        return this.prefix + '-item-group-list';
-      }
-    },
-    paddingSty: function paddingSty() {
-      return this.mode == 'inline' ? {
-        paddingLeft: 24 * this.level + 'px'
-      } : {};
-    }
-  },
-  watch: {
-    mode: function mode() {
-      var _iteratorNormalCompletion4 = true;
-      var _didIteratorError4 = false;
-      var _iteratorError4 = undefined;
-
-      try {
-        for (var _iterator4 = get_iterator_default()(this.data), _step4; !(_iteratorNormalCompletion4 = (_step4 = _iterator4.next()).done); _iteratorNormalCompletion4 = true) {
-          var item = _step4.value;
-
-          this.$set(item, 'expand', false);
-        }
-      } catch (err) {
-        _didIteratorError4 = true;
-        _iteratorError4 = err;
-      } finally {
-        try {
-          if (!_iteratorNormalCompletion4 && _iterator4.return) {
-            _iterator4.return();
-          }
-        } finally {
-          if (_didIteratorError4) {
-            throw _iteratorError4;
-          }
-        }
-      }
-    }
-  },
-  methods: {
-    setAllSelected: function setAllSelected(status) {
-      for (var i = 0; i < this.data.length; i++) {
-        this.$set(this.data[i], 'selected', status);
-      }
-    },
-    clickTriggerOpen: function clickTriggerOpen(disabled, index) {
-      if (!disabled && this.mode == 'inline') {
-        this.setOpen(index, !this.data[index].expand);
-      }
-    },
-    mouseTriggerOpen: function mouseTriggerOpen(disabled, index, status) {
-      var _this2 = this;
-
-      if (!disabled && this.mode != 'inline') {
-        if (this.timer[index]) clearTimeout(this.timer[index]);
-        this.timer[index] = setTimeout(function () {
-          return _this2.setOpen(index, status);
-        }, 300);
-      }
-    },
-    setOpen: function setOpen(index) {
-      var status = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : true;
-
-      this.$set(this.data[index], 'expand', status);
-    },
-    setCheck: function setCheck(conditions) {
-      var status = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : true;
-
-      var res = false;
-      for (var i = 0; i < this.data.length; i++) {
-        res = menu_IsAllMatch(this.data[i], conditions);
-        if (res) {
-          if (status) {
-            this.select(i);
-            var parent = this.$parent,
-                id = this.id;
-            while (parent && parent.$options.name == 'Menu') {
-              parent.setOpen(id);
-              id = parent.id;
-              parent = parent.$parent;
+    props: {
+        type: {
+            type: String,
+            default: 'root'
+        },
+        id: Number,
+        isItemGroup: {
+            type: Boolean,
+            default: false
+        },
+        expand: {
+            type: Boolean,
+            default: false
+        },
+        data: {
+            type: Array,
+            default: function _default() {
+                return [];
             }
-          } else {
-            this.$set(this.data[i], 'selected', false);
-          }
-          break;
+        },
+        mode: {
+            type: String,
+            default: 'vertical'
+        },
+        theme: {
+            type: String,
+            default: 'light'
+        },
+        level: {
+            type: Number,
+            default: 1
         }
-      }
-      if (!res) {
-        var _iteratorNormalCompletion5 = true;
-        var _didIteratorError5 = false;
-        var _iteratorError5 = undefined;
-
-        try {
-          for (var _iterator5 = get_iterator_default()(this.$children), _step5; !(_iteratorNormalCompletion5 = (_step5 = _iterator5.next()).done); _iteratorNormalCompletion5 = true) {
-            var child = _step5.value;
-
-            //如果使用者自定义了选项 可能会有其他类型的子组件
-            if (child.$options.name == 'Menu' && child.setCheck) {
-              res = child.setCheck(conditions, status);
-              if (res) break;
-            }
-          }
-        } catch (err) {
-          _didIteratorError5 = true;
-          _iteratorError5 = err;
-        } finally {
-          try {
-            if (!_iteratorNormalCompletion5 && _iterator5.return) {
-              _iterator5.return();
-            }
-          } finally {
-            if (_didIteratorError5) {
-              throw _iteratorError5;
-            }
-          }
-        }
-      }
-      return res;
     },
-    select: function select(index, disabled) {
-      if (disabled) return;
-      this.setAllSelected(false);
-      this.$set(this.data[index], 'selected', true);
-      if (this.type == 'root') {
-        this.$emit('item-click', [this.data[index]]);
-        this.broadcast('Menu', 'cancelSelected', [this]);
-      } else {
-        this.dispatch('Menu', 'nodeSelected', [this, this.id, [this.data[index]]]);
-      }
+    created: function created() {
+        var _this = this;
+
+        if (this.expand) {
+            var _iteratorNormalCompletion2 = true;
+            var _didIteratorError2 = false;
+            var _iteratorError2 = undefined;
+
+            try {
+                for (var _iterator2 = get_iterator_default()(this.data), _step2; !(_iteratorNormalCompletion2 = (_step2 = _iterator2.next()).done); _iteratorNormalCompletion2 = true) {
+                    var item = _step2.value;
+
+                    this.$set(item, 'expand', true);
+                }
+            } catch (err) {
+                _didIteratorError2 = true;
+                _iteratorError2 = err;
+            } finally {
+                try {
+                    if (!_iteratorNormalCompletion2 && _iterator2.return) {
+                        _iterator2.return();
+                    }
+                } finally {
+                    if (_didIteratorError2) {
+                        throw _iteratorError2;
+                    }
+                }
+            }
+        } else {
+            var _iteratorNormalCompletion3 = true;
+            var _didIteratorError3 = false;
+            var _iteratorError3 = undefined;
+
+            try {
+                for (var _iterator3 = get_iterator_default()(this.data), _step3; !(_iteratorNormalCompletion3 = (_step3 = _iterator3.next()).done); _iteratorNormalCompletion3 = true) {
+                    var _item = _step3.value;
+
+                    if (_item.expand === undefined) {
+                        this.$set(_item, 'expand', false);
+                    }
+                }
+            } catch (err) {
+                _didIteratorError3 = true;
+                _iteratorError3 = err;
+            } finally {
+                try {
+                    if (!_iteratorNormalCompletion3 && _iterator3.return) {
+                        _iterator3.return();
+                    }
+                } finally {
+                    if (_didIteratorError3) {
+                        throw _iteratorError3;
+                    }
+                }
+            }
+        }
+        this.$on('nodeSelected', function (ori, id, dataPath) {
+            if (_this.type === 'root') {
+                _this.setAllSelected(false);
+                _this.$emit('item-click', [_this.data[id]].concat(menu__toConsumableArray(dataPath)));
+                _this.broadcast('Menu', 'cancelSelected', [ori]);
+            } else {
+                _this.dispatch('Menu', 'nodeSelected', [ori, _this.id, [_this.data[id]].concat(menu__toConsumableArray(dataPath))]);
+            }
+        });
+        this.$on('cancelSelected', function (ori) {
+            _this.broadcast('Menu', 'cancelSelected', [ori]);
+            if (_this !== ori) {
+                _this.setAllSelected(false);
+            }
+        });
+    },
+
+    computed: {
+        menuCls: function menuCls() {
+            if (this.type === 'root' || this.type === 'sub') {
+                return [this.prefix, this.prefix + '-' + this.type, this.prefix + '-' + this.mode, menu__defineProperty({}, this.prefix + '-' + this.theme, this.type === 'root')];
+            } else if (this.type === 'item-group-list') {
+                return this.prefix + '-item-group-list';
+            }
+        },
+        paddingSty: function paddingSty() {
+            return this.mode === 'inline' ? {
+                paddingLeft: 24 * this.level + 'px'
+            } : {};
+        }
+    },
+    watch: {
+        mode: function mode() {
+            var _iteratorNormalCompletion4 = true;
+            var _didIteratorError4 = false;
+            var _iteratorError4 = undefined;
+
+            try {
+                for (var _iterator4 = get_iterator_default()(this.data), _step4; !(_iteratorNormalCompletion4 = (_step4 = _iterator4.next()).done); _iteratorNormalCompletion4 = true) {
+                    var item = _step4.value;
+
+                    this.$set(item, 'expand', false);
+                }
+            } catch (err) {
+                _didIteratorError4 = true;
+                _iteratorError4 = err;
+            } finally {
+                try {
+                    if (!_iteratorNormalCompletion4 && _iterator4.return) {
+                        _iterator4.return();
+                    }
+                } finally {
+                    if (_didIteratorError4) {
+                        throw _iteratorError4;
+                    }
+                }
+            }
+        }
+    },
+    methods: {
+        setAllSelected: function setAllSelected(status) {
+            for (var i = 0; i < this.data.length; i++) {
+                this.$set(this.data[i], 'selected', status);
+            }
+        },
+        clickTriggerOpen: function clickTriggerOpen(disabled, index) {
+            if (!disabled && this.mode === 'inline') {
+                this.setOpen(index, !this.data[index].expand);
+            }
+        },
+        mouseTriggerOpen: function mouseTriggerOpen(disabled, index, status) {
+            var _this2 = this;
+
+            if (!disabled && this.mode !== 'inline') {
+                if (this.timer[index]) clearTimeout(this.timer[index]);
+                this.timer[index] = setTimeout(function () {
+                    return _this2.setOpen(index, status);
+                }, 300);
+            }
+        },
+        setOpen: function setOpen(index) {
+            var status = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : true;
+
+            this.$set(this.data[index], 'expand', status);
+        },
+        setCheck: function setCheck(conditions) {
+            var status = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : true;
+
+            var res = false;
+            for (var i = 0; i < this.data.length; i++) {
+                res = menu_IsAllMatch(this.data[i], conditions);
+                if (res) {
+                    if (status) {
+                        this.select(i);
+                        var parent = this.$parent;
+                        var id = this.id;
+                        while (parent && parent.$options.name === 'Menu') {
+                            parent.setOpen(id);
+                            id = parent.id;
+                            parent = parent.$parent;
+                        }
+                    } else {
+                        this.$set(this.data[i], 'selected', false);
+                    }
+                    break;
+                }
+            }
+            if (!res) {
+                var _iteratorNormalCompletion5 = true;
+                var _didIteratorError5 = false;
+                var _iteratorError5 = undefined;
+
+                try {
+                    for (var _iterator5 = get_iterator_default()(this.$children), _step5; !(_iteratorNormalCompletion5 = (_step5 = _iterator5.next()).done); _iteratorNormalCompletion5 = true) {
+                        var child = _step5.value;
+
+                        // 如果使用者自定义了选项 可能会有其他类型的子组件
+                        if (child.$options.name === 'Menu' && child.setCheck) {
+                            res = child.setCheck(conditions, status);
+                            if (res) break;
+                        }
+                    }
+                } catch (err) {
+                    _didIteratorError5 = true;
+                    _iteratorError5 = err;
+                } finally {
+                    try {
+                        if (!_iteratorNormalCompletion5 && _iterator5.return) {
+                            _iterator5.return();
+                        }
+                    } finally {
+                        if (_didIteratorError5) {
+                            throw _iteratorError5;
+                        }
+                    }
+                }
+            }
+            return res;
+        },
+        select: function select(index, disabled) {
+            if (disabled) return;
+            this.setAllSelected(false);
+            this.$set(this.data[index], 'selected', true);
+            if (this.type === 'root') {
+                this.$emit('item-click', [this.data[index]]);
+                this.broadcast('Menu', 'cancelSelected', [this]);
+            } else {
+                this.dispatch('Menu', 'nodeSelected', [this, this.id, [this.data[index]]]);
+            }
+        }
     }
-  }
 });
 // CONCATENATED MODULE: ./node_modules/vue-loader/lib/template-compiler?{"id":"data-v-9f34700a","hasScoped":false}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./vb/components/menu/menu.vue
 var menu_render = function() {
@@ -6593,47 +6719,47 @@ if (false) {(function () {
 /* harmony default export */ var components_dropdown_dropdown_menu = (dropdown_menu_Component.exports);
 
 // CONCATENATED MODULE: ./vb/utils/fn.js
-//返回当前页面相对于窗口显示区左上角的 X ，Y 的位置
+// 返回当前页面相对于窗口显示区左上角的 X ，Y 的位置
 function getScroll(top) {
-  var ret = window['page' + (top ? 'Y' : 'X') + 'Offset'];
-  var method = 'scroll' + (top ? 'Top' : 'Left');
-  if (typeof ret !== 'number') {
-    var d = window.document;
-    // ie6,7,8 standard mode
-    ret = d.documentElement[method];
+    var ret = window['page' + (top ? 'Y' : 'X') + 'Offset'];
+    var method = 'scroll' + (top ? 'Top' : 'Left');
     if (typeof ret !== 'number') {
-      // quirks mode
-      ret = d.body[method];
+        var d = window.document;
+        // ie6,7,8 standard mode
+        ret = d.documentElement[method];
+        if (typeof ret !== 'number') {
+            // quirks mode
+            ret = d.body[method];
+        }
     }
-  }
-  return ret;
+    return ret;
 }
 
-//获取元素top,left,right,bottom的绝对位置
+// 获取元素top,left,right,bottom的绝对位置
 function fn_getOffset(element) {
-  var container = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : document.body;
+    var container = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : document.body;
 
-  var el_rect = element.getBoundingClientRect();
-  var container_rect = container.getBoundingClientRect();
-  var clientTop = element.clientTop || container.clientTop || 0;
-  var clientLeft = element.clientLeft || container.clientLeft || 0;
-  var top = void 0,
-      left = void 0;
+    var elRect = element.getBoundingClientRect();
+    var containerRect = container.getBoundingClientRect();
+    var clientTop = element.clientTop || container.clientTop || 0;
+    var clientLeft = element.clientLeft || container.clientLeft || 0;
+    var top = void 0;
+    var left = void 0;
 
-  if (container === document.body) {
-    top = getScroll(true);
-    left = getScroll();
-  } else {
-    top = container.scrollTop - container_rect.top;
-    left = container.scrollLeft - container_rect.left;
-  }
+    if (container === document.body) {
+        top = getScroll(true);
+        left = getScroll();
+    } else {
+        top = container.scrollTop - containerRect.top;
+        left = container.scrollLeft - containerRect.left;
+    }
 
-  return {
-    top: el_rect.top + top - clientTop,
-    left: el_rect.left + left - clientLeft,
-    right: el_rect.right + left - clientLeft,
-    bottom: el_rect.bottom + top - clientTop
-  };
+    return {
+        top: elRect.top + top - clientTop,
+        left: elRect.left + left - clientLeft,
+        right: elRect.right + left - clientLeft,
+        bottom: elRect.bottom + top - clientTop
+    };
 }
 // CONCATENATED MODULE: ./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/selector.js?type=script&index=0!./vb/components/dropdown/dropdown.vue
 
@@ -6887,7 +7013,14 @@ var affix_style = __webpack_require__(239);
 var affix_style_default = /*#__PURE__*/__webpack_require__.n(affix_style);
 
 // CONCATENATED MODULE: ./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/selector.js?type=script&index=0!./vb/components/affix/affix.vue
-
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 
@@ -6959,8 +7092,6 @@ var affix_style_default = /*#__PURE__*/__webpack_require__.n(affix_style);
     methods: {
         handleScroll: function handleScroll() {
             var isAffix = false;
-            var scrollTop = getScroll(true);
-            var fixedNode = this.$el.children[0];
             var elemOffset = this.$el.getBoundingClientRect();
 
             if (this.isTop) {
@@ -7262,9 +7393,12 @@ var steps = __webpack_require__(241);
 var steps_default = /*#__PURE__*/__webpack_require__.n(steps);
 
 // CONCATENATED MODULE: ./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/selector.js?type=script&index=0!./vb/components/steps/steps.vue
-
-
-function steps__defineProperty(obj, key, value) { if (key in obj) { define_property_default()(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ var steps_steps = ({
     name: 'Steps',
@@ -7287,9 +7421,10 @@ function steps__defineProperty(obj, key, value) { if (key in obj) { define_prope
             maxDescriptionWidth: '100px'
         };
     },
+
     computed: {
         wrapClasses: function wrapClasses() {
-            return ['ant-steps', steps__defineProperty({}, 'ant-steps-small', this.size === 'small'), steps__defineProperty({}, 'ant-steps-vertical', this.direction === 'vertical')];
+            return ['ant-steps', { 'ant-steps-small': this.size === 'small' }, { 'ant-steps-vertical': this.direction === 'vertical' }];
         }
     },
     watch: {
@@ -7332,14 +7467,12 @@ function steps__defineProperty(obj, key, value) { if (key in obj) { define_prope
                     } else {
                         child.currentStatus = 'wait';
                     }
+                } else if (index === _this2.current) {
+                    child.currentStatus = 'process';
+                } else if (index < _this2.current) {
+                    child.currentStatus = 'finish';
                 } else {
-                    if (index === _this2.current) {
-                        child.currentStatus = 'process';
-                    } else if (index < _this2.current) {
-                        child.currentStatus = 'finish';
-                    } else {
-                        child.currentStatus = 'wait';
-                    }
+                    child.currentStatus = 'wait';
                 }
             });
         },
@@ -7353,8 +7486,7 @@ function steps__defineProperty(obj, key, value) { if (key in obj) { define_prope
             var width = this.$children[len].$el.offsetWidth;
 
             this.$children.forEach(function (child, index) {
-
-                if (index == len) {
+                if (index === len) {
                     child.tailWidth = 'auto';
                 } else {
                     child.tailWidth = Math.floor((dom.offsetWidth - width - 1) / len) + 'px';
@@ -7427,6 +7559,25 @@ if (false) {(function () {
 
 function step__defineProperty(obj, key, value) { if (key in obj) { define_property_default()(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
 /* harmony default export */ var steps_step = ({
     name: 'Step',
     props: {
@@ -7446,12 +7597,13 @@ function step__defineProperty(obj, key, value) { if (key in obj) { define_proper
             rootStatus: false
         };
     },
+
     computed: {
         iconName: function iconName() {
             return this.icon ? this.icon : 'check';
         },
         wrapClasses: function wrapClasses() {
-            return ['ant-steps-item', 'ant-steps-status-' + this.currentStatus, step__defineProperty({}, 'ant-steps-item-last', this.stepLast), step__defineProperty({}, 'ant-steps-next-' + this.rootStatus, this.rootStatus), step__defineProperty({}, 'ant-steps-custom', this.icon)];
+            return ['ant-steps-item', 'ant-steps-status-' + this.currentStatus, { 'ant-steps-item-last': this.stepLast }, step__defineProperty({}, 'ant-steps-next-' + this.rootStatus, this.rootStatus), { 'ant-steps-custom': this.icon }];
         }
     }
 });
@@ -7579,6 +7731,14 @@ var stringify_default = /*#__PURE__*/__webpack_require__.n(stringify);
 var get_prototype_of = __webpack_require__(250);
 var get_prototype_of_default = /*#__PURE__*/__webpack_require__.n(get_prototype_of);
 
+// EXTERNAL MODULE: external {"root":"Vue","commonjs":"vue","commonjs2":"vue","amd":"vue"}
+var external___root___Vue___commonjs___vue___commonjs2___vue___amd___vue__ = __webpack_require__(81);
+var external___root___Vue___commonjs___vue___commonjs2___vue___amd___vue___default = /*#__PURE__*/__webpack_require__.n(external___root___Vue___commonjs___vue___commonjs2___vue___amd___vue__);
+
+// EXTERNAL MODULE: ./node_modules/deepmerge/dist/cjs.js
+var cjs = __webpack_require__(253);
+var cjs_default = /*#__PURE__*/__webpack_require__.n(cjs);
+
 // CONCATENATED MODULE: ./vb/locale/lang/zh-CN.js
 /* harmony default export */ var zh_CN = ({
     select: {
@@ -7601,8 +7761,8 @@ var get_prototype_of_default = /*#__PURE__*/__webpack_require__.n(get_prototype_
         selectMonth: '选择月份',
         selectTime: '选择时间',
         selectDate: '选择日期',
-        days: "一,二,三,四,五,六,日",
-        months: "1月,2月,3月,4月,5月,6月,7月,8月,9月,10月,11月,12月"
+        days: '一,二,三,四,五,六,日',
+        months: '1月,2月,3月,4月,5月,6月,7月,8月,9月,10月,11月,12月'
     },
     modal: {
         okText: '确定',
@@ -7624,14 +7784,6 @@ var get_prototype_of_default = /*#__PURE__*/__webpack_require__.n(get_prototype_
         placeholder: '请选择'
     }
 });
-// EXTERNAL MODULE: external {"root":"Vue","commonjs":"vue","commonjs2":"vue","amd":"vue"}
-var external___root___Vue___commonjs___vue___commonjs2___vue___amd___vue__ = __webpack_require__(81);
-var external___root___Vue___commonjs___vue___commonjs2___vue___amd___vue___default = /*#__PURE__*/__webpack_require__.n(external___root___Vue___commonjs___vue___commonjs2___vue___amd___vue__);
-
-// EXTERNAL MODULE: ./node_modules/deepmerge/dist/cjs.js
-var cjs = __webpack_require__(253);
-var cjs_default = /*#__PURE__*/__webpack_require__.n(cjs);
-
 // EXTERNAL MODULE: ./node_modules/babel-runtime/core-js/symbol/iterator.js
 var symbol_iterator = __webpack_require__(51);
 var symbol_iterator_default = /*#__PURE__*/__webpack_require__.n(symbol_iterator);
@@ -7679,18 +7831,15 @@ var RE_NARGS = /(%|)\{([0-9a-zA-Z_]+)\}/g;
         }
 
         return string.replace(RE_NARGS, function (match, prefix, i, index) {
-            var result = void 0;
-
             if (string[index - 1] === '{' && string[index + match.length] === '}') {
                 return i;
-            } else {
-                result = hasOwn(args, i) ? args[i] : null;
-                if (result === null || result === undefined) {
-                    return '';
-                }
-
-                return result;
             }
+            var result = hasOwn(args, i) ? args[i] : null;
+            if (result === null || result === undefined) {
+                return '';
+            }
+
+            return result;
         });
     }
 
@@ -7745,7 +7894,7 @@ var i18n = function i18n(fn) {
 /* harmony default export */ var locale = ({ use: use, t: locale_t, i18n: i18n });
 // CONCATENATED MODULE: ./vb/directives/clickoutside.js
 /* harmony default export */ var clickoutside = ({
-    bind: function bind(el, binding, vnode) {
+    bind: function bind(el, binding) {
         function documentHandler(e) {
             if (el.contains(e.target)) {
                 return false;
@@ -7757,8 +7906,7 @@ var i18n = function i18n(fn) {
         el.__vueClickOutside__ = documentHandler;
         document.addEventListener('click', documentHandler);
     },
-    update: function update() {},
-    unbind: function unbind(el, binding) {
+    unbind: function unbind(el) {
         document.removeEventListener('click', el.__vueClickOutside__);
         delete el.__vueClickOutside__;
     }
@@ -7779,6 +7927,74 @@ var select__slicedToArray = function () { function sliceIterator(arr, i) { var _
 function select__toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return from_default()(arr); } }
 
 function select__defineProperty(obj, key, value) { if (key in obj) { define_property_default()(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 
@@ -7952,13 +8168,13 @@ function select__defineProperty(obj, key, value) { if (key in obj) { define_prop
                     var isIncluded = item[_this3.label].includes(val);
                     if (isIncluded) _this3.searchFound = true;
 
-                    if (type == 'item') {
+                    if (type === 'item') {
                         _this3.$set(_this3.ori_data[path], 'show', isIncluded);
                     } else {
                         _this3.$set(_this3.ori_data[path[0]].options[path[1]], 'show', isIncluded);
                         if (isIncluded) show = true;
                     }
-                }, function (i, group) {
+                }, function (i) {
                     _this3.$set(_this3.ori_data[i], 'show', show);
                     show = false;
                 });
@@ -8019,16 +8235,14 @@ function select__defineProperty(obj, key, value) { if (key in obj) { define_prop
         getOption: function getOption(val) {
             var _this5 = this;
 
-            var res = void 0,
-                selected = val;
+            var res = void 0;
+            var selected = val;
             if (this.multiple) {
                 res = [];
                 selected = [].concat(select__toConsumableArray(val));
             }
             this.mapData(function (_ref11) {
                 var _ref12 = select__slicedToArray(_ref11, 3),
-                    type = _ref12[0],
-                    path = _ref12[1],
                     item = _ref12[2];
 
                 if (_this5.multiple) {
@@ -8131,14 +8345,14 @@ function select__defineProperty(obj, key, value) { if (key in obj) { define_prop
                     selected = true;
                     _this6.labels = item[_this6.label];
                 }
-                if (type == 'item') {
+                if (type === 'item') {
                     _this6.$set(_this6.ori_data[path], 'selected', selected);
                     _this6.$set(_this6.ori_data[path], 'show', true);
                 } else {
                     _this6.$set(_this6.ori_data[path[0]].options[path[1]], 'selected', selected);
                     _this6.$set(_this6.ori_data[path[0]].options[path[1]], 'show', true);
                 }
-            }, function (i, group) {
+            }, function (i) {
                 _this6.$set(_this6.ori_data[i], 'show', true);
             });
         },
@@ -8149,12 +8363,11 @@ function select__defineProperty(obj, key, value) { if (key in obj) { define_prop
             var _this7 = this;
 
             this.mapData(function (_ref19) {
-                var _ref20 = select__slicedToArray(_ref19, 3),
+                var _ref20 = select__slicedToArray(_ref19, 2),
                     type = _ref20[0],
-                    path = _ref20[1],
-                    item = _ref20[2];
+                    path = _ref20[1];
 
-                if (type == 'item') {
+                if (type === 'item') {
                     var _iteratorNormalCompletion3 = true;
                     var _didIteratorError3 = false;
                     var _iteratorError3 = undefined;
@@ -8215,7 +8428,7 @@ function select__defineProperty(obj, key, value) { if (key in obj) { define_prop
                         }
                     }
                 }
-            }, function (i, group) {
+            }, function (i) {
                 if (groupOpt) {
                     var _iteratorNormalCompletion5 = true;
                     var _didIteratorError5 = false;
@@ -8310,8 +8523,8 @@ function select__defineProperty(obj, key, value) { if (key in obj) { define_prop
                     path = _ref28[1],
                     item = _ref28[2];
 
-                if (item[_this10.label] == text) {
-                    if (type == 'item') {
+                if (item[_this10.label] === text) {
+                    if (type === 'item') {
                         _this10.$set(_this10.ori_data[path], 'selected', false);
                     } else {
                         _this10.$set(_this10.ori_data[path[0]].options[path[1]], 'selected', false);
@@ -8322,7 +8535,7 @@ function select__defineProperty(obj, key, value) { if (key in obj) { define_prop
         },
         select: function select(path) {
             var opt = void 0;
-            if (typeof path == 'number') {
+            if (typeof path === 'number') {
                 opt = this.ori_data[path];
             } else {
                 opt = this.ori_data[path[0]].options[path[1]];
@@ -8909,13 +9122,94 @@ if (false) {(function () {
 
 /* harmony default export */ var components_select = (vb_components_select_select);
 // CONCATENATED MODULE: ./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/selector.js?type=script&index=0!./vb/components/pagination/pagination.vue
-
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 
 /* harmony default export */ var pagination = ({
+    components: {
+        vSelect: components_select
+    },
     name: 'Pagination',
-
     props: {
         value: {
             type: Number,
@@ -9079,7 +9373,7 @@ if (false) {(function () {
         },
         _handleKeyUp: function _handleKeyUp(e) {
             var _val = e.target.value;
-            var val = undefined;
+            var val = void 0;
 
             if (_val === '') {
                 val = _val;
@@ -9096,11 +9390,7 @@ if (false) {(function () {
             } else if (e.keyCode === 40) {
                 this._handleChange(val + 1);
             }
-        },
-        _pageSizeChange: function _pageSizeChange() {}
-    },
-    components: {
-        vSelect: components_select
+        }
     }
 });
 // CONCATENATED MODULE: ./node_modules/vue-loader/lib/template-compiler?{"id":"data-v-0ce099ca","hasScoped":false}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./vb/components/pagination/pagination.vue
@@ -9175,9 +9465,9 @@ var pagination_render = function() {
                       _vm._v("／")
                     ]),
                     _vm._v(
-                      "\n                    " +
+                      "\n                " +
                         _vm._s(_vm.allPages) +
-                        "\n                "
+                        "\n            "
                     )
                   ]
                 : _vm._e()
@@ -9352,7 +9642,7 @@ var pagination_render = function() {
                     "div",
                     { class: _vm.prefixCls + "-options-quick-jumper" },
                     [
-                      _vm._v("\n                    跳至\n                    "),
+                      _vm._v("\n                跳至\n                "),
                       _c("input", {
                         attrs: { type: "text" },
                         domProps: { value: _vm.currentForSimple },
@@ -9363,7 +9653,7 @@ var pagination_render = function() {
                           change: _vm._handleKeyUp
                         }
                       }),
-                      _vm._v("\n                    页\n                ")
+                      _vm._v(" 页\n            ")
                     ]
                   )
                 : _vm._e()
@@ -9428,6 +9718,7 @@ if (false) {(function () {
 // CONCATENATED MODULE: ./vb/components/pagination/index.js
 
 
+
 /* harmony default export */ var components_pagination = (components_pagination_pagination);
 // EXTERNAL MODULE: ./vb/components/tag/style/index.less
 var tag_style = __webpack_require__(265);
@@ -9438,40 +9729,51 @@ var tag_style_default = /*#__PURE__*/__webpack_require__.n(tag_style);
 
 function tag__defineProperty(obj, key, value) { if (key in obj) { define_property_default()(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
-/* harmony default export */ var tag = ({
-  name: 'Tag',
-  props: {
-    color: {
-      type: String
-    },
-    closable: {
-      type: Boolean,
-      default: false
-    }
-  },
-  data: function data() {
-    return {
-      prefix: 'ant-tag',
-      show: true
-    };
-  },
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
-  computed: {
-    wrapClasses: function wrapClasses() {
-      return [this.prefix, tag__defineProperty({}, this.prefix + '-has-color', this.color), tag__defineProperty({}, this.prefix + '-' + this.color, this.color)];
+/* harmony default export */ var tag = ({
+    name: 'Tag',
+    props: {
+        color: {
+            type: String
+        },
+        closable: {
+            type: Boolean,
+            default: false
+        }
     },
-    wrapStyle: function wrapStyle() {
-      return this.color && this.color.startsWith('#') ? {
-        backgroundColor: this.color
-      } : {};
+    data: function data() {
+        return {
+            prefix: 'ant-tag',
+            show: true
+        };
+    },
+
+    computed: {
+        wrapClasses: function wrapClasses() {
+            return [this.prefix, tag__defineProperty({}, this.prefix + '-has-color', this.color), tag__defineProperty({}, this.prefix + '-' + this.color, this.color)];
+        },
+        wrapStyle: function wrapStyle() {
+            return this.color && this.color.startsWith('#') ? {
+                backgroundColor: this.color
+            } : {};
+        }
+    },
+    methods: {
+        remove: function remove() {
+            this.show = false;
+            this.$emit('close');
+        }
     }
-  },
-  methods: {
-    remove: function remove() {
-      this.show = false;
-      this.$emit('close');
-    }
-  }
 });
 // CONCATENATED MODULE: ./node_modules/vue-loader/lib/template-compiler?{"id":"data-v-3007dd91","hasScoped":false}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./vb/components/tag/tag.vue
 var tag_render = function() {
@@ -9558,6 +9860,17 @@ var switch_style_default = /*#__PURE__*/__webpack_require__.n(switch_style);
 
 
 function switch__defineProperty(obj, key, value) { if (key in obj) { define_property_default()(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
 
 
 /* harmony default export */ var switch_switch = ({
@@ -9946,6 +10259,13 @@ var layout_style_default = /*#__PURE__*/__webpack_require__.n(layout_style);
 
 function layout__defineProperty(obj, key, value) { if (key in obj) { define_property_default()(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
+//
+//
+//
+//
+//
+//
+
 /* harmony default export */ var layout = ({
     name: 'Layout',
     data: function data() {
@@ -9971,7 +10291,7 @@ function layout__defineProperty(obj, key, value) { if (key in obj) { define_prop
         mountedSider: function mountedSider() {
             var children = this.$children;
             for (var i = 0; i < children.length; i++) {
-                if (children[i].$options.name == 'Sider') {
+                if (children[i].$options.name === 'Sider') {
                     this.hasSider = true;
                 }
             }
@@ -10041,6 +10361,20 @@ if (false) {(function () {
 
 
 function sider__defineProperty(obj, key, value) { if (key in obj) { define_property_default()(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 var dimensionMap = {
     xs: '480px',
@@ -10250,7 +10584,11 @@ if (false) {(function () {
 /* harmony default export */ var components_layout_sider = (sider_Component.exports);
 
 // CONCATENATED MODULE: ./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/selector.js?type=script&index=0!./vb/components/layout/header.vue
-
+//
+//
+//
+//
+//
 
 /* harmony default export */ var header = ({
     name: 'Header',
@@ -10320,7 +10658,11 @@ if (false) {(function () {
 /* harmony default export */ var components_layout_header = (header_Component.exports);
 
 // CONCATENATED MODULE: ./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/selector.js?type=script&index=0!./vb/components/layout/content.vue
-
+//
+//
+//
+//
+//
 
 /* harmony default export */ var content = ({
     name: 'Content',
@@ -10390,7 +10732,11 @@ if (false) {(function () {
 /* harmony default export */ var components_layout_content = (content_Component.exports);
 
 // CONCATENATED MODULE: ./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/selector.js?type=script&index=0!./vb/components/layout/footer.vue
-
+//
+//
+//
+//
+//
 
 /* harmony default export */ var footer = ({
     name: 'Footer',
@@ -10477,6 +10823,20 @@ var spin_style_default = /*#__PURE__*/__webpack_require__.n(spin_style);
 
 function spinInner__defineProperty(obj, key, value) { if (key in obj) { define_property_default()(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
 /* harmony default export */ var spinInner = ({
     props: {
         prefix: {
@@ -10503,7 +10863,7 @@ function spinInner__defineProperty(obj, key, value) { if (key in obj) { define_p
             return [this.prefix, (_ref = {}, spinInner__defineProperty(_ref, this.prefix + '-spinning', this.spinning), spinInner__defineProperty(_ref, this.prefix + '-show-text', this.tip), spinInner__defineProperty(_ref, this.prefix + '-' + size, size), _ref)];
         },
         showTip: function showTip() {
-            return this.tip ? true : false;
+            return !!this.tip;
         }
     }
 });
@@ -10597,41 +10957,55 @@ if (false) {(function () {
 
 function spin__defineProperty(obj, key, value) { if (key in obj) { define_property_default()(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
 
 
 /* harmony default export */ var spin = ({
-  name: 'Spin',
-  data: function data() {
-    return {
-      prefix: 'ant-spin',
-      hasSlot: false,
-      delay: 0
-    };
-  },
+    components: { spinInner: components_spin_spinInner },
+    name: 'Spin',
+    data: function data() {
+        return {
+            prefix: 'ant-spin',
+            hasSlot: false,
+            delay: 0
+        };
+    },
 
-  props: {
-    spinning: {
-      type: Boolean,
-      default: true
+    props: {
+        spinning: {
+            type: Boolean,
+            default: true
+        },
+        size: {
+            type: String
+        },
+        tip: {
+            type: String
+        }
     },
-    size: {
-      type: String
+    mounted: function mounted() {
+        if (this.$slots && this.$slots.default) {
+            this.hasSlot = true;
+        }
     },
-    tip: {
-      type: String
+
+    computed: {
+        containerCls: function containerCls() {
+            return [this.prefix + '-container', spin__defineProperty({}, this.prefix + '-blur', this.spinning)];
+        }
     }
-  },
-  mounted: function mounted() {
-    if (this.$slots && this.$slots.default) {
-      this.hasSlot = true;
-    }
-  },
-  computed: {
-    containerCls: function containerCls() {
-      return [this.prefix + '-container', spin__defineProperty({}, this.prefix + '-blur', this.spinning)];
-    }
-  },
-  components: { spinInner: components_spin_spinInner }
 });
 // CONCATENATED MODULE: ./node_modules/vue-loader/lib/template-compiler?{"id":"data-v-9c3da44a","hasScoped":false}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./vb/components/spin/spin.vue
 var spin_render = function() {
@@ -10730,7 +11104,13 @@ var cascader_style = __webpack_require__(270);
 var cascader_style_default = /*#__PURE__*/__webpack_require__.n(cascader_style);
 
 // CONCATENATED MODULE: ./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/selector.js?type=script&index=0!./vb/components/cascader/menu.vue
-
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ var cascader_menu = ({
     data: function data() {
@@ -10861,6 +11241,23 @@ var cascader__slicedToArray = function () { function sliceIterator(arr, i) { var
 
 function cascader__defineProperty(obj, key, value) { if (key in obj) { define_property_default()(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
 
 
 
@@ -10868,6 +11265,7 @@ function cascader__defineProperty(obj, key, value) { if (key in obj) { define_pr
 
 /* harmony default export */ var cascader = ({
     name: 'Cascader',
+    components: { vmenu: vb_components_cascader_menu },
     directives: { clickoutside: clickoutside },
     mixins: [emitter],
     data: function data() {
@@ -10938,9 +11336,9 @@ function cascader__defineProperty(obj, key, value) { if (key in obj) { define_pr
 
     watch: {
         path: function path(val) {
-            var value = [],
-                label = [],
-                opt = this.data;
+            var value = [];
+            var label = [];
+            var opt = this.data;
 
             var _iteratorNormalCompletion = true;
             var _didIteratorError = false;
@@ -10990,8 +11388,8 @@ function cascader__defineProperty(obj, key, value) { if (key in obj) { define_pr
     methods: {
         init: function init() {
             this.defaultValue = JSON.parse(stringify_default()(this.value));
-            var res = [],
-                opt = this.data;
+            var res = [];
+            var opt = this.data;
             var _iteratorNormalCompletion2 = true;
             var _didIteratorError2 = false;
             var _iteratorError2 = undefined;
@@ -11012,7 +11410,7 @@ function cascader__defineProperty(obj, key, value) { if (key in obj) { define_pr
                             var i = _ref4[0];
                             var item = _ref4[1];
 
-                            if (item.value == val) {
+                            if (item.value === val) {
                                 res.push(i);
                                 opt = opt[i].children;
                                 break;
@@ -11103,8 +11501,7 @@ function cascader__defineProperty(obj, key, value) { if (key in obj) { define_pr
                 this.open = false;
             }
         }
-    },
-    components: { vmenu: vb_components_cascader_menu }
+    }
 });
 // CONCATENATED MODULE: ./node_modules/vue-loader/lib/template-compiler?{"id":"data-v-4de936db","hasScoped":false}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./vb/components/cascader/cascader.vue
 var cascader_render = function() {
@@ -11317,16 +11714,17 @@ var badge_prefix = 'ant-badge';
     },
     watch: {
         showDot: function showDot(value) {
-            var that = this,
-                action = 'dotEnter';
+            var _this = this;
+
+            var action = 'dotEnter';
             if (!value) {
                 action = 'dotLeave';
             }
             /* 控制动画Class */
-            that[action] = true;
+            this[action] = true;
             setTimeout(function () {
-                that[action] = false;
-            }, that.animationTime);
+                _this[action] = false;
+            }, this.animationTime);
         }
     }
 });
@@ -11773,9 +12171,11 @@ if (false) {(function () {
 /* harmony default export */ var components_input_input = (input_Component.exports);
 
 // CONCATENATED MODULE: ./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/selector.js?type=script&index=0!./vb/components/input/input-group.vue
-
-
-function input_group__defineProperty(obj, key, value) { if (key in obj) { define_property_default()(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+//
+//
+//
+//
+//
 
 /* harmony default export */ var input_group = ({
     name: 'InputGroup',
@@ -11791,7 +12191,7 @@ function input_group__defineProperty(obj, key, value) { if (key in obj) { define
     },
     computed: {
         wrapClasses: function wrapClasses() {
-            return ['ant-input-group', input_group__defineProperty({}, 'ant-input-group-sm', this.size === 'small'), input_group__defineProperty({}, 'ant-input-group-lg', this.size === 'large'), input_group__defineProperty({}, 'ant-input-group-compact', this.compact === true)];
+            return ['ant-input-group', { 'ant-input-group-sm': this.size === 'small' }, { 'ant-input-group-lg': this.size === 'large' }, { 'ant-input-group-compact': this.compact === true }];
         }
     }
 });
@@ -12233,6 +12633,41 @@ var format_default = /*#__PURE__*/__webpack_require__.n(date_fns_format);
 
 function time_picker_option__defineProperty(obj, key, value) { if (key in obj) { define_property_default()(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
 /* harmony default export */ var time_picker_option = ({
     data: function data() {
         return {
@@ -12593,7 +13028,19 @@ if (false) {(function () {
 /* harmony default export */ var components_time_picker_time_picker_option = (time_picker_option_Component.exports);
 
 // CONCATENATED MODULE: ./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/selector.js?type=script&index=0!./vb/components/time-picker/time-picker.vue
-
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 
@@ -12715,7 +13162,7 @@ if (false) {(function () {
             this.selected = !this.selected;
         },
         setPosition: function setPosition() {
-            if (!this.$el) return;
+            if (!this.$el || !this.$refs.timePicker) return;
             var p = fn_getOffset(this.$refs.timePicker, this.container);
 
             this.style = {
@@ -12904,6 +13351,61 @@ var tabs_style_default = /*#__PURE__*/__webpack_require__.n(tabs_style);
 var tabs__slicedToArray = function () { function sliceIterator(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = get_iterator_default()(arr), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"]) _i["return"](); } finally { if (_d) throw _e; } } return _arr; } return function (arr, i) { if (Array.isArray(arr)) { return arr; } else if (is_iterable_default()(Object(arr))) { return sliceIterator(arr, i); } else { throw new TypeError("Invalid attempt to destructure non-iterable instance"); } }; }();
 
 function tabs__defineProperty(obj, key, value) { if (key in obj) { define_property_default()(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 
@@ -13680,6 +14182,13 @@ if (false) {(function () {
 
 function tab_pane__defineProperty(obj, key, value) { if (key in obj) { define_property_default()(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
+//
+//
+//
+//
+//
+//
+
 
 
 /* harmony default export */ var tab_pane = ({
@@ -13823,6 +14332,104 @@ var date_picker_style_default = /*#__PURE__*/__webpack_require__.n(date_picker_s
 
 var date_picker__typeof = typeof symbol_default.a === "function" && typeof symbol_iterator_default.a === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof symbol_default.a === "function" && obj.constructor === symbol_default.a && obj !== symbol_default.a.prototype ? "symbol" : typeof obj; };
 
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
 
 
 
@@ -13873,19 +14480,19 @@ var _t = mixins_locale.methods.t;
             type: Boolean,
             default: false
         },
-        //选择最大范围限制,以天为单位（只有range为true的时候才起作用）
+        // 选择最大范围限制,以天为单位（只有range为true的时候才起作用）
         maxRange: Number,
-        //是否可以清除
+        // 是否可以清除
         clearable: {
             type: Boolean,
             default: false
         },
-        //显示格式
+        // 显示格式
         format: {
             type: String,
             default: 'yyyy-MM-dd'
         },
-        //禁用
+        // 禁用
         disabled: {
             type: Boolean,
             default: false
@@ -13938,8 +14545,8 @@ var _t = mixins_locale.methods.t;
         label: function label() {
             var val = '';
             if (this.range) {
-                var startTime = '',
-                    endTime = '';
+                var startTime = '';
+                var endTime = '';
                 if (this.startTime && this.endTime) {
                     startTime = this.stringify(this.parse(this.startTime, false));
                     endTime = this.stringify(this.parse(this.endTime, false));
@@ -13949,12 +14556,10 @@ var _t = mixins_locale.methods.t;
                     }
                     val = startTime + ' ~ ' + endTime;
                 }
-            } else {
-                if (this.value) {
-                    val = this.stringify(this.parse(this.value, false));
-                    if (this.showTime) {
-                        val = val + ' ' + this.timeVal[0];
-                    }
+            } else if (this.value) {
+                val = this.stringify(this.parse(this.value, false));
+                if (this.showTime) {
+                    val = val + ' ' + this.timeVal[0];
                 }
             }
             return val;
@@ -14086,17 +14691,16 @@ var _t = mixins_locale.methods.t;
                     return tmpTime;
                 } else if (isLast) {
                     return new Date(tmpTime.getFullYear(), tmpTime.getMonth(), tmpTime.getDate(), 23, 59, 59, 999);
-                } else {
-                    return new Date(tmpTime.getFullYear(), tmpTime.getMonth(), tmpTime.getDate());
                 }
+                return new Date(tmpTime.getFullYear(), tmpTime.getMonth(), tmpTime.getDate());
             }
             return null;
         },
 
-        //初始化时间范围
+        // 初始化时间范围
         initRanges: function initRanges() {
-            var time = new Date(),
-                ranges = [];
+            var time = new Date();
+            var ranges = [];
             ranges.push({
                 name: '今天',
                 start: this.parse(time, false),
@@ -14147,13 +14751,13 @@ var _t = mixins_locale.methods.t;
             this.ranges = ranges;
         },
 
-        //更新所有的日历
+        // 更新所有的日历
         updateAll: function updateAll() {
             this.update(new Date(this.now1), 1);
             this.range && this.update(new Date(this.now2), 2);
         },
 
-        //点击时间输入框的时候触发
+        // 点击时间输入框的时候触发
         click: function click() {
             var _this3 = this;
 
@@ -14164,8 +14768,8 @@ var _t = mixins_locale.methods.t;
                 this.time2 = this.parse(this.endTime);
                 this.now2 = this.parse(this.endTime) || new Date();
             }
-            var rect = this.$el.getBoundingClientRect(),
-                right = document.documentElement.clientWidth - rect.left;
+            var rect = this.$el.getBoundingClientRect();
+            var right = document.documentElement.clientWidth - rect.left;
             right < (this.range ? 441 : 214) && right < rect.left ? this.left = true : this.left = false;
             this.show = !this.show;
 
@@ -14176,7 +14780,7 @@ var _t = mixins_locale.methods.t;
             }
         },
 
-        //选择时间
+        // 选择时间
         select: function select(item, no) {
             this.hidePanel();
 
@@ -14194,7 +14798,7 @@ var _t = mixins_locale.methods.t;
             }
         },
 
-        //确认
+        // 确认
         confirm: function confirm() {
             this.closeDropdown();
             this.$emit('confirm');
@@ -14203,7 +14807,7 @@ var _t = mixins_locale.methods.t;
             this.show = false;
         },
 
-        //选择范围
+        // 选择范围
         selectRange: function selectRange(index) {
             var item = this.ranges[index];
 
@@ -14220,9 +14824,9 @@ var _t = mixins_locale.methods.t;
             this.hidePanel();
         },
 
-        //根据输出类型，获取输出的时间
+        // 根据输出类型，获取输出的时间
         getOutTime: function getOutTime(time) {
-            //                var type = this.value ? typeof(this.value) : typeof(this.startTime);
+            // let type = this.value ? typeof(this.value) : typeof(this.startTime);
             // TODO: 疑问，这里的逻辑判断近乎 Magic 并且在旧的版本引发了 bug：清除时间然后再选会报错
             var type = date_picker__typeof(this.value);
             if (!this.value && this.startTime) type = date_picker__typeof(this.startTime);
@@ -14230,23 +14834,20 @@ var _t = mixins_locale.methods.t;
                 return time.getTime();
             } else if (type === 'object') {
                 return new Date(time);
-            } else {
-                return this.stringify(time);
             }
+            return this.stringify(time);
         },
 
-        //更新时间
+        // 更新时间
         update: function update(time, no) {
-            var i,
-                tmpTime,
-                curFirstDay,
-                lastDay,
-                curDay,
-                day,
-                arr = [];
-            time.setDate(0); //切换到上个月最后一天
-            curFirstDay = time.getDay(); //星期几
-            lastDay = time.getDate(); //上个月的最后一天
+            var i = void 0;
+            var tmpTime = void 0;
+            var day = void 0;
+            var arr = [];
+            time.setDate(0); // 切换到上个月最后一天
+            var curFirstDay = time.getDay(); // 星期几
+            var lastDay = time.getDate(); // 上个月的最后一天;
+
             for (i = curFirstDay; i > 0; i--) {
                 day = lastDay - i + 1;
                 tmpTime = new Date(time.getFullYear(), time.getMonth(), day);
@@ -14258,8 +14859,8 @@ var _t = mixins_locale.methods.t;
                     time: tmpTime
                 });
             }
-            time.setMonth(time.getMonth() + 2, 0); //切换到当前月的最后一天
-            curDay = time.getDate(); //当前月的最后一天
+            time.setMonth(time.getMonth() + 2, 0); // 切换到当前月的最后一天
+            var curDay = time.getDate(); // 当前月的最后一天
             time.setDate(1);
             for (i = 1; i <= curDay; i++) {
                 tmpTime = new Date(time.getFullYear(), time.getMonth(), i);
@@ -14271,7 +14872,7 @@ var _t = mixins_locale.methods.t;
                     time: tmpTime
                 });
             }
-            //下个月的前几天
+            // 下个月的前几天
             for (i = 1; arr.length < 42; i++) {
                 tmpTime = new Date(time.getFullYear(), time.getMonth() + 1, i);
                 tmpTime = this.parse(tmpTime, no === 2);
@@ -14285,16 +14886,14 @@ var _t = mixins_locale.methods.t;
             this['date' + no] = arr;
         },
 
-        //获取时间状态
+        // 获取时间状态
         getTimeStatus: function getTimeStatus(time, no, format) {
-            var status = '',
-                curTime = new Date(),
-                selTime = this['time' + no],
-                tmpTimeVal = this.stringify(time, format || 'yyyy-MM-dd'),
-                //需要查询状态的时间字符串值
-            curTimeVal = this.stringify(curTime, format || 'yyyy-MM-dd'),
-                //当前时间字符串值
-            selTimeVal = this.stringify(selTime, format || 'yyyy-MM-dd'); //选中时间字符串值
+            var status = '';
+            var curTime = new Date();
+            var selTime = this['time' + no];
+            var tmpTimeVal = this.stringify(time, format || 'yyyy-MM-dd'); // 需要查询状态的时间字符串值
+            var curTimeVal = this.stringify(curTime, format || 'yyyy-MM-dd'); // 当前时间字符串值
+            var selTimeVal = this.stringify(selTime, format || 'yyyy-MM-dd'); // 选中时间字符串值
             if (tmpTimeVal === selTimeVal) {
                 status = this.prefix + '-selected-day';
             } else if (tmpTimeVal === curTimeVal) {
@@ -14303,7 +14902,7 @@ var _t = mixins_locale.methods.t;
             if (this.time1 && this.time2 && time >= this.time1 && time <= this.time2) {
                 status += ' ' + this.prefix + '-inrange';
             }
-            if (no == 1 && this.time2) {
+            if (no * 1 === 1 && this.time2) {
                 var minTime = new Date(this.time2);
                 if (this.maxRange) {
                     minTime.setDate(minTime.getDate() - this.maxRange);
@@ -14323,7 +14922,7 @@ var _t = mixins_locale.methods.t;
                     status += ' ' + this.prefix + '-disabled-cell';
                 }
             }
-            if (no == 2 && this.time1) {
+            if (no * 1 === 2 && this.time1) {
                 var maxTime = new Date(this.time1);
                 if (this.maxRange) {
                     maxTime.setDate(maxTime.getDate() + this.maxRange);
@@ -14346,26 +14945,20 @@ var _t = mixins_locale.methods.t;
             return status;
         },
 
-        //将Date转化为指定格式的String
+        // 将Date转化为指定格式的String
         stringify: function stringify(time, format) {
             if (!time) {
                 return '';
             }
             format = format || this.format;
-            var year = time.getFullYear(),
-                //年份
-            month = time.getMonth() + 1,
-                //月份
-            day = time.getDate(),
-                //日
-            hours24 = time.getHours(),
-                //小时
-            hours = hours24 % 12 === 0 ? 12 : hours24 % 12,
-                minutes = time.getMinutes(),
-                //分
-            seconds = time.getSeconds(),
-                //秒
-            milliseconds = time.getMilliseconds(); //毫秒
+            var year = time.getFullYear(); // 年份
+            var month = time.getMonth() + 1; // 月份
+            var day = time.getDate(); // 日
+            var hours24 = time.getHours(); // 小时
+            var hours = hours24 % 12 === 0 ? 12 : hours24 % 12;
+            var minutes = time.getMinutes(); // 分
+            var seconds = time.getSeconds(); // 秒
+            var milliseconds = time.getMilliseconds(); // 毫秒
             var map = {
                 yyyy: year,
                 MM: ('0' + month).slice(-2),
@@ -14387,23 +14980,22 @@ var _t = mixins_locale.methods.t;
             });
         },
 
-        //显示年份选择器
+        // 显示年份选择器
         showYear: function showYear(no) {
             var name = 'showYear' + no;
             this.hidePanel(name);
             this[name] = !this[name];
-            var time = new Date(this['now' + no] || new Date()),
-                selectedYear = time.getFullYear(),
-                num = Math.floor(selectedYear % 10),
-                //获取当前时间个位数
-            arr = [];
-            time.setDate(1); //先设置为第一天，因为月份天数不一样，要不存在bug
+            var time = new Date(this['now' + no] || new Date());
+            var selectedYear = time.getFullYear();
+            var num = Math.floor(selectedYear % 10); // 获取当前时间个位数
+            var arr = [];
+            time.setDate(1); // 先设置为第一天，因为月份天数不一样，要不存在bug
             time.setFullYear(selectedYear - num);
             while (arr.length < 12) {
                 no === 2 && time.setMonth(time.getMonth() + 1, 0);
                 arr.push({
                     year: time.getFullYear(),
-                    status: time.getFullYear() == selectedYear ? 'ant-calendar-year-panel-selected-cell' : ''
+                    status: time.getFullYear() === selectedYear ? 'ant-calendar-year-panel-selected-cell' : ''
                 });
                 time.setDate(1);
                 time.setFullYear(time.getFullYear() + 1);
@@ -14411,68 +15003,68 @@ var _t = mixins_locale.methods.t;
             this['years' + no] = arr;
         },
 
-        //显示月份选择器
+        // 显示月份选择器
         showMonth: function showMonth(no) {
             var name = 'showMonth' + no;
             this.hidePanel(name);
             this[name] = !this[name];
-            var time = new Date(this['now' + no] || new Date()),
-                selectedMonth = time.getMonth(),
-                arr = [];
+            var time = new Date(this['now' + no] || new Date());
+            var selectedMonth = time.getMonth();
+            var arr = [];
             while (arr.length < 12) {
-                time.setDate(1); //先设置为第一天，因为月份天数不一样，要不存在bug
+                time.setDate(1); // 先设置为第一天，因为月份天数不一样，要不存在bug
                 time.setMonth(arr.length);
                 no === 2 && time.setMonth(time.getMonth() + 1, 0);
                 arr.push({
                     month: arr.length + 1,
-                    status: arr.length == selectedMonth ? 'ant-calendar-month-panel-selected-cell' : ''
+                    status: arr.length === selectedMonth ? 'ant-calendar-month-panel-selected-cell' : ''
                 });
             }
             this['months' + no] = arr;
         },
 
-        //切换年份选择器
+        // 切换年份选择器
         changeYearRange: function changeYearRange(no, flag) {
-            var arr = this['years' + no],
-                time = new Date(this['time' + no] || new Date());
+            var arr = this['years' + no];
+            var time = new Date(this['time' + no] || new Date());
             for (var i in arr) {
-                var item = arr[i],
-                    year = item.year + 12 * flag;
-                time.setDate(1); //先设置为第一天，因为月份天数不一样，要不存在bug
+                var item = arr[i];
+                var year = item.year + 12 * flag;
+                time.setDate(1); // 先设置为第一天，因为月份天数不一样，要不存在bug
                 time.setFullYear(year);
                 no === 2 && time.setMonth(time.getMonth() + 1, 0);
                 item.year = year;
-                item.status = year == new Date(this['now' + no] || new Date()).getFullYear() ? 'ant-calendar-year-panel-selected-cell' : '';
+                item.status = year === new Date(this['now' + no] || new Date()).getFullYear() ? 'ant-calendar-year-panel-selected-cell' : '';
             }
         },
 
-        //改变年份
+        // 改变年份
         changeYear: function changeYear(flag, no) {
             var now = this['now' + no];
-            now.setDate(1); //先设置为第一天，因为月份天数不一样，要不存在bug
+            now.setDate(1); // 先设置为第一天，因为月份天数不一样，要不存在bug
             now.setFullYear(now.getFullYear() + flag);
             no === 2 && now.setMonth(now.getMonth() + 1, 0);
             this['now' + no] = new Date(now);
             this.hidePanel();
         },
 
-        //改变月份
+        // 改变月份
         changeMonth: function changeMonth(flag, no) {
             var now = this['now' + no];
-            now.setDate(1); //先设置为第一天，因为月份天数不一样，要不存在bug
+            now.setDate(1); // 先设置为第一天，因为月份天数不一样，要不存在bug
             now.setMonth(now.getMonth() + flag);
             no === 2 && now.setMonth(now.getMonth() + 1, 0);
             this['now' + no] = new Date(now);
             this.hidePanel();
         },
 
-        //选择年份
+        // 选择年份
         selectYear: function selectYear(index, no) {
             if (this['years' + no][index].status.indexOf('ant-calendar-disabled-cell') !== -1) {
                 return;
             }
             for (var i = 0; i < this['years' + no].length; i++) {
-                if (this['years' + no][i].status == 'ant-calendar-year-panel-selected-cell') {
+                if (this['years' + no][i].status === 'ant-calendar-year-panel-selected-cell') {
                     this.$set(this['years' + no][i], 'status', '');
                 }
             }
@@ -14483,14 +15075,14 @@ var _t = mixins_locale.methods.t;
             this.hidePanel();
         },
 
-        //选择月份
+        // 选择月份
         selectMonth: function selectMonth(index, no) {
             if (this['months' + no][index].status.indexOf('ant-calendar-disabled-cell') !== -1) {
                 return;
             }
             for (var i = 0; i < this['months' + no].length; i++) {
-                if (this['months' + no][i].status == 'ant-calendar-month-panel-selected-cell') {
-                    this.$set(this['years' + no][i], 'status', '');
+                if (this['months' + no][i].status === 'ant-calendar-month-panel-selected-cell') {
+                    this.$set(this['months' + no][i], 'status', '');
                 }
             }
             this.$set(this['months' + no][index], 'status', 'ant-calendar-month-panel-selected-cell');
@@ -14500,7 +15092,7 @@ var _t = mixins_locale.methods.t;
             this.hidePanel();
         },
 
-        //隐藏所有面板
+        // 隐藏所有面板
         hidePanel: function hidePanel(name) {
             ['showYear1', 'showYear2', 'showMonth1', 'showMonth2'].map(function (item) {
                 if (item !== name) {
@@ -14509,11 +15101,11 @@ var _t = mixins_locale.methods.t;
             }.bind(this));
         },
 
-        //清除时间
+        // 清除时间
         clear: function clear() {
             this.time1 = this.time2 = this.startTime = this.endTime = null;
             if (!this.range) this.$emit('input', '');
-            this.timeVal = ["00:00", "00:00"];
+            this.timeVal = ['00:00', '00:00'];
             this.timeSelected = false;
             this.now1 = new Date();
             this.now2 = new Date();
@@ -14679,6 +15271,7 @@ var date_picker_render = function() {
                           _vm._l(_vm.ranges, function(item, index) {
                             return [
                               index ? _c("i") : _vm._e(),
+                              _vm._v(" "),
                               _c("a", {
                                 class: item.active ? "on" : "",
                                 domProps: { textContent: _vm._s(item.name) },
@@ -15336,6 +15929,16 @@ var message_style = __webpack_require__(293);
 var message_style_default = /*#__PURE__*/__webpack_require__.n(message_style);
 
 // CONCATENATED MODULE: ./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/selector.js?type=script&index=0!./vb/components/message/notice.vue
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 
@@ -15364,14 +15967,15 @@ var message_style_default = /*#__PURE__*/__webpack_require__.n(message_style);
             prefixCls: 'ant-message'
         };
     },
+
     computed: {
         iconType: function iconType() {
             return {
-                'info': 'info-circle',
-                'success': 'check-circle',
-                'warning': 'exclamation-circle',
-                'error': 'exclamation-circle',
-                'loading': 'loading'
+                info: 'info-circle',
+                success: 'check-circle',
+                warning: 'exclamation-circle',
+                error: 'exclamation-circle',
+                loading: 'loading'
             }[this.type];
         }
     },
@@ -15491,11 +16095,30 @@ if (false) {(function () {
 /* harmony default export */ var components_message_notice = (notice_Component.exports);
 
 // CONCATENATED MODULE: ./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/selector.js?type=script&index=0!./vb/components/message/message.vue
-
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 
 /* harmony default export */ var message_message = ({
+    components: {
+        notice: components_message_notice
+    },
     props: {
         top: {
             type: Number
@@ -15506,12 +16129,13 @@ if (false) {(function () {
             notices: []
         };
     },
+
     methods: {
-        add: function add(notice) {
+        add: function add(not) {
             if (!this.notices.filter(function (v) {
-                return v.selfKey === notice.selfKey;
+                return v.selfKey === not.selfKey;
             }).length) {
-                this.notices.push(notice);
+                this.notices.push(not);
             }
         },
         close: function close(key) {
@@ -15526,9 +16150,6 @@ if (false) {(function () {
             this.$destroy(true);
             this.$el.parentNode.removeChild(this.$el);
         }
-    },
-    components: {
-        notice: components_message_notice
     }
 });
 // CONCATENATED MODULE: ./node_modules/vue-loader/lib/template-compiler?{"id":"data-v-3d70d2eb","hasScoped":false}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./vb/components/message/message.vue
@@ -15616,31 +16237,31 @@ if (false) {(function () {
 
 
 vb_components_message_message.newInstance = function (data) {
-  var div = document.createElement('div');
-  div.innerHTML = '<v-message :top=\'' + data.top + '\' :duration=\'' + data.duration + '\'></v-message>';
-  document.body.appendChild(div);
+    var div = document.createElement('div');
+    div.innerHTML = '<v-message :top=\'' + data.top + '\' :duration=\'' + data.duration + '\'></v-message>';
+    document.body.appendChild(div);
 
-  var message = new external___root___Vue___commonjs___vue___commonjs2___vue___amd___vue___default.a({
-    el: div,
-    data: {},
-    components: { vMessage: vb_components_message_message }
-  }).$children[0];
+    var message = new external___root___Vue___commonjs___vue___commonjs2___vue___amd___vue___default.a({
+        el: div,
+        data: {},
+        components: { vMessage: vb_components_message_message }
+    }).$children[0];
 
-  return {
-    notice: function notice(noticeProps) {
-      message.add(noticeProps);
-    },
-    removeNotice: function removeNotice(key) {
-      message.close(key);
-    },
+    return {
+        notice: function notice(noticeProps) {
+            message.add(noticeProps);
+        },
+        removeNotice: function removeNotice(key) {
+            message.close(key);
+        },
 
 
-    component: message,
+        component: message,
 
-    destroy: function destroy() {
-      message.destroy();
-    }
-  };
+        destroy: function destroy() {
+            message.destroy();
+        }
+    };
 };
 
 /* harmony default export */ var vb_components_message_message_0 = (vb_components_message_message);
@@ -15654,70 +16275,68 @@ var messageInstance = void 0;
 var message_key = 1;
 
 function getMessageInstance() {
-  messageInstance = messageInstance || vb_components_message_message_0.newInstance({
-    top: message_top
-  });
+    messageInstance = messageInstance || vb_components_message_message_0.newInstance({
+        top: message_top
+    });
 
-  return messageInstance;
+    return messageInstance;
 }
 
 function vb_components_message_notice(content) {
-  var duration = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : defaultDuration;
-  var onClose = arguments[2];
-  var selfKey = arguments[3];
-  var type = arguments[4];
+    var duration = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : defaultDuration;
+    var onClose = arguments[2];
+    var selfKey = arguments[3];
+    var type = arguments[4];
 
-  var instance = getMessageInstance();
+    var instance = getMessageInstance();
 
-  instance.notice({
-    selfKey: selfKey || message_key + '',
-    duration: duration,
-    content: content,
-    type: type,
-    onClose: onClose
-  });
+    instance.notice({
+        selfKey: selfKey || '' + message_key,
+        duration: duration,
+        content: content,
+        type: type,
+        onClose: onClose
+    });
 
-  return function () {
     var target = message_key++;
     return function () {
-      instance.removeNotice(target);
+        instance.removeNotice(target);
     };
-  }();
 }
 
 /* harmony default export */ var components_message = ({
-  info: function info(content, duration, onClose, selfKey) {
-    return vb_components_message_notice(content, duration, onClose, selfKey, 'info');
-  },
-  success: function success(content, duration, onClose, selfKey) {
-    return vb_components_message_notice(content, duration, onClose, selfKey, 'success');
-  },
-  error: function error(content, duration, onClose, selfKey) {
-    return vb_components_message_notice(content, duration, onClose, selfKey, 'error');
-  },
-  warning: function warning(content, duration, onClose, selfKey) {
-    return vb_components_message_notice(content, duration, onClose, selfKey, 'warning');
-  },
-  loading: function loading(content, duration, onClose, selfKey) {
-    return vb_components_message_notice(content, duration, onClose, selfKey, 'loading');
-  },
-  config: function config(options) {
-    if (options.top) {
-      message_top = options.top;
-      // delete messageInstance for new defaultTop
-      messageInstance = null;
-    }
+    info: function info(content, duration, onClose, selfKey) {
+        return vb_components_message_notice(content, duration, onClose, selfKey, 'info');
+    },
+    success: function success(content, duration, onClose, selfKey) {
+        return vb_components_message_notice(content, duration, onClose, selfKey, 'success');
+    },
+    error: function error(content, duration, onClose, selfKey) {
+        return vb_components_message_notice(content, duration, onClose, selfKey, 'error');
+    },
+    warning: function warning(content, duration, onClose, selfKey) {
+        return vb_components_message_notice(content, duration, onClose, selfKey, 'warning');
+    },
+    loading: function loading(content, duration, onClose, selfKey) {
+        return vb_components_message_notice(content, duration, onClose, selfKey, 'loading');
+    },
+    config: function config(options) {
+        if (options.top) {
+            message_top = options.top;
+            // delete messageInstance for new defaultTop
+            messageInstance = null;
+        }
 
-    if (options.duration) {
-      defaultDuration = options.duration;
+        if (options.duration) {
+            defaultDuration = options.duration;
+        }
+    },
+    destroy: function destroy() {
+        if (messageInstance) {
+            messageInstance.destroy();
+            messageInstance = null;
+        }
     }
-  },
-  destroy: function destroy() {
-    if (messageInstance) {
-      messageInstance.destroy();
-      messageInstance = null;
-    }
-  }
 });
 // EXTERNAL MODULE: ./vb/components/modal/style/index.less
 var modal_style = __webpack_require__(294);
@@ -16151,11 +16770,12 @@ var KeyCode = {
    * WIN_IME
    */
   WIN_IME: 229
+};
 
-  /*
-   whether text and modified key is entered at the same time.
-   */
-};KeyCode.isTextModifyingKeyEvent = function (e) {
+/*
+ whether text and modified key is entered at the same time.
+ */
+KeyCode.isTextModifyingKeyEvent = function (e) {
   var keyCode = e.keyCode;
   if (e.altKey && !e.ctrlKey || e.metaKey ||
   // Function keys don't generate text
@@ -16242,10 +16862,89 @@ KeyCode.isCharacterKey = function (keyCode) {
 
 /* harmony default export */ var key_code = (KeyCode);
 // CONCATENATED MODULE: ./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/selector.js?type=script&index=0!./vb/components/modal/dialog.vue
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 
 var uuid = 0;
+var scrollbarWidth = void 0;
+var scrollbarMeasure = {
+    position: 'absolute',
+    top: '-9999px',
+    width: '50px',
+    height: '50px',
+    overflow: 'scroll'
+};
+
+function dialog_getScroll(el) {
+    var doc = el.ownerDocument;
+    var w = doc.defaultView || doc.parentWindow;
+    return {
+        x: w.pageXOffset,
+        y: w.pageYOffset
+    };
+}
+
+function hasScrollbar() {
+    return document.body.clientHeight < document.body.scrollHeight;
+}
+
+function getScrollbarWidth() {
+    if (!hasScrollbar()) return;
+
+    if (scrollbarWidth !== undefined) {
+        return scrollbarWidth;
+    }
+    var scrollDiv = document.createElement('div');
+    for (var scrollProp in scrollbarMeasure) {
+        if (scrollbarMeasure.hasOwnProperty(scrollProp)) {
+            scrollDiv.style[scrollProp] = scrollbarMeasure[scrollProp];
+        }
+    }
+    document.body.appendChild(scrollDiv);
+    var _scrollbarWidth = scrollDiv.offsetWidth - scrollDiv.clientWidth;
+    document.body.removeChild(scrollDiv);
+    scrollbarWidth = _scrollbarWidth;
+    return scrollbarWidth;
+}
+
+function setTransformOrigin(node, value) {
+    var style = node.style;
+    ['Webkit', 'Moz', 'Ms', 'ms'].forEach(function (prefix) {
+        style[prefix + 'TransformOrigin'] = value;
+    });
+    style.transformOrigin = value;
+}
+
 /* harmony default export */ var dialog = ({
     name: 'Dialog',
     data: function data() {
@@ -16296,23 +16995,22 @@ var uuid = 0;
         }
     },
     methods: {
-        beforeEnter: function beforeEnter(el) {
-            var that = this;
+        beforeEnter: function beforeEnter() {
+            var _this = this;
+
             this.lastOutSideFocusNode = document.activeElement;
             if (this.visible) {
-                /* 不使用事件排队， that.$el.querySelector查询不到子元素儿抛错，可能系visible渲染是异步的*/
+                // 不使用事件排队， that.$el.querySelector查询不到子元素儿抛错，可能系visible渲染是异步的
                 setTimeout(function () {
-                    that.$refs.dialog.focus();
-                    that._startAnimation(that.$el.querySelector('.' + that.prefixCls + '-wrap'));
-                    that._setScrollbar();
+                    _this.$refs.dialog.focus();
+                    _this._startAnimation(_this.$el.querySelector('.' + _this.prefixCls + '-wrap'));
+                    _this._setScrollbar();
                 }, 0);
             }
         },
-
-        afterLeave: function afterLeave(el) {
+        afterLeave: function afterLeave() {
             this._resetScrollbar();
         },
-
         _onMaskClick: function _onMaskClick() {
             if (this.fromInner) {
                 return this.fromInner = false;
@@ -16365,60 +17063,10 @@ var uuid = 0;
             this.fromInner = true;
         },
         _close: function _close() {
-            this.$emit("close");
+            this.$emit('close');
         }
     }
 });
-
-var scrollbarWidth = void 0;
-var scrollbarMeasure = {
-    position: 'absolute',
-    top: '-9999px',
-    width: '50px',
-    height: '50px',
-    overflow: 'scroll'
-};
-
-function dialog_getScroll(el) {
-    var doc = el.ownerDocument;
-    var w = doc.defaultView || doc.parentWindow;
-    var ret = {
-        x: w.pageXOffset,
-        y: w.pageYOffset
-    };
-    return ret;
-}
-
-function getScrollbarWidth() {
-    if (!hasScrollbar()) return;
-
-    if (scrollbarWidth !== undefined) {
-        return scrollbarWidth;
-    }
-    var scrollDiv = document.createElement('div');
-    for (var scrollProp in scrollbarMeasure) {
-        if (scrollbarMeasure.hasOwnProperty(scrollProp)) {
-            scrollDiv.style[scrollProp] = scrollbarMeasure[scrollProp];
-        }
-    }
-    document.body.appendChild(scrollDiv);
-    var _scrollbarWidth = scrollDiv.offsetWidth - scrollDiv.clientWidth;
-    document.body.removeChild(scrollDiv);
-    scrollbarWidth = _scrollbarWidth;
-    return scrollbarWidth;
-}
-
-function hasScrollbar() {
-    return document.body.clientHeight < document.body.scrollHeight;
-}
-
-function setTransformOrigin(node, value) {
-    var style = node.style;
-    ['Webkit', 'Moz', 'Ms', 'ms'].forEach(function (prefix) {
-        style[prefix + 'TransformOrigin'] = value;
-    });
-    style['transformOrigin'] = value;
-}
 // CONCATENATED MODULE: ./node_modules/vue-loader/lib/template-compiler?{"id":"data-v-33bca32e","hasScoped":false}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./vb/components/modal/dialog.vue
 var dialog_render = function() {
   var _vm = this
@@ -16985,7 +17633,23 @@ var more_panel_style = __webpack_require__(295);
 var more_panel_style_default = /*#__PURE__*/__webpack_require__.n(more_panel_style);
 
 // CONCATENATED MODULE: ./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/selector.js?type=script&index=0!./vb/components/more-panel/more-panel.vue
-
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ var more_panel = ({
     name: 'MorePanel',
@@ -17024,31 +17688,32 @@ var more_panel_style_default = /*#__PURE__*/__webpack_require__.n(more_panel_sty
         }
     },
     mounted: function mounted() {
-        var _this = this;
-
         this.panelPR = this.$refs.panelControl.offsetWidth + 'px';
         this.ifShowBtn();
 
         if (!this.bindResize) {
-            window.addEventListener("resize", function () {
-                _this.ifShowBtn();
-            }, false);
+            window.addEventListener('resize', this.ifShowBtn, false);
             this.bindResize = true;
         }
     },
 
     methods: {
         ifShowBtn: function ifShowBtn() {
-            var _this2 = this;
+            var _this = this;
 
             if (!this.$el) return;
 
             this.$nextTick(function () {
-                _this2.showBtn = _this2.$refs.panelForm.offsetHeight > _this2.originalHeight;
+                _this.showBtn = _this.$refs.panelForm.offsetHeight > _this.originalHeight;
             });
         },
         click: function click() {
             this.collapse = !this.collapse;
+        }
+    },
+    beforeDestroy: function beforeDestroy() {
+        if (this.bindResize) {
+            window.removeEventListener('resize', this.ifShowBtn);
         }
     }
 });
@@ -17185,6 +17850,17 @@ var radio_style_default = /*#__PURE__*/__webpack_require__.n(radio_style);
 
 function radio__defineProperty(obj, key, value) { if (key in obj) { define_property_default()(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
 /* harmony default export */ var radio_radio = ({
     name: 'Radio',
     data: function data() {
@@ -17197,7 +17873,7 @@ function radio__defineProperty(obj, key, value) { if (key in obj) { define_prope
     props: {
         type: {
             type: String,
-            default: 'radio' //或者button
+            default: 'radio' // 或者button
         },
         value: {
             type: [String, Number, Boolean],
@@ -17238,13 +17914,12 @@ function radio__defineProperty(obj, key, value) { if (key in obj) { define_prope
             }
         },
         selected: function selected() {
-            return this.model == this.label;
+            return this.model === this.label;
         },
         isDisabled: function isDisabled() {
-            return this.isGroup ? this.$parent.disabled ? true : this.disabled : this.disabled;
+            return this.isGroup ? this.$parent.disabled || this.disabled : this.disabled;
         }
     },
-
     mounted: function mounted() {
         if (this.type === 'button') {
             this.prefixCls = 'ant-radio-button';
@@ -17350,6 +18025,18 @@ if (false) {(function () {
 
 function radio_group__defineProperty(obj, key, value) { if (key in obj) { define_property_default()(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
 
 
 
@@ -17363,6 +18050,7 @@ function radio_group__defineProperty(obj, key, value) { if (key in obj) { define
             selectValue: ''
         };
     },
+
     props: {
         type: {
             type: String,
@@ -17373,7 +18061,7 @@ function radio_group__defineProperty(obj, key, value) { if (key in obj) { define
             default: ''
         },
         data: {
-            type: Array, //[{value:'',text:'',disabled:true/false}]
+            type: Array, // [{value:'',text:'',disabled:true/false}]
             default: function _default() {
                 return [];
             }
@@ -17591,7 +18279,7 @@ function checkbox__defineProperty(obj, key, value) { if (key in obj) { define_pr
         };
     },
     mounted: function mounted() {
-        if (this.$parent.$options.name == 'CheckboxGroup') {
+        if (this.$parent.$options.name === 'CheckboxGroup') {
             this.parentIsGroup = true;
         }
     },
@@ -17608,8 +18296,8 @@ function checkbox__defineProperty(obj, key, value) { if (key in obj) { define_pr
             this.innerValue = _value;
         },
         innerValue: function innerValue(value) {
-            this.$emit("change", value);
-            this.$emit("input", value);
+            this.$emit('change', value);
+            this.$emit('input', value);
             this.dispatch('CheckboxGroup', 'checkbox.change', [this.trueValue === value, this.trueValue]);
         }
     },
@@ -17804,7 +18492,7 @@ if (false) {(function () {
         }
     },
     watch: {
-        value: function value(val) {
+        value: function value() {
             this.setChecked();
         },
         innerValue: function innerValue(value) {
@@ -19027,7 +19715,23 @@ var notification_style = __webpack_require__(300);
 var notification_style_default = /*#__PURE__*/__webpack_require__.n(notification_style);
 
 // CONCATENATED MODULE: ./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/selector.js?type=script&index=0!./vb/components/notification/notice.vue
-
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ var notification_notice = ({
     props: {
@@ -19064,14 +19768,12 @@ var notification_style_default = /*#__PURE__*/__webpack_require__.n(notification
 
     computed: {
         iconType: function iconType() {
-            var iconClass = {
-                'info': 'info-circle-o',
-                'success': 'check-circle-o',
-                'error': 'cross-circle-o',
-                'warning': 'exclamation-circle-o'
+            return {
+                info: 'info-circle-o',
+                success: 'check-circle-o',
+                error: 'cross-circle-o',
+                warning: 'exclamation-circle-o'
             }[this.type] || 'info-circle';
-
-            return iconClass;
         }
     },
     mounted: function mounted() {
@@ -19203,11 +19905,21 @@ if (false) {(function () {
 /* harmony default export */ var vb_components_notification_notice = (notification_notice_Component.exports);
 
 // CONCATENATED MODULE: ./node_modules/babel-loader/lib!./node_modules/vue-loader/lib/selector.js?type=script&index=0!./vb/components/notification/notification.vue
-
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 
 /* harmony default export */ var notification_notification = ({
+    components: {
+        notice: vb_components_notification_notice
+    },
     props: {
         top: {
             type: Number
@@ -19231,6 +19943,7 @@ if (false) {(function () {
             notices: []
         };
     },
+
     computed: {
         wrapStyles: function wrapStyles() {
             switch (this.placement) {
@@ -19262,11 +19975,11 @@ if (false) {(function () {
         }
     },
     methods: {
-        add: function add(notice) {
+        add: function add(not) {
             if (!this.notices.filter(function (v) {
-                return v.selfKey === notice.selfKey;
+                return v.selfKey === not.selfKey;
             }).length) {
-                this.notices.push(notice);
+                this.notices.push(not);
             }
         },
         close: function close(key) {
@@ -19277,9 +19990,6 @@ if (false) {(function () {
                 }
             }
         }
-    },
-    components: {
-        notice: vb_components_notification_notice
     }
 });
 // CONCATENATED MODULE: ./node_modules/vue-loader/lib/template-compiler?{"id":"data-v-09d1590a","hasScoped":false}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./vb/components/notification/notification.vue
@@ -19371,31 +20081,31 @@ if (false) {(function () {
 
 
 vb_components_notification_notification.newInstance = function (data) {
-  var div = document.createElement('div');
-  div.innerHTML = '<v-notification :top=\'' + data.top + '\' :bottom=\'' + data.bottom + '\' placement=\'' + data.placement + '\' :duration=\'' + data.duration + '\'></v-notification>';
-  document.body.appendChild(div);
+    var div = document.createElement('div');
+    div.innerHTML = '<v-notification :top=\'' + data.top + '\' :bottom=\'' + data.bottom + '\' placement=\'' + data.placement + '\' :duration=\'' + data.duration + '\'></v-notification>';
+    document.body.appendChild(div);
 
-  var notification = new external___root___Vue___commonjs___vue___commonjs2___vue___amd___vue___default.a({
-    el: div,
-    data: {},
-    components: { vNotification: vb_components_notification_notification }
-  }).$children[0];
+    var notification = new external___root___Vue___commonjs___vue___commonjs2___vue___amd___vue___default.a({
+        el: div,
+        data: {},
+        components: { vNotification: vb_components_notification_notification }
+    }).$children[0];
 
-  return {
-    notice: function notice(noticeProps) {
-      notification.add(noticeProps);
-    },
-    removeNotice: function removeNotice(key) {
-      notification.close(key);
-    },
+    return {
+        notice: function notice(noticeProps) {
+            notification.add(noticeProps);
+        },
+        removeNotice: function removeNotice(key) {
+            notification.close(key);
+        },
 
 
-    component: notification,
+        component: notification,
 
-    destroy: function destroy() {
-      notification.destroy();
-    }
-  };
+        destroy: function destroy() {
+            notification.destroy();
+        }
+    };
 };
 
 /* harmony default export */ var vb_components_notification_notification_0 = (vb_components_notification_notification);
@@ -19404,87 +20114,85 @@ vb_components_notification_notification.newInstance = function (data) {
 
 
 var notification_defaultDuration = 4.5;
-
 var notification_top = 24;
 var bottom = 24;
-var duration = notification_defaultDuration;
 var placement = 'topRight';
 var notificationInstance = void 0;
 var notification_key = 1;
 
 function getNotificationInstance() {
-  notificationInstance = notificationInstance || vb_components_notification_notification_0.newInstance({
-    top: notification_top,
-    bottom: bottom,
-    duration: duration,
-    placement: placement
-  });
+    notificationInstance = notificationInstance || vb_components_notification_notification_0.newInstance({
+        top: notification_top,
+        bottom: bottom,
+        duration: notification_defaultDuration,
+        placement: placement
+    });
 
-  return notificationInstance;
+    return notificationInstance;
 }
 
 function vb_components_notification_notice_0(message, description) {
-  var duration = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : notification_defaultDuration;
-  var onClose = arguments[3];
-  var selfKey = arguments[4];
-  var type = arguments[5];
+    var duration = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : notification_defaultDuration;
+    var onClose = arguments[3];
+    var selfKey = arguments[4];
+    var type = arguments[5];
 
-  var instance = getNotificationInstance();
+    var instance = getNotificationInstance();
 
-  instance.notice({
-    selfKey: selfKey || notification_key + '',
-    duration: duration,
-    message: message,
-    description: description,
-    type: type,
-    onClose: onClose
-  });
+    instance.notice({
+        selfKey: selfKey || '' + notification_key,
+        duration: duration,
+        message: message,
+        description: description,
+        type: type,
+        onClose: onClose
+    });
 
-  notification_key++;
+    notification_key++;
 }
 
 function notification__close(selfKey) {
-  var instance = getNotificationInstance();
-  instance.removeNotice(selfKey);
+    var instance = getNotificationInstance();
+    instance.removeNotice(selfKey);
 }
 
 /* harmony default export */ var components_notification = ({
-  info: function info(config) {
-    return vb_components_notification_notice_0(config.message, config.description, config.duration, config.onClose, config.selfKey, 'info');
-  },
-  success: function success(config) {
-    return vb_components_notification_notice_0(config.message, config.description, config.duration, config.onClose, config.selfKey, 'success');
-  },
-  error: function error(config) {
-    return vb_components_notification_notice_0(config.message, config.description, config.duration, config.onClose, config.selfKey, 'error');
-  },
-  warning: function warning(config) {
-    return vb_components_notification_notice_0(config.message, config.description, config.duration, config.onClose, config.selfKey, 'warning');
-  },
-  open: function open(config) {
-    return vb_components_notification_notice_0(config.message, config.description, config.duration, config.onClose, config.selfKey, '');
-  },
-  close: function close(selfKey) {
-    notification__close(selfKey);
-  },
-  config: function config(options) {
-    if (options.top) {
-      notification_top = options.top;
+    info: function info(config) {
+        return vb_components_notification_notice_0(config.message, config.description, config.duration, config.onClose, config.selfKey, 'info');
+    },
+    success: function success(config) {
+        return vb_components_notification_notice_0(config.message, config.description, config.duration, config.onClose, config.selfKey, 'success');
+    },
+    error: function error(config) {
+        return vb_components_notification_notice_0(config.message, config.description, config.duration, config.onClose, config.selfKey, 'error');
+    },
+    warning: function warning(config) {
+        return vb_components_notification_notice_0(config.message, config.description, config.duration, config.onClose, config.selfKey, 'warning');
+    },
+    open: function open(config) {
+        return vb_components_notification_notice_0(config.message, config.description, config.duration, config.onClose, config.selfKey, '');
+    },
+    close: function close(selfKey) {
+        notification__close(selfKey);
+    },
+    config: function config(options) {
+        if (options.top) {
+            notification_top = options.top;
+        }
+        if (options.bottom) {
+            bottom = options.bottom;
+        }
+        if (options.duration) {
+            notification_defaultDuration = options.duration;
+        }
+        if (options.placement) {
+            placement = options.placement;
+        }
+        // delete notificationInstance
+        if (placement !== undefined || bottom !== undefined || notification_top !== undefined) {
+            notificationInstance = null;
+        }
     }
-    if (options.bottom) {
-      bottom = options.bottom;
-    }
-    if (options.duration) {
-      duration = options.duration;
-    }
-    if (options.placement) {
-      placement = options.placement;
-    }
-    // delete notificationInstance
-    if (placement !== undefined || bottom !== undefined || notification_top !== undefined) {
-      notificationInstance = null;
-    }
-  }
 });
 // EXTERNAL MODULE: ./vb/components/form/style/index.less
 var form_style = __webpack_require__(301);
@@ -19549,7 +20257,7 @@ var form_style_default = /*#__PURE__*/__webpack_require__.n(form_style);
 
             var valid = true;
             var count = 0;
-            this.fields.forEach(function (field, index) {
+            this.fields.forEach(function (field) {
                 field.validate('', function (errors) {
                     if (errors) {
                         valid = false;
@@ -19561,8 +20269,8 @@ var form_style_default = /*#__PURE__*/__webpack_require__.n(form_style);
             });
         },
         validateField: function validateField(prop, cb) {
-            var field = this.fields.filter(function (field) {
-                return field.prop === prop;
+            var field = this.fields.filter(function (f) {
+                return f.prop === prop;
             })[0];
             if (!field) {
                 throw new Error('must call validateField with valid prop string!');
@@ -20840,6 +21548,21 @@ Schema.messages = messages_messages;
 
 function form_item__defineProperty(obj, key, value) { if (key in obj) { define_property_default()(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
 
 
 
@@ -20870,6 +21593,7 @@ function getPropByPath(obj, path) {
 /* harmony default export */ var form_item = ({
     name: 'FormItem',
     mixins: [emitter],
+    components: { vCol: components_grid_col },
     data: function data() {
         return {
             formPrefix: 'ant-form',
@@ -20910,7 +21634,6 @@ function getPropByPath(obj, path) {
             default: true
         }
     },
-    components: { vCol: components_grid_col },
     watch: {
         help: function help(value) {
             this.validateMessage = value;
@@ -20980,6 +21703,7 @@ function getPropByPath(obj, path) {
                         _this.isRequired = true;
                         return false;
                     }
+                    return true;
                 });
                 this.$on('form.blur', this.onFieldBlur);
                 this.$on('form.change', this.onFieldChange);
@@ -21012,7 +21736,7 @@ function getPropByPath(obj, path) {
 
             model[this.prop] = this.fieldValue;
 
-            validator.validate(model, { firstFields: true }, function (errors, fields) {
+            validator.validate(model, { firstFields: true }, function (errors) {
                 _this2.validateState = !errors ? 'success' : 'error';
                 _this2.validateMessage = errors ? errors[0].message : '';
 
@@ -21516,7 +22240,7 @@ function data_table__defineProperty(obj, key, value) { if (key in obj) { define_
                 return [];
             }
         },
-        //表头信息
+        // 表头信息
         columns: {
             type: Array,
             required: true
@@ -21535,12 +22259,12 @@ function data_table__defineProperty(obj, key, value) { if (key in obj) { define_
             type: Boolean,
             default: false
         },
-        //分页大小
+        // 分页大小
         pageSize: {
             type: Number,
             default: 10
         },
-        //当前页数
+        // 当前页数
         pageNum: {
             type: Number,
             default: 1
@@ -21558,11 +22282,11 @@ function data_table__defineProperty(obj, key, value) { if (key in obj) { define_
                 return {};
             }
         },
-        //行选择配置
+        // 行选择配置
         checkType: {
             type: String,
             validator: function validator(value) {
-                return value == "checkbox" || value == "radio";
+                return value === 'checkbox' || value === 'radio';
             }
         },
         // 点击行选中
@@ -21570,12 +22294,12 @@ function data_table__defineProperty(obj, key, value) { if (key in obj) { define_
             type: Boolean,
             default: false
         },
-        //距离viewport底部的距离
+        // 距离viewport底部的距离
         bottomGap: {
             type: Number,
             default: 0
         },
-        //固定高度
+        // 固定高度
         height: {
             type: Number,
             default: null
@@ -21590,7 +22314,7 @@ function data_table__defineProperty(obj, key, value) { if (key in obj) { define_
             type: Number,
             default: 0
         },
-        //是否启用树形表格
+        // 是否启用树形表格
         treeTable: {
             type: Boolean,
             default: false
@@ -21608,31 +22332,31 @@ function data_table__defineProperty(obj, key, value) { if (key in obj) { define_
      */
     data: function data() {
         return {
-            //当前分页数据,默认没有
+            // 当前分页数据,默认没有
             current: [],
             initFlag: false,
             // 默认总数
             total: 0,
             // class前缀
             prefix: 'ant-table',
-            contentClass: "ant-table-content",
+            contentClass: 'ant-table-content',
             // 默认加载第一页
             defaultCurrent: 1,
-            //加载状态
+            // 加载状态
             loading: false,
             sortParams: {},
             //                排序模式:single和multi,单参数和多参数
             sortModel: 'single',
             rowSelectionStates: [],
             tableBodyScrollLeft: 0,
-            tableBodyWidth: "100%",
+            tableBodyWidth: '100%',
             tableBodyHeight: null,
             pageNumber: this.pageNum,
             pageSizeT: this.pageSize,
             paramsName: {},
-            //是否修正滚动条宽度误差（在fixedRight模式下，右侧固定表头由于定位基点不同，需要修正滚动条宽度误差，仅限于存在竖向滚动条时）
+            // 是否修正滚动条宽度误差（在fixedRight模式下，右侧固定表头由于定位基点不同，需要修正滚动条宽度误差，仅限于存在竖向滚动条时）
             isFixScrollbar: false,
-            //滚动条宽度
+            // 滚动条宽度
             scrollbarWidth: 15,
             hoverIndex: null
         };
@@ -21640,7 +22364,7 @@ function data_table__defineProperty(obj, key, value) { if (key in obj) { define_
     created: function created() {
         var _this = this;
 
-        //数据请求参数配置
+        // 数据请求参数配置
         this.paramsName = assign_default()({}, {
             pageNumber: 'pageNo',
             pageSize: 'pageSize',
@@ -21649,14 +22373,14 @@ function data_table__defineProperty(obj, key, value) { if (key in obj) { define_
             sortColumns: 'sortColumns'
         }, this.responseParamsName);
 
-        //treetable配置项
+        // treetable配置项
         this.treeTableOption = assign_default()({}, {
-            idKey: "id",
-            pidKey: "pid",
+            idKey: 'id',
+            pidKey: 'pid',
             indent: 4,
             position: 0,
-            sortKey: null, //启用客户端节点排序，指定排序的字段
-            order: "asc", //排序的顺序,
+            sortKey: null, // 启用客户端节点排序，指定排序的字段
+            order: 'asc', // 排序的顺序,
             isAsync: false,
             loadChildren: null
         }, this.treeOption);
@@ -21676,8 +22400,10 @@ function data_table__defineProperty(obj, key, value) { if (key in obj) { define_
         }
     },
     mounted: function mounted() {
+        var _this2 = this;
+
         this.$nextTick(function () {
-            this.calculateSize();
+            _this2.calculateSize();
         });
     },
     updated: function updated() {
@@ -21686,17 +22412,17 @@ function data_table__defineProperty(obj, key, value) { if (key in obj) { define_
 
     methods: {
         getScrollbarWidth: function getScrollbarWidth() {
-            var outer = document.createElement("div");
-            outer.style.visibility = "hidden";
-            outer.style.width = "100px";
-            outer.style.position = "fixed";
+            var outer = document.createElement('div');
+            outer.style.visibility = 'hidden';
+            outer.style.width = '100px';
+            outer.style.position = 'fixed';
             document.body.appendChild(outer);
             var widthNoScroll = outer.offsetWidth;
             // force scrollbars
-            outer.style.overflow = "scroll";
+            outer.style.overflow = 'scroll';
             // add innerdiv
-            var inner = document.createElement("div");
-            inner.style.width = "100%";
+            var inner = document.createElement('div');
+            inner.style.width = '100%';
             outer.appendChild(inner);
             var widthWithScroll = inner.offsetWidth;
             // remove divs
@@ -21704,13 +22430,13 @@ function data_table__defineProperty(obj, key, value) { if (key in obj) { define_
             return widthNoScroll - widthWithScroll;
         },
         clickCheck: function clickCheck(index, event) {
-            //组装消息
+            // 组装消息
             var item = this.items[index];
             var msg = assign_default()({
                 index: index,
                 checked: event.target.checked
             }, item);
-            //派发事件
+            // 派发事件
             this.$emit('select', msg);
         },
 
@@ -21720,7 +22446,7 @@ function data_table__defineProperty(obj, key, value) { if (key in obj) { define_
          */
         pageChange: function pageChange(page) {
             this.pageNumber = page;
-            //不直接修改pageNum,传递给loadData,待数据加载成功之后修改pageNum
+            // 不直接修改pageNum,传递给loadData,待数据加载成功之后修改pageNum
             this.loadData({ pageNum: page });
         },
 
@@ -21738,7 +22464,7 @@ function data_table__defineProperty(obj, key, value) { if (key in obj) { define_
          * @param pageSize
          */
         sort: function sort(column, order) {
-            if (this.sortModel == "single") {
+            if (this.sortModel === 'single') {
                 this.setCurrentSort(column, order);
             } else {
                 this.setSortParams(column, order);
@@ -21771,7 +22497,7 @@ function data_table__defineProperty(obj, key, value) { if (key in obj) { define_
                 for (var _iterator = get_iterator_default()(this.columns), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
                     var column = _step.value;
 
-                    if (typeof column.sort == 'string') {
+                    if (typeof column.sort === 'string') {
                         column.sort = true;
                     }
                 }
@@ -21793,7 +22519,7 @@ function data_table__defineProperty(obj, key, value) { if (key in obj) { define_
             this.currentSort = sortColumn;
             sortColumn.sort = order;
             var sortParams = {};
-            if (order == 'asc' || order == 'desc') {
+            if (order === 'asc' || order === 'desc') {
                 sortParams[this.paramsName.sortColumns] = sortColumn.field + ' ' + sortColumn.sort + ' ';
             }
             this.sortParams = sortParams;
@@ -21801,7 +22527,7 @@ function data_table__defineProperty(obj, key, value) { if (key in obj) { define_
         setSortParams: function setSortParams(sortColumn, order) {
             sortColumn.sort = order;
 
-            var sortStr = "";
+            var sortStr = '';
             var _iteratorNormalCompletion2 = true;
             var _didIteratorError2 = false;
             var _iteratorError2 = undefined;
@@ -21810,7 +22536,7 @@ function data_table__defineProperty(obj, key, value) { if (key in obj) { define_
                 for (var _iterator2 = get_iterator_default()(this.columns), _step2; !(_iteratorNormalCompletion2 = (_step2 = _iterator2.next()).done); _iteratorNormalCompletion2 = true) {
                     var column = _step2.value;
 
-                    if (typeof column.sort == 'string') {
+                    if (typeof column.sort === 'string') {
                         sortStr += column.field + ' ' + column.sort + ' ';
                     }
                 }
@@ -21834,7 +22560,7 @@ function data_table__defineProperty(obj, key, value) { if (key in obj) { define_
             this.sortParams = sortParams;
         },
         getSortParams: function getSortParams() {
-            var sortStr = "";
+            var sortStr = '';
             var _iteratorNormalCompletion3 = true;
             var _didIteratorError3 = false;
             var _iteratorError3 = undefined;
@@ -21843,7 +22569,7 @@ function data_table__defineProperty(obj, key, value) { if (key in obj) { define_
                 for (var _iterator3 = get_iterator_default()(this.columns), _step3; !(_iteratorNormalCompletion3 = (_step3 = _iterator3.next()).done); _iteratorNormalCompletion3 = true) {
                     var column = _step3.value;
 
-                    if (typeof column.sort == 'string') {
+                    if (typeof column.sort === 'string') {
                         sortStr += column.field + ' ' + column.sort + ' ';
                     }
                 }
@@ -21873,53 +22599,52 @@ function data_table__defineProperty(obj, key, value) { if (key in obj) { define_
          * @param params
          */
         loadData: function loadData(params) {
-            var _this2 = this;
+            var _this3 = this;
 
             params = assign_default()({}, params);
-            var self = this;
-            self.loading = true;
-            //拼装请求参数
+            this.loading = true;
+            // 拼装请求参数
             var remoteParams = assign_default()({}, this.sortParams);
-            remoteParams[this.paramsName.pageNumber] = params.pageNum || self.pageNumber;
+            remoteParams[this.paramsName.pageNumber] = params.pageNum || this.pageNumber;
             remoteParams[this.paramsName.pageSize] = params.pageSize || this.pageSizeT;
 
             if (params.pageNum) {
-                self.pageNumber = params.pageNum;
+                this.pageNumber = params.pageNum;
             }
             if (params.pageSize) {
-                self.pageSizeT = params.pageSize;
+                this.pageSizeT = params.pageSize;
             }
 
-            var dataPromise = self.data(remoteParams);
+            var dataPromise = this.data(remoteParams);
 
             dataPromise.then(function (response) {
-                _this2.initFlag = true;
+                _this3.initFlag = true;
                 if (!response) {
-                    self.loading = false;
+                    _this3.loading = false;
                     return;
                 }
-                var results = response[self.paramsName.results];
+                var results = response[_this3.paramsName.results];
 
-                //处理treeTable数据
-                if (self.treeTable) {
-                    self.dealTreeData(results);
+                // 处理treeTable数据
+                if (_this3.treeTable) {
+                    _this3.dealTreeData(results);
                 } else {
-                    self.current = results;
+                    _this3.current = results;
                 }
 
                 // 将数据更新至父组件
-                self.$emit('update:currentData', self.current.slice());
+                _this3.$emit('update:currentData', _this3.current.slice());
                 // 专门发送dataloaded事件
-                self.$emit('dataloaded', self.current.slice());
+                _this3.$emit('dataloaded', _this3.current.slice());
 
-                self.checkType && self.initCheckSatatus();
+                _this3.checkType && _this3.initCheckSatatus();
 
-                self.total = response[self.paramsName.total] * 1;
+                _this3.total = response[_this3.paramsName.total] * 1;
 
-                self.loading = false;
-            }, function (response) {
+                _this3.loading = false;
+            }, function () {
                 // error callback
-                self.loading = false;
+                _this3.loading = false;
             });
         },
         initCheckSatatus: function initCheckSatatus() {
@@ -22027,19 +22752,19 @@ function data_table__defineProperty(obj, key, value) { if (key in obj) { define_
             return res;
         },
         rowSelectionChange: function rowSelectionChange(index) {
-            var _this3 = this;
+            var _this4 = this;
 
             // firefox上checkbox对应的值没有立即更新，延时获取
             setTimeout(function () {
-                _this3.$set(_this3.rowSelectionStates, index, _this3.current[index].vb_dt_checked);
+                _this4.$set(_this4.rowSelectionStates, index, _this4.current[index].vb_dt_checked);
 
-                _this3.$emit('clickrow', {
+                _this4.$emit('clickrow', {
                     index: index,
-                    checked: _this3.rowSelectionStates[index],
-                    row: _this3.current[index]
+                    checked: _this4.rowSelectionStates[index],
+                    row: _this4.current[index]
                 });
                 // 将数据更新至父组件
-                _this3.$emit('update:currentData', _this3.current.slice());
+                _this4.$emit('update:currentData', _this4.current.slice());
             }, 200);
         },
         clickRow: function clickRow(index) {
@@ -22050,17 +22775,17 @@ function data_table__defineProperty(obj, key, value) { if (key in obj) { define_
             this.rowSelectionChange(index);
         },
         setChecked: function setChecked(index) {
-            var _this4 = this;
+            var _this5 = this;
 
             var status = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : true;
 
             this.current[index].vb_dt_checked = status;
             // firefox上checkbox对应的值没有立即更新，延时获取
             setTimeout(function () {
-                _this4.$set(_this4.rowSelectionStates, index, status);
+                _this5.$set(_this5.rowSelectionStates, index, status);
 
                 // 将数据更新至父组件
-                _this4.$emit('update:currentData', _this4.current.slice());
+                _this5.$emit('update:currentData', _this5.current.slice());
             }, 200);
         },
         hoverRow: function hoverRow(index) {
@@ -22124,39 +22849,42 @@ function data_table__defineProperty(obj, key, value) { if (key in obj) { define_
         getBodyWidth: function getBodyWidth() {
             // 设置表头表格总宽度
             var tbody = this.$refs.tbody;
-            tbody && (this.tableBodyWidth = tbody.offsetWidth + "px");
+            tbody && (this.tableBodyWidth = tbody.offsetWidth + 'px');
         },
 
         // 修正各个表头的宽度
         fixHeaderWidth: function fixHeaderWidth() {
-            var _this5 = this;
+            var _this6 = this;
 
             var theader = this.$refs.theader;
-            var theader_ths = theader && theader.querySelectorAll('thead>tr>th');
+            var lettheaderThs = theader && theader.querySelectorAll('thead>tr>th');
             var tbody = this.$refs.tbody;
-            var tbody_ths = tbody && tbody.querySelectorAll("thead>tr>th");
+            var tbodyThs = tbody && tbody.querySelectorAll('thead>tr>th');
 
-            var condition = !!(theader && theader_ths.length && tbody && tbody_ths.length);
+            var condition = !!(theader && lettheaderThs.length && tbody && tbodyThs.length);
+            var fixedLeftThs = void 0;
+            var fixedLeftCols = void 0;
+            var fixedRightThs = void 0;
+            var fixedRightCols = void 0;
 
             if (this.fixedLeft) {
                 var fixedLeftHeader = this.$refs.fixedLeftHeader;
-                var fixedLeft_ths = fixedLeftHeader && fixedLeftHeader.querySelectorAll("thead>tr>th");
-                var fixedLeft_colgroup = this.$refs.fixedLeftCols;
-                var fixedLeft_cols = fixedLeft_colgroup && fixedLeft_colgroup.querySelectorAll("col");
+                fixedLeftThs = fixedLeftHeader && fixedLeftHeader.querySelectorAll('thead>tr>th');
+                var fixedLeftColgroup = this.$refs.fixedLeftCols;
+                fixedLeftCols = fixedLeftColgroup && fixedLeftColgroup.querySelectorAll('col');
 
-                condition = condition && !!(fixedLeftHeader && fixedLeft_ths.length && fixedLeft_colgroup && fixedLeft_cols.length);
+                condition = condition && !!(fixedLeftHeader && fixedLeftThs.length && fixedLeftColgroup && fixedLeftCols.length);
             }
 
             if (this.fixedRight) {
-
                 this.isFixScrollbar = this.$refs.content ? this.$refs.content.scrollHeight > this.$refs.content.clientHeight : false;
 
                 var fixedRightHeader = this.$refs.fixedRightHeader;
-                var fixedRight_ths = fixedRightHeader && fixedRightHeader.querySelectorAll("thead>tr>th");
-                var fixedRight_colgroup = this.$refs.fixedRightCols;
-                var fixedRight_cols = fixedRight_colgroup && fixedRight_colgroup.querySelectorAll("col");
+                fixedRightThs = fixedRightHeader && fixedRightHeader.querySelectorAll('thead>tr>th');
+                var fixedRightColgroup = this.$refs.fixedRightCols;
+                fixedRightCols = fixedRightColgroup && fixedRightColgroup.querySelectorAll('col');
 
-                condition = condition && !!(fixedRightHeader && fixedRight_ths.length && fixedRight_colgroup && fixedRight_cols.length);
+                condition = condition && !!(fixedRightHeader && fixedRightThs.length && fixedRightColgroup && fixedRightCols.length);
             }
 
             if (condition) {
@@ -22165,7 +22893,7 @@ function data_table__defineProperty(obj, key, value) { if (key in obj) { define_
                 var _iteratorError7 = undefined;
 
                 try {
-                    for (var _iterator7 = get_iterator_default()(theader_ths.entries()), _step7; !(_iteratorNormalCompletion7 = (_step7 = _iterator7.next()).done); _iteratorNormalCompletion7 = true) {
+                    for (var _iterator7 = get_iterator_default()(lettheaderThs.entries()), _step7; !(_iteratorNormalCompletion7 = (_step7 = _iterator7.next()).done); _iteratorNormalCompletion7 = true) {
                         var _ref = _step7.value;
 
                         var _ref2 = data_table__slicedToArray(_ref, 2);
@@ -22173,8 +22901,8 @@ function data_table__defineProperty(obj, key, value) { if (key in obj) { define_
                         var index = _ref2[0];
                         var el = _ref2[1];
 
-                        if (index != theader_ths.length - 1) {
-                            el.style.width = tbody_ths[index].offsetWidth + 'px';
+                        if (index !== lettheaderThs.length - 1) {
+                            el.style.width = tbodyThs[index].offsetWidth + 'px';
                         }
                     }
                 } catch (err) {
@@ -22193,13 +22921,13 @@ function data_table__defineProperty(obj, key, value) { if (key in obj) { define_
                 }
 
                 if (this.fixedLeft) {
-                    if (fixedLeft_ths.length) {
+                    if (fixedLeftThs.length) {
                         var _iteratorNormalCompletion8 = true;
                         var _didIteratorError8 = false;
                         var _iteratorError8 = undefined;
 
                         try {
-                            for (var _iterator8 = get_iterator_default()(fixedLeft_ths.entries()), _step8; !(_iteratorNormalCompletion8 = (_step8 = _iterator8.next()).done); _iteratorNormalCompletion8 = true) {
+                            for (var _iterator8 = get_iterator_default()(fixedLeftThs.entries()), _step8; !(_iteratorNormalCompletion8 = (_step8 = _iterator8.next()).done); _iteratorNormalCompletion8 = true) {
                                 var _ref3 = _step8.value;
 
                                 var _ref4 = data_table__slicedToArray(_ref3, 2);
@@ -22207,9 +22935,9 @@ function data_table__defineProperty(obj, key, value) { if (key in obj) { define_
                                 var _index = _ref4[0];
                                 var _el = _ref4[1];
 
-                                var w = tbody_ths[_index].offsetWidth + 'px';
+                                var w = tbodyThs[_index].offsetWidth + 'px';
                                 _el.style.width = w;
-                                fixedLeft_cols[_index].style.width = w;
+                                fixedLeftCols[_index].style.width = w;
                             }
                         } catch (err) {
                             _didIteratorError8 = true;
@@ -22229,13 +22957,13 @@ function data_table__defineProperty(obj, key, value) { if (key in obj) { define_
                 }
 
                 if (this.fixedRight) {
-                    if (fixedRight_ths.length) {
+                    if (fixedRightThs.length) {
                         var _iteratorNormalCompletion9 = true;
                         var _didIteratorError9 = false;
                         var _iteratorError9 = undefined;
 
                         try {
-                            for (var _iterator9 = get_iterator_default()(fixedRight_ths.entries()), _step9; !(_iteratorNormalCompletion9 = (_step9 = _iterator9.next()).done); _iteratorNormalCompletion9 = true) {
+                            for (var _iterator9 = get_iterator_default()(fixedRightThs.entries()), _step9; !(_iteratorNormalCompletion9 = (_step9 = _iterator9.next()).done); _iteratorNormalCompletion9 = true) {
                                 var _ref5 = _step9.value;
 
                                 var _ref6 = data_table__slicedToArray(_ref5, 2);
@@ -22244,10 +22972,10 @@ function data_table__defineProperty(obj, key, value) { if (key in obj) { define_
                                 var _el2 = _ref6[1];
 
                                 // 从右侧开始计算
-                                var i = tbody_ths.length - this.fixedRight + _index2;
-                                var w = tbody_ths[i].offsetWidth + 'px';
-                                _el2.style.width = w;
-                                fixedRight_cols[_index2].style.width = w;
+                                var i = tbodyThs.length - this.fixedRight + _index2;
+                                var _w = tbodyThs[i].offsetWidth + 'px';
+                                _el2.style.width = _w;
+                                fixedRightCols[_index2].style.width = _w;
                             }
                         } catch (err) {
                             _didIteratorError9 = true;
@@ -22267,17 +22995,16 @@ function data_table__defineProperty(obj, key, value) { if (key in obj) { define_
                 }
             } else {
                 setTimeout(function () {
-                    _this5.fixHeaderWidth();
+                    _this6.fixHeaderWidth();
                 }, 100);
             }
         },
-        fixGapHeight: function fixGapHeight(footerHeight) {
-            var self = this;
-            //获取挂载元素在屏幕上的位置
-            var rect = self.$el.getBoundingClientRect();
+        fixGapHeight: function fixGapHeight() {
+            // 获取挂载元素在屏幕上的位置
+            var rect = this.$el.getBoundingClientRect();
             var winHeight = window.innerHeight;
             var tableBodyHeight = winHeight - this.bottomGap - rect.top;
-            //在可见首屏范围内且计算高度至少200时处理，否则不处理
+            // 在可见首屏范围内且计算高度至少200时处理，否则不处理
             if (rect.top > 0 && tableBodyHeight >= 200) {
                 this.tableBodyHeight = tableBodyHeight;
             }
@@ -22290,60 +23017,56 @@ function data_table__defineProperty(obj, key, value) { if (key in obj) { define_
             this.current = this.newData;
         },
 
-        //处理数据，将一维数组转化为层级结构
+        // 处理数据，将一维数组转化为层级结构
         transTreeData: function transTreeData(pid) {
-            var self = this;
             var TreeTableOpt = this.treeTableOption;
             var results = [];
             var children = this.findChildren(pid);
             for (var i = 0; i < children.length; i++) {
                 var obj = children[i];
-                obj['children'] = self.transTreeData(obj[TreeTableOpt.idKey]);
-                obj['level'] = self.getLevel(obj.id);
-                obj.vshow = obj.level > 1 ? false : true;
-                obj.vopen = obj.level > 0 ? false : true;
-                obj.paddingLeft = (obj.level - 1) * 12 * self.treeTableOption.indent + "px";
+                obj.children = this.transTreeData(obj[TreeTableOpt.idKey]);
+                obj.level = this.getLevel(obj.id);
+                obj.vshow = !(obj.level > 1);
+                obj.vopen = !(obj.level > 0);
+                obj.paddingLeft = (obj.level - 1) * 12 * this.treeTableOption.indent + 'px';
                 results.push(obj);
             }
-            TreeTableOpt.sortKey && results.sort(self.sortData);
+            TreeTableOpt.sortKey && results.sort(this.sortData);
             return results;
         },
 
-        //输出排序后的一维数组
+        // 输出排序后的一维数组
         sortTrData: function sortTrData(trData) {
-            var self = this;
             for (var i = 0; i < trData.length; i++) {
                 var obj = trData[i];
                 var ch = obj.children;
 
                 //                    如果是异步模式，直接使用isparent字段判断是否为父节点；否则使用children长度判断
-                if (!self.treeTableOption.isAsync) {
-                    obj.isparent = ch.length ? true : false;
+                if (!this.treeTableOption.isAsync) {
+                    obj.isparent = !!ch.length;
                 }
                 //                    先插入父节点
-                self.newData.push(obj);
+                this.newData.push(obj);
                 //                     递归插入子节点
-                ch.length && self.sortTrData(ch);
+                ch.length && this.sortTrData(ch);
             }
         },
 
-        //对象排序
+        // 对象排序
         sortData: function sortData(a, b) {
             var name = this.treeTableOption.sortKey;
-            if (this.treeTableOption.order == "asc") {
+            if (this.treeTableOption.order === 'asc') {
                 return a[name] > b[name] ? 1 : -1;
-            } else {
-                return a[name] < b[name] ? 1 : -1;
             }
+            return a[name] < b[name] ? 1 : -1;
         },
 
         //            查找子节点
         findChildren: function findChildren(pid) {
-            var self = this;
             var results = [];
             var origindata = this.originData;
             for (var i = 0; i < origindata.length; i++) {
-                if (origindata[i][self.treeTableOption.pidKey] == pid) {
+                if (origindata[i][this.treeTableOption.pidKey] === pid) {
                     results.push(origindata[i]);
                 }
             }
@@ -22352,21 +23075,18 @@ function data_table__defineProperty(obj, key, value) { if (key in obj) { define_
 
         //            获取节点层级
         getLevel: function getLevel(id) {
-            var self = this;
             var origindata = this.originData;
             var TreeTableOpt = this.treeTableOption;
             for (var i = 0; i < origindata.length; i++) {
                 var d = origindata[i];
-                var dataId = d[TreeTableOpt.idKey];
                 var dataPId = d[TreeTableOpt.pidKey];
-                if (d[TreeTableOpt.idKey] == id) {
-                    if (id == 0) {
+                if (d[TreeTableOpt.idKey] === id) {
+                    if (id === 0) {
                         return 0;
-                    } else if (d[TreeTableOpt.pidKey] == 0) {
+                    } else if (d[TreeTableOpt.pidKey] === 0) {
                         return 1;
-                    } else {
-                        return self.getLevel(dataPId) + 1;
                     }
+                    return this.getLevel(dataPId) + 1;
                 }
             }
             return 0;
@@ -22378,10 +23098,10 @@ function data_table__defineProperty(obj, key, value) { if (key in obj) { define_
          * @param isRecursion 是否递归，关闭节点时需要递归关闭子节点
          */
         toggle: function toggle(item, index) {
-            if (item.vopen == false) {
-                this.expand(item, index);
-            } else if (item.vopen == true) {
+            if (item.vopen) {
                 this.collapse(item);
+            } else {
+                this.expand(item, index);
             }
         },
 
@@ -22390,25 +23110,21 @@ function data_table__defineProperty(obj, key, value) { if (key in obj) { define_
          * @param item
          */
         expand: function expand(item, index) {
-            var self = this;
-
-            if (self.treeTableOption.isAsync && !item.childrenLoaded) {
-                self.loadChildren(item, index);
+            if (this.treeTableOption.isAsync && !item.childrenLoaded) {
+                this.loadChildren(item, index);
             } else {
-                self.expandChildren(item);
+                this.expandChildren(item);
             }
         },
         collapse: function collapse(item) {
-            var self = this;
             item.vopen = false;
             var vshow = false;
 
             var children = item.children || [];
             for (var i = 0; i < children.length; i++) {
-
                 children[i].vshow = vshow;
                 //                    关闭节点时，所有子孙节点都要关闭
-                self.collapse(children[i]);
+                this.collapse(children[i]);
             }
             this.calculateSize();
         },
@@ -22422,51 +23138,50 @@ function data_table__defineProperty(obj, key, value) { if (key in obj) { define_
             }
         },
         loadChildren: function loadChildren(parent, pIndex) {
+            var _this7 = this;
+
             if (!this.treeTableOption.loadChildren) {
-                console.error("datatable:treetable need loadChildren function");
+                console.error('datatable:treetable need loadChildren function');
                 return;
             }
-
-            var self = this;
-            self.loading = true;
-            //拼装请求参数
+            this.loading = true;
+            // 拼装请求参数
             var remoteParams = assign_default()({ parentid: parent.id }, this.sortParams);
 
             var childrenPromise = this.treeTableOption.loadChildren(remoteParams);
             childrenPromise.then(function (response) {
-                var results = response[self.paramsName.results];
+                var results = response[_this7.paramsName.results];
                 if (results.length) {
                     parent.childrenLoaded = true;
-                    parent.children = self.transAsyncTreeData(results, parent.level);
+                    parent.children = _this7.transAsyncTreeData(results, parent.level);
 
                     var pindex = pIndex + 1;
 
-                    //向父节点后面插入子节点数据
-                    var newCurrent = self.current.slice(0, pindex).concat(results, self.current.slice(pindex));
-                    self.current = newCurrent;
+                    // 向父节点后面插入子节点数据
+                    var newCurrent = _this7.current.slice(0, pindex).concat(results, _this7.current.slice(pindex));
+                    _this7.current = newCurrent;
 
-                    //向rowSelectionStates数组中插入子节点数据
-                    var newRowSelectionStates = self.rowSelectionStates.slice(0, pindex).concat(new Array(results.length || 0).fill(false), self.rowSelectionStates.slice(pindex));
-                    self.rowSelectionStates = newRowSelectionStates;
+                    // 向rowSelectionStates数组中插入子节点数据
+                    var newRowSelectionStates = _this7.rowSelectionStates.slice(0, pindex).concat(new Array(results.length || 0).fill(false), _this7.rowSelectionStates.slice(pindex));
+                    _this7.rowSelectionStates = newRowSelectionStates;
 
-                    self.expandChildren(parent);
+                    _this7.expandChildren(parent);
                 }
-                self.loading = false;
-            }, function (response) {
-                self.loading = false;
+                _this7.loading = false;
+            }, function () {
+                _this7.loading = false;
             });
         },
         transAsyncTreeData: function transAsyncTreeData(results, level) {
-            var self = this;
             for (var i = 0; i < results.length; i++) {
                 var obj = results[i];
-                obj['level'] = level + 1;
+                obj.level = level + 1;
                 obj.vopen = false;
                 obj.vshow = true;
-                obj.paddingLeft = (obj.level - 1) * 12 * self.treeTableOption.indent + "px";
+                obj.paddingLeft = (obj.level - 1) * 12 * this.treeTableOption.indent + 'px';
             }
 
-            this.treeTableOption.sortKey && results.sort(self.sortData);
+            this.treeTableOption.sortKey && results.sort(this.sortData);
             return results;
         }
     },
@@ -22474,13 +23189,11 @@ function data_table__defineProperty(obj, key, value) { if (key in obj) { define_
         tableCls: function tableCls() {
             return [this.prefix, this.prefix + '-' + this.size, data_table__defineProperty({}, this.prefix + '-bordered', this.bordered), data_table__defineProperty({}, this.prefix + '-stripe', this.stripe)];
         },
-
         checkIndeterminate: function checkIndeterminate() {
             if (this.rowSelectionStates.includes(true) && this.rowSelectionStates.includes(false)) {
                 return true;
-            } else {
-                return false;
             }
+            return false;
         },
         checkAllState: function checkAllState() {
             // 包含至少一个false
@@ -22503,11 +23216,11 @@ function data_table__defineProperty(obj, key, value) { if (key in obj) { define_
             this.refresh();
         },
         current: function current() {
-            var _this6 = this;
+            var _this8 = this;
 
             this.$nextTick(function () {
-                _this6.$refs.content.scrollLeft = 0;
-                _this6.calculateSize();
+                _this8.$refs.content.scrollLeft = 0;
+                _this8.calculateSize();
             });
         },
         currentData: function currentData(val) {
@@ -23728,9 +24441,9 @@ var data_table_render = function() {
                   "footerinfo",
                   [
                     _vm._v(
-                      "\n                共有" +
+                      "\n                Total " +
                         _vm._s(_vm.total) +
-                        "条数据\n            "
+                        "\n            "
                     )
                   ],
                   { total: _vm.total, pageNumber: "pageNumber" }
@@ -23852,690 +24565,693 @@ function tree__defineProperty(obj, key, value) { if (key in obj) { define_proper
 
 
 /* harmony default export */ var tree = ({
-  name: 'Tree',
-  mixins: [emitter],
-  props: {
-    prefixCls: {
-      type: String,
-      default: 'ant-tree'
+    name: 'Tree',
+    mixins: [emitter],
+    props: {
+        prefixCls: {
+            type: String,
+            default: 'ant-tree'
+        },
+        clue: {
+            type: String,
+            default: '0'
+        },
+        data: {
+            type: Array,
+            default: function _default() {
+                return [];
+            }
+        },
+        multiple: {
+            type: Boolean,
+            default: false
+        },
+        checkable: {
+            type: Boolean,
+            default: false
+        },
+        draggable: {
+            type: Boolean,
+            default: false
+        },
+        canDrop: {
+            type: Function,
+            default: function _default() {
+                return true;
+            }
+        },
+        showLine: {
+            type: Boolean,
+            default: false
+        },
+        async: Function
     },
-    clue: {
-      type: String,
-      default: '0'
-    },
-    data: {
-      type: Array,
-      default: function _default() {
-        return [];
-      }
-    },
-    multiple: {
-      type: Boolean,
-      default: false
-    },
-    checkable: {
-      type: Boolean,
-      default: false
-    },
-    draggable: {
-      type: Boolean,
-      default: false
-    },
-    canDrop: {
-      type: Function,
-      default: function _default() {
-        return true;
-      }
-    },
-    showLine: {
-      type: Boolean,
-      default: false
-    },
-    async: Function
-  },
-  data: function data() {
-    return {
-      dragIndex: -1,
-      dragOverIndex: -1,
-      dropPosition: 0,
-      dragCrossSameTree: false
-    };
-  },
-  computed: {
-    treeCls: function treeCls() {
-      if (this.clue === '0') {
-        return [this.prefixCls, tree__defineProperty({}, this.prefixCls + '-show-line', this.showLine)];
-      }
-      return [this.prefixCls + '-child-tree', tree__defineProperty({}, this.prefixCls + '-line', this.showLine)];
-    },
-    dropOverCls: function dropOverCls() {
-      var res = void 0;
-      switch (this.dropPosition) {
-        case 0:
-          res = 'drag-over';
-          break;
-        case 1:
-          res = 'drag-over-gap-bottom';
-          break;
-        case -1:
-          res = 'drag-over-gap-top';
-          break;
-        default:
-      }
-      return res;
-    }
-  },
-  watch: {
     data: function data() {
-      this.setKey();
-      this.preHandle();
-    }
-  },
-  mounted: function mounted() {
-    var _this = this;
-
-    this.setKey();
-    this.preHandle();
-
-    this.$on('nodeSelected', function (params) {
-      if (_this.clue !== '0') return _this.dispatch('Tree', 'nodeSelected', params);
-      if (!_this.multiple && params.status) {
-        if (_this !== params.origin) {
-          for (var i = 0; i < _this.data.length; i++) {
-            _this.$set(_this.data[i], 'selected', false);
-          }
+        return {
+            dragIndex: -1,
+            dragOverIndex: -1,
+            dropPosition: 0,
+            dragCrossSameTree: false
+        };
+    },
+    computed: {
+        treeCls: function treeCls() {
+            if (this.clue === '0') {
+                return [this.prefixCls, tree__defineProperty({}, this.prefixCls + '-show-line', this.showLine)];
+            }
+            return [this.prefixCls + '-child-tree', tree__defineProperty({}, this.prefixCls + '-line', this.showLine)];
+        },
+        dropOverCls: function dropOverCls() {
+            var res = void 0;
+            switch (this.dropPosition) {
+                case 0:
+                    res = 'drag-over';
+                    break;
+                case 1:
+                    res = 'drag-over-gap-bottom';
+                    break;
+                case -1:
+                    res = 'drag-over-gap-top';
+                    break;
+                default:
+            }
+            return res;
         }
-        _this.broadcast('Tree', 'cancelSelected', params.origin);
-      }
-      _this.$emit('select', _this.getSelectedNodes());
-    });
-
-    this.$on('cancelSelected', function (ori) {
-      _this.broadcast('Tree', 'cancelSelected', ori);
-
-      if (_this !== ori) {
-        for (var i = 0; i < _this.data.length; i++) {
-          _this.$set(_this.data[i], 'selected', false);
+    },
+    watch: {
+        data: function data() {
+            this.setKey();
+            this.preHandle();
         }
-      }
-    });
+    },
+    mounted: function mounted() {
+        var _this = this;
 
-    this.$on('parentChecked', function (params) {
-      if (_this.clue == params.clue || _this.clue.startsWith(params.clue + '-')) {
-        for (var i = 0; i < _this.data.length; i++) {
-          _this.$set(_this.data[i], 'checked', params.status);
-          _this.$set(_this.data[i], 'childrenCheckedStatus', params.status ? 2 : 0);
-        }
-        _this.broadcast('Tree', 'parentChecked', params);
-      }
-    });
+        this.setKey();
+        this.preHandle();
 
-    this.$on('childChecked', function (params) {
-      if (_this.clue === '0') {
-        _this.$nextTick(function () {
-          _this.$emit('check', _this.getCheckedNodes());
+        this.$on('nodeSelected', function (params) {
+            if (_this.clue !== '0') return _this.dispatch('Tree', 'nodeSelected', params);
+            if (!_this.multiple && params.status) {
+                if (_this !== params.origin) {
+                    for (var i = 0; i < _this.data.length; i++) {
+                        _this.$set(_this.data[i], 'selected', false);
+                    }
+                }
+                _this.broadcast('Tree', 'cancelSelected', params.origin);
+            }
+            _this.$emit('select', _this.getSelectedNodes());
         });
-      }
-      if (_this === params.origin) return;
 
-      var _iteratorNormalCompletion = true;
-      var _didIteratorError = false;
-      var _iteratorError = undefined;
+        this.$on('cancelSelected', function (ori) {
+            _this.broadcast('Tree', 'cancelSelected', ori);
 
-      try {
-        for (var _iterator = get_iterator_default()(_this.data.entries()), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
-          var _ref3 = _step.value;
-
-          var _ref4 = tree__slicedToArray(_ref3, 2);
-
-          var i = _ref4[0];
-          var item = _ref4[1];
-
-          if (_this.clue + '-' + i === params.clue) {
-            var temp = _this.getChildrenCheckedStatus(item.children);
-
-            if (temp !== item.childrenCheckedStatus) {
-              _this.$set(_this.data[i], 'checked', !!temp);
-              _this.$set(_this.data[i], 'childrenCheckedStatus', temp);
-            }
-
-            if (_this.clue !== '0') {
-              _this.dispatch('Tree', 'childChecked', { origin: _this, clue: _this.clue });
-            }
-          }
-        }
-      } catch (err) {
-        _didIteratorError = true;
-        _iteratorError = err;
-      } finally {
-        try {
-          if (!_iteratorNormalCompletion && _iterator.return) {
-            _iterator.return();
-          }
-        } finally {
-          if (_didIteratorError) {
-            throw _iteratorError;
-          }
-        }
-      }
-    });
-    this.$on('dragdrop', function (sourceClue, targetClue, dropPosition) {
-      if (_this.clue !== '0') return _this.dispatch('Tree', 'dragdrop', [sourceClue, targetClue, dropPosition]);
-      // 直接父级是否是同一个
-      var sameTree = sourceClue.substr(0, sourceClue.length - 1) === targetClue.substr(0, targetClue.length - 1);
-      sourceClue = sourceClue.split('-');
-      var sourceData = _this.data,
-          _sourceData = void 0,
-          lastSourceIndex = sourceClue[sourceClue.length - 1] * 1;
-      for (var i = 1; i < sourceClue.length - 1; i++) {
-        var index = sourceClue[i];
-        if (i === 1) {
-          sourceData = sourceData[index];
-        } else {
-          sourceData = sourceData.children[index];
-        }
-      }
-      if (sourceClue.length > 2) {
-        _sourceData = JSON.parse(stringify_default()(sourceData.children[lastSourceIndex]));
-      } else {
-        _sourceData = JSON.parse(stringify_default()(sourceData[lastSourceIndex]));
-      }
-
-      targetClue = targetClue.split('-');
-      var targetData = _this.data;
-      var targetIndex = targetClue[targetClue.length - 1] * 1;
-
-      for (var _i = 1; _i < targetClue.length - 1; _i++) {
-        var _index = targetClue[_i];
-        if (_i === 1) {
-          targetData = targetData[_index];
-        } else {
-          targetData = targetData.children[_index];
-        }
-      }
-      var canDrop = void 0;
-      if (targetClue.length > 2) {
-        canDrop = _this.canDrop(_sourceData, targetData.children[targetIndex], dropPosition);
-      } else {
-        canDrop = _this.canDrop(_sourceData, targetData[targetIndex], dropPosition);
-      }
-      if (!canDrop) return;
-
-      var sourcePositionChange = false;
-      switch (dropPosition) {
-        case 0:
-          if (targetClue.length > 2) {
-            targetData = targetData.children[targetIndex];
-          } else {
-            targetData = targetData[targetIndex];
-          }
-          if (targetData.children) {
-            targetData.children.push(_sourceData);
-          } else {
-            _this.$set(targetData, 'children', [_sourceData]);
-          }
-          break;
-        case -1:
-        case 1:
-          var p = targetIndex + (dropPosition === -1 ? 0 : dropPosition);
-          if (targetClue.length > 2) {
-            targetData.children.splice(p, 0, _sourceData);
-          } else {
-            targetData.splice(p, 0, _sourceData);
-          }
-          sourcePositionChange = sameTree && p <= lastSourceIndex;
-          break;
-      }
-
-      if (sourcePositionChange) lastSourceIndex++;
-      if (sourceClue.length > 2) {
-        if (sourceData.children.length === 1) {
-          _this.$delete(sourceData, 'children');
-        } else {
-          sourceData.children.splice(lastSourceIndex, 1);
-        }
-      } else {
-        sourceData.splice(lastSourceIndex, 1);
-      }
-    });
-  },
-
-  methods: {
-    dragstart: function dragstart(index, ev) {
-      ev.stopPropagation();
-      this.dragIndex = index;
-      ev.dataTransfer.setData('dragClue', this.clue + '-' + index);
-    },
-    dragover: function dragover(ev) {
-      ev.preventDefault();
-      ev.stopPropagation();
-    },
-    drop: function drop(index, ev) {
-      ev.stopPropagation();
-      this.dragOverIndex = -1;
-      var dragClue = ev.dataTransfer.getData('dragClue');
-      var selfClue = this.clue + '-' + index;
-
-      // 如果拖拽的对象不是自己的父辈级
-      if (!selfClue.startsWith(dragClue)) {
-        if (this.clue === '0') {
-          this.$emit('dragdrop', dragClue, selfClue, this.dropPosition);
-        } else {
-          this.dispatch('Tree', 'dragdrop', [dragClue, selfClue, this.dropPosition]);
-        }
-      }
-    },
-    dragenter: function dragenter(index, ev) {
-      ev.preventDefault();
-      ev.stopPropagation();
-      if (this.dragIndex === index) return;
-      if (this.dragOverIndex > -1) this.dragCrossSameTree = true;
-      this.dragOverIndex = index;
-      var offset = fn_getOffset(this.$refs.node[index]);
-      var offsetTop = offset.top;
-      var offsetHeight = offset.bottom - offset.top;
-      var pageY = ev.pageY;
-      var gapHeight = 2;
-
-      if (pageY > offsetTop + offsetHeight - gapHeight) {
-        this.dropPosition = 1;
-      } else if (pageY < offsetTop + gapHeight) {
-        this.dropPosition = -1;
-      } else {
-        this.dropPosition = 0;
-      }
-      this.$set(this.data[index], 'expanded', true);
-    },
-    dragleave: function dragleave(index, ev) {
-      ev.stopPropagation();
-      if (this.dragIndex === index) return;
-      if (this.dragCrossSameTree) {
-        this.dragCrossSameTree = false;
-      } else {
-        this.dragOverIndex = -1;
-      }
-    },
-    dragend: function dragend(ev) {
-      ev.stopPropagation();
-      this.dragIndex = -1;
-    },
-    treeNodeCls: function treeNodeCls(item) {
-      return tree__defineProperty({}, this.prefixCls + '-treenode-disabled', item.disabled);
-    },
-    switcherCls: function switcherCls(item) {
-      var _ref6;
-
-      var expandedState = item.expanded ? 'open' : 'close';
-
-      return [this.prefixCls + '-switcher', (_ref6 = {}, tree__defineProperty(_ref6, this.prefixCls + '-switcher-disabled', item.disabled), tree__defineProperty(_ref6, this.prefixCls + '-switcher-noop', item.isLeaf), tree__defineProperty(_ref6, this.prefixCls + '-noline_docu', item.isLeaf), tree__defineProperty(_ref6, this.prefixCls + '-noline_' + expandedState, !item.isLeaf), _ref6)];
-    },
-    checkboxCls: function checkboxCls(item) {
-      var _ref7;
-
-      return [this.prefixCls + '-checkbox', (_ref7 = {}, tree__defineProperty(_ref7, this.prefixCls + '-checkbox-disabled', item.disabled || item.disableCheckbox), tree__defineProperty(_ref7, this.prefixCls + '-checkbox-checked', item.checked && item.childrenCheckedStatus === 2), tree__defineProperty(_ref7, this.prefixCls + '-checkbox-indeterminate', item.checked && item.childrenCheckedStatus === 1), _ref7)];
-    },
-    selectHandleCls: function selectHandleCls(item) {
-      var _ref8;
-
-      var wrap = this.prefixCls + '-node-content-wrapper';
-
-      return [wrap, wrap + '-normal', (_ref8 = {}, tree__defineProperty(_ref8, this.prefixCls + '-node-selected', !item.disable && item.selected), tree__defineProperty(_ref8, 'draggable', this.draggable), _ref8)];
-    },
-    setKey: function setKey() {
-      for (var i = 0; i < this.data.length; i++) {
-        this.data[i].clue = this.clue + '-' + i;
-      }
-    },
-    preHandle: function preHandle() {
-      var _iteratorNormalCompletion2 = true;
-      var _didIteratorError2 = false;
-      var _iteratorError2 = undefined;
-
-      try {
-        for (var _iterator2 = get_iterator_default()(this.data.entries()), _step2; !(_iteratorNormalCompletion2 = (_step2 = _iterator2.next()).done); _iteratorNormalCompletion2 = true) {
-          var _ref9 = _step2.value;
-
-          var _ref10 = tree__slicedToArray(_ref9, 2);
-
-          var i = _ref10[0];
-          var item = _ref10[1];
-
-          if (!item.children) {
-            this.$set(item, 'isLeaf', true);
-            this.$set(item, 'childrenCheckedStatus', 2);
-            continue;
-          }
-
-          this.$set(item, 'isLeaf', false);
-          if (item.checked && !item.childrenCheckedStatus) {
-            this.$set(item, 'childrenCheckedStatus', 2);
-            this.broadcast('Tree', 'parentChecked', { status: true, clue: this.clue + '-' + i });
-          } else {
-            var status = this.getChildrenCheckedStatus(item.children);
-            this.$set(item, 'childrenCheckedStatus', status);
-
-            if (status !== 0) {
-              this.$set(item, 'checked', true);
-            }
-          }
-        }
-      } catch (err) {
-        _didIteratorError2 = true;
-        _iteratorError2 = err;
-      } finally {
-        try {
-          if (!_iteratorNormalCompletion2 && _iterator2.return) {
-            _iterator2.return();
-          }
-        } finally {
-          if (_didIteratorError2) {
-            throw _iteratorError2;
-          }
-        }
-      }
-    },
-    setExpand: function setExpand(disabled, index) {
-      var _this2 = this;
-
-      return _asyncToGenerator(regenerator_default.a.mark(function _callee() {
-        var expanded, data;
-        return regenerator_default.a.wrap(function _callee$(_context) {
-          while (1) {
-            switch (_context.prev = _context.next) {
-              case 0:
-                if (disabled) {
-                  _context.next = 10;
-                  break;
+            if (_this !== ori) {
+                for (var i = 0; i < _this.data.length; i++) {
+                    _this.$set(_this.data[i], 'selected', false);
                 }
-
-                expanded = !_this2.data[index].expanded;
-
-                _this2.$set(_this2.data[index], 'expanded', expanded);
-
-                if (!(expanded && !_this2.data[index].children.length && _this2.async)) {
-                  _context.next = 10;
-                  break;
-                }
-
-                _this2.$set(_this2.data[index], 'loading', true);
-                _context.next = 7;
-                return _this2.async(_this2.data[index]);
-
-              case 7:
-                data = _context.sent;
-
-                _this2.data[index].children = data;
-                _this2.$set(_this2.data[index], 'loading', false);
-
-              case 10:
-              case 'end':
-                return _context.stop();
             }
-          }
-        }, _callee, _this2);
-      }))();
-    },
-    setSelect: function setSelect(disabled, index) {
-      if (!disabled) {
-        var selected = !this.data[index].selected;
+        });
 
-        if (this.multiple || !selected) {
-          this.$set(this.data[index], 'selected', selected);
-        } else {
-          for (var i = 0; i < this.data.length; i++) {
-            if (i === index) {
-              this.$set(this.data[i], 'selected', true);
+        this.$on('parentChecked', function (params) {
+            if (_this.clue === params.clue || _this.clue.startsWith(params.clue + '-')) {
+                for (var i = 0; i < _this.data.length; i++) {
+                    _this.$set(_this.data[i], 'checked', params.status);
+                    _this.$set(_this.data[i], 'childrenCheckedStatus', params.status ? 2 : 0);
+                }
+                _this.broadcast('Tree', 'parentChecked', params);
+            }
+        });
+
+        this.$on('childChecked', function (params) {
+            if (_this.clue === '0') {
+                _this.$nextTick(function () {
+                    _this.$emit('check', _this.getCheckedNodes());
+                });
+            }
+            if (_this === params.origin) return;
+
+            var _iteratorNormalCompletion = true;
+            var _didIteratorError = false;
+            var _iteratorError = undefined;
+
+            try {
+                for (var _iterator = get_iterator_default()(_this.data.entries()), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
+                    var _ref3 = _step.value;
+
+                    var _ref4 = tree__slicedToArray(_ref3, 2);
+
+                    var i = _ref4[0];
+                    var item = _ref4[1];
+
+                    if (_this.clue + '-' + i === params.clue) {
+                        var temp = _this.getChildrenCheckedStatus(item.children);
+
+                        if (temp !== item.childrenCheckedStatus) {
+                            _this.$set(_this.data[i], 'checked', !!temp);
+                            _this.$set(_this.data[i], 'childrenCheckedStatus', temp);
+                        }
+
+                        if (_this.clue !== '0') {
+                            _this.dispatch('Tree', 'childChecked', { origin: _this, clue: _this.clue });
+                        }
+                    }
+                }
+            } catch (err) {
+                _didIteratorError = true;
+                _iteratorError = err;
+            } finally {
+                try {
+                    if (!_iteratorNormalCompletion && _iterator.return) {
+                        _iterator.return();
+                    }
+                } finally {
+                    if (_didIteratorError) {
+                        throw _iteratorError;
+                    }
+                }
+            }
+        });
+        this.$on('dragdrop', function (sourceClue, targetClue, dropPosition) {
+            if (_this.clue !== '0') return _this.dispatch('Tree', 'dragdrop', [sourceClue, targetClue, dropPosition]);
+            // 直接父级是否是同一个
+            var sameTree = sourceClue.substr(0, sourceClue.length - 1) === targetClue.substr(0, targetClue.length - 1);
+            sourceClue = sourceClue.split('-');
+            var sourceData = _this.data;
+            var _sourceData = void 0;
+            var lastSourceIndex = sourceClue[sourceClue.length - 1] * 1;
+            for (var i = 1; i < sourceClue.length - 1; i++) {
+                var index = sourceClue[i];
+                if (i === 1) {
+                    sourceData = sourceData[index];
+                } else {
+                    sourceData = sourceData.children[index];
+                }
+            }
+            if (sourceClue.length > 2) {
+                _sourceData = JSON.parse(stringify_default()(sourceData.children[lastSourceIndex]));
             } else {
-              this.$set(this.data[i], 'selected', false);
+                _sourceData = JSON.parse(stringify_default()(sourceData[lastSourceIndex]));
             }
-          }
-        }
 
-        if (this.clue === '0') {
-          this.$emit('nodeSelected', { origin: this, status: selected });
-        } else {
-          this.dispatch('Tree', 'nodeSelected', { origin: this, status: selected });
-        }
-      }
-    },
-    setCheck: function setCheck(disabled, index) {
-      if (disabled) return;
+            targetClue = targetClue.split('-');
+            var targetData = _this.data;
+            var targetIndex = targetClue[targetClue.length - 1] * 1;
 
-      var checked = !this.data[index].checked;
-      this.$set(this.data[index], 'checked', checked);
-      this.$set(this.data[index], 'childrenCheckedStatus', checked ? 2 : 0);
-      if (this.clue === '0') {
-        this.$emit('childChecked', { origin: this, clue: this.clue });
-      } else {
-        this.dispatch('Tree', 'childChecked', { origin: this, clue: this.clue });
-      }
-      this.broadcast('Tree', 'parentChecked', { status: checked, clue: this.clue + '-' + index });
-    },
-    getNodes: function getNodes(data, opt) {
-      data = data || this.data;
-      var res = [];
-
-      var _iteratorNormalCompletion3 = true;
-      var _didIteratorError3 = false;
-      var _iteratorError3 = undefined;
-
-      try {
-        for (var _iterator3 = get_iterator_default()(data), _step3; !(_iteratorNormalCompletion3 = (_step3 = _iterator3.next()).done); _iteratorNormalCompletion3 = true) {
-          var node = _step3.value;
-
-          var tmp = true;
-          var _iteratorNormalCompletion4 = true;
-          var _didIteratorError4 = false;
-          var _iteratorError4 = undefined;
-
-          try {
-            for (var _iterator4 = get_iterator_default()(object_entries_default()(opt)), _step4; !(_iteratorNormalCompletion4 = (_step4 = _iterator4.next()).done); _iteratorNormalCompletion4 = true) {
-              var _ref11 = _step4.value;
-
-              var _ref12 = tree__slicedToArray(_ref11, 2);
-
-              var key = _ref12[0];
-              var value = _ref12[1];
-
-              if (node[key] !== value) {
-                tmp = false;
-                break;
-              }
+            for (var _i = 1; _i < targetClue.length - 1; _i++) {
+                var _index = targetClue[_i];
+                if (_i === 1) {
+                    targetData = targetData[_index];
+                } else {
+                    targetData = targetData.children[_index];
+                }
             }
-          } catch (err) {
-            _didIteratorError4 = true;
-            _iteratorError4 = err;
-          } finally {
+            var canDrop = void 0;
+            if (targetClue.length > 2) {
+                canDrop = _this.canDrop(_sourceData, targetData.children[targetIndex], dropPosition);
+            } else {
+                canDrop = _this.canDrop(_sourceData, targetData[targetIndex], dropPosition);
+            }
+            if (!canDrop) return;
+
+            var sourcePositionChange = false;
+            switch (dropPosition) {
+                case 0:
+                    if (targetClue.length > 2) {
+                        targetData = targetData.children[targetIndex];
+                    } else {
+                        targetData = targetData[targetIndex];
+                    }
+                    if (targetData.children) {
+                        targetData.children.push(_sourceData);
+                    } else {
+                        _this.$set(targetData, 'children', [_sourceData]);
+                    }
+                    break;
+                case 1:
+                    var p = targetIndex + (dropPosition === -1 ? 0 : dropPosition);
+                    if (targetClue.length > 2) {
+                        targetData.children.splice(p, 0, _sourceData);
+                    } else {
+                        targetData.splice(p, 0, _sourceData);
+                    }
+                    sourcePositionChange = sameTree && p <= lastSourceIndex;
+                    break;
+                case -1:
+                default:
+            }
+
+            if (sourcePositionChange) lastSourceIndex++;
+            if (sourceClue.length > 2) {
+                if (sourceData.children.length === 1) {
+                    _this.$delete(sourceData, 'children');
+                } else {
+                    sourceData.children.splice(lastSourceIndex, 1);
+                }
+            } else {
+                sourceData.splice(lastSourceIndex, 1);
+            }
+        });
+    },
+
+    methods: {
+        dragstart: function dragstart(index, ev) {
+            ev.stopPropagation();
+            this.dragIndex = index;
+            ev.dataTransfer.setData('dragClue', this.clue + '-' + index);
+        },
+        dragover: function dragover(ev) {
+            ev.preventDefault();
+            ev.stopPropagation();
+        },
+        drop: function drop(index, ev) {
+            ev.stopPropagation();
+            this.dragOverIndex = -1;
+            var dragClue = ev.dataTransfer.getData('dragClue');
+            var selfClue = this.clue + '-' + index;
+
+            // 如果拖拽的对象不是自己的父辈级
+            if (!selfClue.startsWith(dragClue)) {
+                if (this.clue === '0') {
+                    this.$emit('dragdrop', dragClue, selfClue, this.dropPosition);
+                } else {
+                    this.dispatch('Tree', 'dragdrop', [dragClue, selfClue, this.dropPosition]);
+                }
+            }
+        },
+        dragenter: function dragenter(index, ev) {
+            ev.preventDefault();
+            ev.stopPropagation();
+            if (this.dragIndex === index) return;
+            if (this.dragOverIndex > -1) this.dragCrossSameTree = true;
+            this.dragOverIndex = index;
+            var offset = fn_getOffset(this.$refs.node[index]);
+            var offsetTop = offset.top;
+            var offsetHeight = offset.bottom - offset.top;
+            var pageY = ev.pageY;
+            var gapHeight = 2;
+
+            if (pageY > offsetTop + offsetHeight - gapHeight) {
+                this.dropPosition = 1;
+            } else if (pageY < offsetTop + gapHeight) {
+                this.dropPosition = -1;
+            } else {
+                this.dropPosition = 0;
+            }
+            this.$set(this.data[index], 'expanded', true);
+        },
+        dragleave: function dragleave(index, ev) {
+            ev.stopPropagation();
+            if (this.dragIndex === index) return;
+            if (this.dragCrossSameTree) {
+                this.dragCrossSameTree = false;
+            } else {
+                this.dragOverIndex = -1;
+            }
+        },
+        dragend: function dragend(ev) {
+            ev.stopPropagation();
+            this.dragIndex = -1;
+        },
+        treeNodeCls: function treeNodeCls(item) {
+            return tree__defineProperty({}, this.prefixCls + '-treenode-disabled', item.disabled);
+        },
+        switcherCls: function switcherCls(item) {
+            var _ref6;
+
+            var expandedState = item.expanded ? 'open' : 'close';
+
+            return [this.prefixCls + '-switcher', (_ref6 = {}, tree__defineProperty(_ref6, this.prefixCls + '-switcher-disabled', item.disabled), tree__defineProperty(_ref6, this.prefixCls + '-switcher-noop', item.isLeaf), tree__defineProperty(_ref6, this.prefixCls + '-noline_docu', item.isLeaf), tree__defineProperty(_ref6, this.prefixCls + '-noline_' + expandedState, !item.isLeaf), _ref6)];
+        },
+        checkboxCls: function checkboxCls(item) {
+            var _ref7;
+
+            return [this.prefixCls + '-checkbox', (_ref7 = {}, tree__defineProperty(_ref7, this.prefixCls + '-checkbox-disabled', item.disabled || item.disableCheckbox), tree__defineProperty(_ref7, this.prefixCls + '-checkbox-checked', item.checked && item.childrenCheckedStatus === 2), tree__defineProperty(_ref7, this.prefixCls + '-checkbox-indeterminate', item.checked && item.childrenCheckedStatus === 1), _ref7)];
+        },
+        selectHandleCls: function selectHandleCls(item) {
+            var _ref8;
+
+            var wrap = this.prefixCls + '-node-content-wrapper';
+
+            return [wrap, wrap + '-normal', (_ref8 = {}, tree__defineProperty(_ref8, this.prefixCls + '-node-selected', !item.disable && item.selected), tree__defineProperty(_ref8, 'draggable', this.draggable), _ref8)];
+        },
+        setKey: function setKey() {
+            for (var i = 0; i < this.data.length; i++) {
+                this.data[i].clue = this.clue + '-' + i;
+            }
+        },
+        preHandle: function preHandle() {
+            var _iteratorNormalCompletion2 = true;
+            var _didIteratorError2 = false;
+            var _iteratorError2 = undefined;
+
             try {
-              if (!_iteratorNormalCompletion4 && _iterator4.return) {
-                _iterator4.return();
-              }
+                for (var _iterator2 = get_iterator_default()(this.data.entries()), _step2; !(_iteratorNormalCompletion2 = (_step2 = _iterator2.next()).done); _iteratorNormalCompletion2 = true) {
+                    var _ref9 = _step2.value;
+
+                    var _ref10 = tree__slicedToArray(_ref9, 2);
+
+                    var i = _ref10[0];
+                    var item = _ref10[1];
+
+                    if (!item.children) {
+                        this.$set(item, 'isLeaf', true);
+                        this.$set(item, 'childrenCheckedStatus', 2);
+                        continue;
+                    }
+
+                    this.$set(item, 'isLeaf', false);
+                    if (item.checked && !item.childrenCheckedStatus) {
+                        this.$set(item, 'childrenCheckedStatus', 2);
+                        this.broadcast('Tree', 'parentChecked', { status: true, clue: this.clue + '-' + i });
+                    } else {
+                        var status = this.getChildrenCheckedStatus(item.children);
+                        this.$set(item, 'childrenCheckedStatus', status);
+
+                        if (status !== 0) {
+                            this.$set(item, 'checked', true);
+                        }
+                    }
+                }
+            } catch (err) {
+                _didIteratorError2 = true;
+                _iteratorError2 = err;
             } finally {
-              if (_didIteratorError4) {
-                throw _iteratorError4;
-              }
+                try {
+                    if (!_iteratorNormalCompletion2 && _iterator2.return) {
+                        _iterator2.return();
+                    }
+                } finally {
+                    if (_didIteratorError2) {
+                        throw _iteratorError2;
+                    }
+                }
             }
-          }
+        },
+        setExpand: function setExpand(disabled, index) {
+            var _this2 = this;
 
-          if (tmp) {
-            res.push(node);
-          }
-          if (node.children && node.children.length) {
-            res = res.concat(this.getNodes(node.children, opt));
-          }
-        }
-      } catch (err) {
-        _didIteratorError3 = true;
-        _iteratorError3 = err;
-      } finally {
-        try {
-          if (!_iteratorNormalCompletion3 && _iterator3.return) {
-            _iterator3.return();
-          }
-        } finally {
-          if (_didIteratorError3) {
-            throw _iteratorError3;
-          }
-        }
-      }
+            return _asyncToGenerator(regenerator_default.a.mark(function _callee() {
+                var expanded, data;
+                return regenerator_default.a.wrap(function _callee$(_context) {
+                    while (1) {
+                        switch (_context.prev = _context.next) {
+                            case 0:
+                                if (disabled) {
+                                    _context.next = 10;
+                                    break;
+                                }
 
-      return res;
-    },
-    getSelectedNodes: function getSelectedNodes() {
-      return this.getNodes(this.data, { selected: true });
-    },
-    getCheckedNodes: function getCheckedNodes() {
-      return this.getNodes(this.data, { checked: true, childrenCheckedStatus: 2 });
-    },
-    getHalfCheckedNodes: function getHalfCheckedNodes() {
-      return this.getNodes(this.data, { checked: true, childrenCheckedStatus: 1 });
-    },
-    getChildrenCheckedStatus: function getChildrenCheckedStatus(children) {
-      var checkNum = 0,
-          child_childrenAllChecked = true;
+                                expanded = !_this2.data[index].expanded;
 
-      var _iteratorNormalCompletion5 = true;
-      var _didIteratorError5 = false;
-      var _iteratorError5 = undefined;
+                                _this2.$set(_this2.data[index], 'expanded', expanded);
 
-      try {
-        for (var _iterator5 = get_iterator_default()(children), _step5; !(_iteratorNormalCompletion5 = (_step5 = _iterator5.next()).done); _iteratorNormalCompletion5 = true) {
-          var child = _step5.value;
+                                if (!(expanded && !_this2.data[index].children.length && _this2.async)) {
+                                    _context.next = 10;
+                                    break;
+                                }
 
-          if (child.checked) {
-            checkNum++;
-          }
-          if (child.childrenCheckedStatus !== 2) {
-            child_childrenAllChecked = false;
-          }
-        }
-        // 全选
-      } catch (err) {
-        _didIteratorError5 = true;
-        _iteratorError5 = err;
-      } finally {
-        try {
-          if (!_iteratorNormalCompletion5 && _iterator5.return) {
-            _iterator5.return();
-          }
-        } finally {
-          if (_didIteratorError5) {
-            throw _iteratorError5;
-          }
-        }
-      }
+                                _this2.$set(_this2.data[index], 'loading', true);
+                                _context.next = 7;
+                                return _this2.async(_this2.data[index]);
 
-      if (checkNum === children.length) {
-        return child_childrenAllChecked ? 2 : 1;
-        // 部分选择
-      } else if (checkNum > 0) {
-        return 1;
-      } else {
-        return 0;
-      }
-    },
-    edit: function edit(path, action, data) {
-      path = path.split('-');
-      var isTopNode = path.length === 2;
+                            case 7:
+                                data = _context.sent;
 
-      var node = this.data;
-      var lastIndex = path.pop();
+                                _this2.data[index].children = data;
+                                _this2.$set(_this2.data[index], 'loading', false);
 
-      if (!isTopNode) node = node[path[1]];
-      path.splice(0, 2);
+                            case 10:
+                            case 'end':
+                                return _context.stop();
+                        }
+                    }
+                }, _callee, _this2);
+            }))();
+        },
+        setSelect: function setSelect(disabled, index) {
+            if (!disabled) {
+                var selected = !this.data[index].selected;
 
-      var _iteratorNormalCompletion6 = true;
-      var _didIteratorError6 = false;
-      var _iteratorError6 = undefined;
+                if (this.multiple || !selected) {
+                    this.$set(this.data[index], 'selected', selected);
+                } else {
+                    for (var i = 0; i < this.data.length; i++) {
+                        if (i === index) {
+                            this.$set(this.data[i], 'selected', true);
+                        } else {
+                            this.$set(this.data[i], 'selected', false);
+                        }
+                    }
+                }
 
-      try {
-        for (var _iterator6 = get_iterator_default()(path), _step6; !(_iteratorNormalCompletion6 = (_step6 = _iterator6.next()).done); _iteratorNormalCompletion6 = true) {
-          var i = _step6.value;
-
-          node = node.children[i];
-        }
-      } catch (err) {
-        _didIteratorError6 = true;
-        _iteratorError6 = err;
-      } finally {
-        try {
-          if (!_iteratorNormalCompletion6 && _iterator6.return) {
-            _iterator6.return();
-          }
-        } finally {
-          if (_didIteratorError6) {
-            throw _iteratorError6;
-          }
-        }
-      }
-
-      switch (action) {
-        case 'delete':
-          if (isTopNode) {
-            node.splice(lastIndex, 1);
-          } else {
-            node.children.splice(lastIndex, 1);
-          }
-          break;
-        case 'add':
-          var child = void 0;
-          if (isTopNode) {
-            child = node[lastIndex];
-          } else {
-            child = node.children[lastIndex];
-          }
-          if (child.children) {
-            child.children.push(data);
-          } else {
-            this.$set(child, 'children', [data]);
-          }
-          break;
-        case 'edit':
-          node = isTopNode ? node[lastIndex] : node.children[lastIndex];
-
-          var _iteratorNormalCompletion7 = true;
-          var _didIteratorError7 = false;
-          var _iteratorError7 = undefined;
-
-          try {
-            for (var _iterator7 = get_iterator_default()(object_entries_default()(data)), _step7; !(_iteratorNormalCompletion7 = (_step7 = _iterator7.next()).done); _iteratorNormalCompletion7 = true) {
-              var _ref13 = _step7.value;
-
-              var _ref14 = tree__slicedToArray(_ref13, 2);
-
-              var key = _ref14[0];
-              var val = _ref14[1];
-
-              node[key] = val;
+                if (this.clue === '0') {
+                    this.$emit('nodeSelected', { origin: this, status: selected });
+                } else {
+                    this.dispatch('Tree', 'nodeSelected', { origin: this, status: selected });
+                }
             }
-          } catch (err) {
-            _didIteratorError7 = true;
-            _iteratorError7 = err;
-          } finally {
+        },
+        setCheck: function setCheck(disabled, index) {
+            if (disabled) return;
+
+            var checked = !this.data[index].checked;
+            this.$set(this.data[index], 'checked', checked);
+            this.$set(this.data[index], 'childrenCheckedStatus', checked ? 2 : 0);
+            if (this.clue === '0') {
+                this.$emit('childChecked', { origin: this, clue: this.clue });
+            } else {
+                this.dispatch('Tree', 'childChecked', { origin: this, clue: this.clue });
+            }
+            this.broadcast('Tree', 'parentChecked', { status: checked, clue: this.clue + '-' + index });
+        },
+        getNodes: function getNodes(data, opt) {
+            data = data || this.data;
+            var res = [];
+
+            var _iteratorNormalCompletion3 = true;
+            var _didIteratorError3 = false;
+            var _iteratorError3 = undefined;
+
             try {
-              if (!_iteratorNormalCompletion7 && _iterator7.return) {
-                _iterator7.return();
-              }
-            } finally {
-              if (_didIteratorError7) {
-                throw _iteratorError7;
-              }
-            }
-          }
+                for (var _iterator3 = get_iterator_default()(data), _step3; !(_iteratorNormalCompletion3 = (_step3 = _iterator3.next()).done); _iteratorNormalCompletion3 = true) {
+                    var node = _step3.value;
 
-      }
-    },
-    editNode: function editNode(path, data) {
-      this.edit(path, 'edit', data);
-    },
-    addNode: function addNode(path, data) {
-      if (path === '0') return this.data.push(data);
-      this.edit(path, 'add', data);
-    },
-    delNode: function delNode(path) {
-      this.edit(path, 'delete');
+                    var tmp = true;
+                    var _iteratorNormalCompletion4 = true;
+                    var _didIteratorError4 = false;
+                    var _iteratorError4 = undefined;
+
+                    try {
+                        for (var _iterator4 = get_iterator_default()(object_entries_default()(opt)), _step4; !(_iteratorNormalCompletion4 = (_step4 = _iterator4.next()).done); _iteratorNormalCompletion4 = true) {
+                            var _ref11 = _step4.value;
+
+                            var _ref12 = tree__slicedToArray(_ref11, 2);
+
+                            var key = _ref12[0];
+                            var value = _ref12[1];
+
+                            if (node[key] !== value) {
+                                tmp = false;
+                                break;
+                            }
+                        }
+                    } catch (err) {
+                        _didIteratorError4 = true;
+                        _iteratorError4 = err;
+                    } finally {
+                        try {
+                            if (!_iteratorNormalCompletion4 && _iterator4.return) {
+                                _iterator4.return();
+                            }
+                        } finally {
+                            if (_didIteratorError4) {
+                                throw _iteratorError4;
+                            }
+                        }
+                    }
+
+                    if (tmp) {
+                        res.push(node);
+                    }
+                    if (node.children && node.children.length) {
+                        res = res.concat(this.getNodes(node.children, opt));
+                    }
+                }
+            } catch (err) {
+                _didIteratorError3 = true;
+                _iteratorError3 = err;
+            } finally {
+                try {
+                    if (!_iteratorNormalCompletion3 && _iterator3.return) {
+                        _iterator3.return();
+                    }
+                } finally {
+                    if (_didIteratorError3) {
+                        throw _iteratorError3;
+                    }
+                }
+            }
+
+            return res;
+        },
+        getSelectedNodes: function getSelectedNodes() {
+            return this.getNodes(this.data, { selected: true });
+        },
+        getCheckedNodes: function getCheckedNodes() {
+            return this.getNodes(this.data, { checked: true, childrenCheckedStatus: 2 });
+        },
+        getHalfCheckedNodes: function getHalfCheckedNodes() {
+            return this.getNodes(this.data, { checked: true, childrenCheckedStatus: 1 });
+        },
+        getChildrenCheckedStatus: function getChildrenCheckedStatus(children) {
+            var checkNum = 0;
+            var childChildrenAllChecked = true;
+
+            var _iteratorNormalCompletion5 = true;
+            var _didIteratorError5 = false;
+            var _iteratorError5 = undefined;
+
+            try {
+                for (var _iterator5 = get_iterator_default()(children), _step5; !(_iteratorNormalCompletion5 = (_step5 = _iterator5.next()).done); _iteratorNormalCompletion5 = true) {
+                    var child = _step5.value;
+
+                    if (child.checked) {
+                        checkNum++;
+                    }
+                    if (child.childrenCheckedStatus !== 2) {
+                        childChildrenAllChecked = false;
+                    }
+                }
+                // 全选
+            } catch (err) {
+                _didIteratorError5 = true;
+                _iteratorError5 = err;
+            } finally {
+                try {
+                    if (!_iteratorNormalCompletion5 && _iterator5.return) {
+                        _iterator5.return();
+                    }
+                } finally {
+                    if (_didIteratorError5) {
+                        throw _iteratorError5;
+                    }
+                }
+            }
+
+            if (checkNum === children.length) {
+                return childChildrenAllChecked ? 2 : 1;
+                // 部分选择
+            } else if (checkNum > 0) {
+                return 1;
+            }
+            return 0;
+        },
+        edit: function edit(path, action, data) {
+            path = path.split('-');
+            var isTopNode = path.length === 2;
+
+            var node = this.data;
+            var lastIndex = path.pop();
+
+            if (!isTopNode) node = node[path[1]];
+            path.splice(0, 2);
+
+            var _iteratorNormalCompletion6 = true;
+            var _didIteratorError6 = false;
+            var _iteratorError6 = undefined;
+
+            try {
+                for (var _iterator6 = get_iterator_default()(path), _step6; !(_iteratorNormalCompletion6 = (_step6 = _iterator6.next()).done); _iteratorNormalCompletion6 = true) {
+                    var i = _step6.value;
+
+                    node = node.children[i];
+                }
+            } catch (err) {
+                _didIteratorError6 = true;
+                _iteratorError6 = err;
+            } finally {
+                try {
+                    if (!_iteratorNormalCompletion6 && _iterator6.return) {
+                        _iterator6.return();
+                    }
+                } finally {
+                    if (_didIteratorError6) {
+                        throw _iteratorError6;
+                    }
+                }
+            }
+
+            switch (action) {
+                case 'delete':
+                    if (isTopNode) {
+                        node.splice(lastIndex, 1);
+                    } else {
+                        node.children.splice(lastIndex, 1);
+                    }
+                    break;
+                case 'add':
+                    var child = void 0;
+                    if (isTopNode) {
+                        child = node[lastIndex];
+                    } else {
+                        child = node.children[lastIndex];
+                    }
+                    if (child.children) {
+                        child.children.push(data);
+                    } else {
+                        this.$set(child, 'children', [data]);
+                    }
+                    break;
+                case 'edit':
+                    node = isTopNode ? node[lastIndex] : node.children[lastIndex];
+
+                    var _iteratorNormalCompletion7 = true;
+                    var _didIteratorError7 = false;
+                    var _iteratorError7 = undefined;
+
+                    try {
+                        for (var _iterator7 = get_iterator_default()(object_entries_default()(data)), _step7; !(_iteratorNormalCompletion7 = (_step7 = _iterator7.next()).done); _iteratorNormalCompletion7 = true) {
+                            var _ref13 = _step7.value;
+
+                            var _ref14 = tree__slicedToArray(_ref13, 2);
+
+                            var key = _ref14[0];
+                            var val = _ref14[1];
+
+                            node[key] = val;
+                        }
+                    } catch (err) {
+                        _didIteratorError7 = true;
+                        _iteratorError7 = err;
+                    } finally {
+                        try {
+                            if (!_iteratorNormalCompletion7 && _iterator7.return) {
+                                _iterator7.return();
+                            }
+                        } finally {
+                            if (_didIteratorError7) {
+                                throw _iteratorError7;
+                            }
+                        }
+                    }
+
+                    break;
+                default:
+                    break;
+            }
+        },
+        editNode: function editNode(path, data) {
+            this.edit(path, 'edit', data);
+        },
+        addNode: function addNode(path, data) {
+            if (path === '0') return this.data.push(data);
+            this.edit(path, 'add', data);
+        },
+        delNode: function delNode(path) {
+            this.edit(path, 'delete');
+        }
     }
-  }
 });
 // CONCATENATED MODULE: ./node_modules/vue-loader/lib/template-compiler?{"id":"data-v-e009b14a","hasScoped":false}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./vb/components/tree/tree.vue
 var tree_render = function() {
@@ -25682,40 +26398,40 @@ var transfer_style_default = /*#__PURE__*/__webpack_require__.n(transfer_style);
 
 
 /* harmony default export */ var search = ({
-	props: {
-		prefixCls: String,
-		placeholder: {
-			type: Array,
-			default: function _default() {
-				return [];
-			}
-		},
-		handleClear: {
-			type: Function,
-			default: function _default() {}
-		},
-		value: {
-			type: String,
-			default: ''
-		},
-		searchPlaceholder: {
-			type: String,
-			default: ''
-		}
-	},
-	methods: {
-		handleChange: function handleChange(e) {
-			this.$emit('input', e.target.value);
-			this.$emit('change', e.target.value);
-		},
-		clear: function clear(e) {
-			e.preventDefault();
-			this.handleClear();
-		}
-	},
-	components: {
-		vIcon: components_icon
-	}
+    components: {
+        vIcon: components_icon
+    },
+    props: {
+        prefixCls: String,
+        placeholder: {
+            type: Array,
+            efault: function efault() {
+                return [];
+            }
+        },
+        handleClear: {
+            type: Function,
+            default: function _default() {}
+        },
+        value: {
+            type: String,
+            default: ''
+        },
+        searchPlaceholder: {
+            type: String,
+            default: ''
+        }
+    },
+    methods: {
+        handleChange: function handleChange(e) {
+            this.$emit('input', e.target.value);
+            this.$emit('change', e.target.value);
+        },
+        clear: function clear(e) {
+            e.preventDefault();
+            this.handleClear();
+        }
+    }
 });
 // CONCATENATED MODULE: ./node_modules/vue-loader/lib/template-compiler?{"id":"data-v-d1190290","hasScoped":false}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./vb/components/transfer/search.vue
 var search_render = function() {
@@ -25832,183 +26548,166 @@ if (false) {(function () {
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 
 
 
 function list_noop() {}
 /* harmony default export */ var list = ({
-	props: {
-		prefixCls: String,
-		dataSource: {
-			type: Array,
-			default: function _default() {
-				return [];
-			}
-		},
-		handleSelect: {
-			type: Function,
-			default: list_noop
-		},
-		handleSelectAll: {
-			type: Function,
-			default: list_noop
-		},
-		checkedKeys: {
-			type: Array,
-			default: function _default() {
-				return [];
-			}
-		},
-		label: {
-			type: Function,
-			default: list_noop
-		},
-		filter: {
-			type: String,
-			default: ''
-		},
-		titleText: {
-			type: String,
-			default: ''
-		},
-		handleFilter: {
-			type: Function,
-			default: list_noop
-		},
-		handleClear: {
-			type: Function,
-			default: list_noop
-		},
-		className: {
-			type: String,
-			default: ''
-		},
-		showSearch: {
-			type: Boolean,
-			default: false
-		},
-		filterOption: Function,
-		searchPlaceholder: {
-			type: String,
-			default: ''
-		},
-		notFoundContent: {
-			type: String,
-			default: ''
-		}
-	},
-	data: function data() {
-		return {
-			hasFooter: false,
-			checkAll: false,
-			checkPart: false,
-			disabled: false,
-			filteredDataSource: [],
-			showItems: []
-		};
-	},
-	created: function created() {
-		this.setFilteredDataSource();
-	},
-	mounted: function mounted() {
-		this.hasFooter = !!this.$slots && !!this.$slots.default;
-	},
+    components: {
+        vCheckbox: components_checkbox,
+        vSearch: components_transfer_search
+    },
+    props: {
+        prefixCls: String,
+        dataSource: {
+            type: Array,
+            default: function _default() {
+                return [];
+            }
+        },
+        handleSelect: {
+            type: Function,
+            default: list_noop
+        },
+        handleSelectAll: {
+            type: Function,
+            default: list_noop
+        },
+        checkedKeys: {
+            type: Array,
+            default: function _default() {
+                return [];
+            }
+        },
+        label: {
+            type: Function,
+            default: list_noop
+        },
+        filter: {
+            type: String,
+            default: ''
+        },
+        titleText: {
+            type: String,
+            default: ''
+        },
+        handleFilter: {
+            type: Function,
+            default: list_noop
+        },
+        handleClear: {
+            type: Function,
+            default: list_noop
+        },
+        className: {
+            type: String,
+            default: ''
+        },
+        showSearch: {
+            type: Boolean,
+            default: false
+        },
+        filterOption: Function,
+        searchPlaceholder: {
+            type: String,
+            default: ''
+        },
+        notFoundContent: {
+            type: String,
+            default: ''
+        }
+    },
+    data: function data() {
+        return {
+            hasFooter: false,
+            checkAll: false,
+            checkPart: false,
+            disabled: false,
+            filteredDataSource: [],
+            showItems: []
+        };
+    },
+    created: function created() {
+        this.setFilteredDataSource();
+    },
+    mounted: function mounted() {
+        this.hasFooter = !!this.$slots && !!this.$slots.default;
+    },
 
-	watch: {
-		checkedKeys: function checkedKeys() {
-			var checkStatus = this.getCheckStatus(this.filteredDataSource);
-			this.checkAll = checkStatus === 'all';
-			this.checkPart = checkStatus === 'part';
-		},
-		dataSource: function dataSource() {
-			this.setFilteredDataSource();
-		},
-		filter: function filter() {
-			this.setFilteredDataSource();
-		}
-	},
-	methods: {
-		showLabel: function showLabel(item) {
-			var result = this.label(item);
-			return result.label ? result.label : result;
-		},
-		setFilteredDataSource: function setFilteredDataSource() {
-			var _this = this;
+    watch: {
+        checkedKeys: function checkedKeys() {
+            var checkStatus = this.getCheckStatus(this.filteredDataSource);
+            this.checkAll = checkStatus === 'all';
+            this.checkPart = checkStatus === 'part';
+        },
+        dataSource: function dataSource() {
+            this.setFilteredDataSource();
+        },
+        filter: function filter() {
+            this.setFilteredDataSource();
+        }
+    },
+    methods: {
+        showLabel: function showLabel(item) {
+            var result = this.label(item);
+            return result.label ? result.label : result;
+        },
+        setFilteredDataSource: function setFilteredDataSource() {
+            var _this = this;
 
-			this.filteredDataSource = [];
-			this.showItems = this.dataSource.map(function (item) {
-				var renderResult = _this.label(item);
-				var renderedText = void 0;
-				var renderedEl = void 0;
-				if (renderResult.value) {
-					renderedText = renderResult.value;
-					renderedEl = renderResult.label;
-				} else {
-					renderedText = renderResult;
-					renderedEl = renderResult;
-				}
-				if (_this.filter && _this.filter.trim() && !_this.matchFilter(item, renderedText, _this.filter)) {
-					return null;
-				}
-				if (!item.disabled) _this.filteredDataSource.push(item);
-				return item;
-			}).filter(function (item) {
-				return !!item;
-			});
-		},
-		isCheck: function isCheck(item) {
-			return this.checkedKeys.some(function (key) {
-				return key === item.key;
-			});
-		},
-		select: function select(selectedItem) {
-			if (selectedItem.disabled) return;
-			var result = this.checkedKeys.some(function (key) {
-				return key === selectedItem.key;
-			});
-			this.handleSelect(selectedItem, !result);
-		},
-		selectAll: function selectAll() {
-			this.handleSelectAll(this.filteredDataSource, this.checkAll);
-		},
-		getCheckStatus: function getCheckStatus(filteredDataSource) {
-			var _this2 = this;
+            this.filteredDataSource = [];
+            this.showItems = this.dataSource.map(function (item) {
+                var renderResult = _this.label(item);
+                var renderedText = void 0;
+                if (renderResult.value) {
+                    renderedText = renderResult.value;
+                } else {
+                    renderedText = renderResult;
+                }
+                if (_this.filter && _this.filter.trim() && !_this.matchFilter(item, renderedText, _this.filter)) {
+                    return null;
+                }
+                if (!item.disabled) _this.filteredDataSource.push(item);
+                return item;
+            }).filter(function (item) {
+                return !!item;
+            });
+        },
+        isCheck: function isCheck(item) {
+            return this.checkedKeys.some(function (key) {
+                return key === item.key;
+            });
+        },
+        select: function select(selectedItem) {
+            if (selectedItem.disabled) return;
+            var result = this.checkedKeys.some(function (key) {
+                return key === selectedItem.key;
+            });
+            this.handleSelect(selectedItem, !result);
+        },
+        selectAll: function selectAll() {
+            this.handleSelectAll(this.filteredDataSource, this.checkAll);
+        },
+        getCheckStatus: function getCheckStatus(filteredDataSource) {
+            var _this2 = this;
 
-			if (this.checkedKeys.length === 0) {
-				return 'none';
-			} else if (filteredDataSource.every(function (item) {
-				return _this2.checkedKeys.indexOf(item.key) >= 0;
-			})) {
-				return 'all';
-			}
-			return 'part';
-		},
-		matchFilter: function matchFilter(result, text, filterText) {
-			if (this.filterOption) {
-				return this.filterOption(filterText, result);
-			}
-			return text.indexOf(filterText) >= 0;
-		}
-	},
-	components: {
-		vCheckbox: components_checkbox,
-		vSearch: components_transfer_search
-	}
+            if (this.checkedKeys.length === 0) {
+                return 'none';
+            } else if (filteredDataSource.every(function (item) {
+                return _this2.checkedKeys.indexOf(item.key) >= 0;
+            })) {
+                return 'all';
+            }
+            return 'part';
+        },
+        matchFilter: function matchFilter(result, text, filterText) {
+            if (this.filterOption) {
+                return this.filterOption(filterText, result);
+            }
+            return text.indexOf(filterText) >= 0;
+        }
+    }
 });
 // CONCATENATED MODULE: ./node_modules/vue-loader/lib/template-compiler?{"id":"data-v-74e4c6a4","hasScoped":false}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./vb/components/transfer/list.vue
 var list_render = function() {
@@ -26205,50 +26904,41 @@ if (false) {(function () {
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 
 
 
-function operation_noop() {};
+function operation_noop() {}
 /* harmony default export */ var operation = ({
-	props: {
-		prefixCls: String,
-		operations: {
-			type: Array,
-			default: function _default() {
-				return [];
-			}
-		},
-		leftActive: {
-			type: Boolean,
-			default: false
-		},
-		rightActive: {
-			type: Boolean,
-			default: false
-		},
-		moveToLeft: {
-			type: Function,
-			default: operation_noop
-		},
-		moveToRight: {
-			type: Function,
-			default: operation_noop
-		}
-	},
-	components: {
-		vButton: components_button,
-		vIcon: components_icon
-	}
+    components: {
+        vButton: components_button,
+        vIcon: components_icon
+    },
+    props: {
+        prefixCls: String,
+        operations: {
+            type: Array,
+            default: function _default() {
+                return [];
+            }
+        },
+        leftActive: {
+            type: Boolean,
+            default: false
+        },
+        rightActive: {
+            type: Boolean,
+            default: false
+        },
+        moveToLeft: {
+            type: Function,
+            default: operation_noop
+        },
+        moveToRight: {
+            type: Function,
+            default: operation_noop
+        }
+    }
 });
 // CONCATENATED MODULE: ./node_modules/vue-loader/lib/template-compiler?{"id":"data-v-52194f07","hasScoped":false}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./vb/components/transfer/operation.vue
 var operation_render = function() {
@@ -26267,7 +26957,7 @@ var operation_render = function() {
         },
         [
           _c("v-icon", { attrs: { type: "left" } }),
-          _vm._v(_vm._s(_vm.operations[0]) + "\n  ")
+          _vm._v(_vm._s(_vm.operations[0]) + "\n\t")
         ],
         1
       ),
@@ -26279,7 +26969,7 @@ var operation_render = function() {
           on: { click: _vm.moveToRight }
         },
         [
-          _vm._v("\n    " + _vm._s(_vm.operations[1])),
+          _vm._v("\n\t\t" + _vm._s(_vm.operations[1]) + "\n\t\t"),
           _c("v-icon", { attrs: { type: "right" } })
         ],
         1
@@ -26404,203 +27094,202 @@ function transfer__toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i
 
 function transfer_noop() {}
 /* harmony default export */ var transfer = ({
-	name: 'Transfer',
-	props: {
-		data: {
-			type: Array,
-			default: function _default() {
-				return [];
-			}
-		},
-		label: {
-			type: Function,
-			default: transfer_noop
-		},
-		targetKeys: {
-			ype: Array,
-			default: function _default() {
-				return [];
-			}
-		},
-		listStyle: Object,
-		className: String,
-		titles: {
-			type: Array,
-			default: function _default() {
-				return ['', ''];
-			}
-		},
-		operations: {
-			type: Array,
-			default: function _default() {
-				return [];
-			}
-		},
-		showSearch: {
-			type: Boolean,
-			default: false
-		},
-		filterOption: Function,
-		searchPlaceholder: {
-			type: String,
-			default: function _default() {
-				return locale_t('transfer.searchPlaceholder');
-			}
-		},
-		notFoundContent: {
-			type: String,
-			default: function _default() {
-				return locale_t('transfer.notFoundContent');
-			}
-		}
-	},
-	data: function data() {
-		return {
-			prefixCls: 'ant-transfer',
-			leftCheckedKeys: [],
-			rightCheckedKeys: [],
-			leftDataSource: [],
-			rightDataSource: [],
-			leftActive: false,
-			rightActive: false,
-			leftFilter: '',
-			rightFilter: ''
-		};
-	},
+    name: 'Transfer',
+    components: {
+        list: components_transfer_list,
+        operation: components_transfer_operation
+    },
+    props: {
+        data: {
+            type: Array,
+            default: function _default() {
+                return [];
+            }
+        },
+        label: {
+            type: Function,
+            default: transfer_noop
+        },
+        targetKeys: {
+            type: Array,
+            default: function _default() {
+                return [];
+            }
+        },
+        listStyle: Object,
+        className: String,
+        titles: {
+            type: Array,
+            default: function _default() {
+                return ['', ''];
+            }
+        },
+        operations: {
+            type: Array,
+            default: function _default() {
+                return [];
+            }
+        },
+        showSearch: {
+            type: Boolean,
+            default: false
+        },
+        filterOption: Function,
+        searchPlaceholder: {
+            type: String,
+            default: function _default() {
+                return locale_t('transfer.searchPlaceholder');
+            }
+        },
+        notFoundContent: {
+            type: String,
+            default: function _default() {
+                return locale_t('transfer.notFoundContent');
+            }
+        }
+    },
+    data: function data() {
+        return {
+            prefixCls: 'ant-transfer',
+            leftCheckedKeys: [],
+            rightCheckedKeys: [],
+            leftDataSource: [],
+            rightDataSource: [],
+            leftActive: false,
+            rightActive: false,
+            leftFilter: '',
+            rightFilter: ''
+        };
+    },
 
-	watch: {
-		leftCheckedKeys: function leftCheckedKeys() {
-			this.leftActive = this.leftCheckedKeys.length > 0;
-		},
-		rightCheckedKeys: function rightCheckedKeys() {
-			this.rightActive = this.rightCheckedKeys.length > 0;
-		},
-		targetKeys: function targetKeys() {
-			this.splitDataSource();
-		}
-	},
-	created: function created() {
-		var _this = this;
+    watch: {
+        leftCheckedKeys: function leftCheckedKeys() {
+            this.leftActive = this.leftCheckedKeys.length > 0;
+        },
+        rightCheckedKeys: function rightCheckedKeys() {
+            this.rightActive = this.rightCheckedKeys.length > 0;
+        },
+        targetKeys: function targetKeys() {
+            this.splitDataSource();
+        }
+    },
+    created: function created() {
+        var _this = this;
 
-		this.leftCheckedKeys = this.leftCheckedKeys.filter(function (data) {
-			return _this.data.filter(function (item) {
-				return item.key === data;
-			}).length;
-		}).filter(function (data) {
-			return _this.targetKeys.filter(function (key) {
-				return key === data;
-			}).length === 0;
-		});
+        this.leftCheckedKeys = this.leftCheckedKeys.filter(function (data) {
+            return _this.data.filter(function (item) {
+                return item.key === data;
+            }).length;
+        }).filter(function (data) {
+            return _this.targetKeys.filter(function (key) {
+                return key === data;
+            }).length === 0;
+        });
+        this.rightCheckedKeys = this.rightCheckedKeys.filter(function (data) {
+            return _this.data.filter(function (item) {
+                return item.key === data;
+            }).length;
+        }).filter(function (data) {
+            return _this.targetKeys.filter(function (key) {
+                return key === data;
+            }).length > 0;
+        });
+        this.splitDataSource();
+    },
 
-		this.rightCheckedKeys = this.rightCheckedKeys.filter(function (data) {
-			return _this.data.filter(function (item) {
-				return item.key === data;
-			}).length;
-		}).filter(function (data) {
-			return _this.targetKeys.filter(function (key) {
-				return key === data;
-			}).length > 0;
-		});
-		this.splitDataSource();
-	},
+    methods: {
+        splitDataSource: function splitDataSource() {
+            var _this2 = this;
 
-	methods: {
-		splitDataSource: function splitDataSource() {
-			var _this2 = this;
+            this.leftDataSource = [].concat(transfer__toConsumableArray(this.data));
+            this.rightDataSource = [];
+            if (this.targetKeys.length > 0) {
+                this.targetKeys.forEach(function (targetKey) {
+                    _this2.rightDataSource.push(_this2.leftDataSource.filter(function (data, index) {
+                        if (data.key === targetKey) {
+                            _this2.leftDataSource.splice(index, 1);
+                            return true;
+                        }
+                        return false;
+                    })[0]);
+                });
+            }
+        },
+        handleLeftSelect: function handleLeftSelect(selectedItem, checked) {
+            this.handleSelect('left', selectedItem, checked);
+        },
+        handleRightSelect: function handleRightSelect(selectedItem, checked) {
+            this.handleSelect('right', selectedItem, checked);
+        },
+        handleSelect: function handleSelect(direction, selectedItem, checked) {
+            var leftCheckedKeys = this.leftCheckedKeys;
+            var rightCheckedKeys = this.rightCheckedKeys;
+            var holder = direction === 'left' ? [].concat(transfer__toConsumableArray(leftCheckedKeys)) : [].concat(transfer__toConsumableArray(rightCheckedKeys));
+            var index = void 0;
+            holder.forEach(function (key, i) {
+                if (key === selectedItem.key) {
+                    index = i;
+                }
+            });
+            if (index > -1) {
+                holder.splice(index, 1);
+            }
+            if (checked) {
+                holder.push(selectedItem.key);
+            }
+            this[direction + 'CheckedKeys'] = holder;
+        },
+        handleSelectAll: function handleSelectAll(direction, filteredDataSource, checkAll) {
+            var holder = checkAll ? filteredDataSource.map(function (item) {
+                return item.key;
+            }) : [];
+            this[direction + 'CheckedKeys'] = holder;
+        },
+        handleLeftSelectAll: function handleLeftSelectAll() {
+            for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+                args[_key] = arguments[_key];
+            }
 
-			this.leftDataSource = [].concat(transfer__toConsumableArray(this.data));
-			this.rightDataSource = [];
-			if (this.targetKeys.length > 0) {
-				this.targetKeys.forEach(function (targetKey) {
-					_this2.rightDataSource.push(_this2.leftDataSource.filter(function (data, index) {
-						if (data.key === targetKey) {
-							_this2.leftDataSource.splice(index, 1);
-							return true;
-						}
-						return false;
-					})[0]);
-				});
-			}
-		},
-		handleLeftSelect: function handleLeftSelect(selectedItem, checked) {
-			this.handleSelect('left', selectedItem, checked);
-		},
-		handleRightSelect: function handleRightSelect(selectedItem, checked) {
-			this.handleSelect('right', selectedItem, checked);
-		},
-		handleSelect: function handleSelect(direction, selectedItem, checked) {
-			var leftCheckedKeys = this.leftCheckedKeys;
-			var rightCheckedKeys = this.rightCheckedKeys;
-			var holder = direction === 'left' ? [].concat(transfer__toConsumableArray(leftCheckedKeys)) : [].concat(transfer__toConsumableArray(rightCheckedKeys));
-			var index = void 0;
-			holder.forEach(function (key, i) {
-				if (key === selectedItem.key) {
-					index = i;
-				}
-			});
-			if (index > -1) {
-				holder.splice(index, 1);
-			}
-			if (checked) {
-				holder.push(selectedItem.key);
-			}
-			this[direction + 'CheckedKeys'] = holder;
-		},
-		handleSelectAll: function handleSelectAll(direction, filteredDataSource, checkAll) {
-			var holder = checkAll ? filteredDataSource.map(function (item) {
-				return item.key;
-			}) : [];
-			this[direction + 'CheckedKeys'] = holder;
-		},
-		handleLeftSelectAll: function handleLeftSelectAll() {
-			for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
-				args[_key] = arguments[_key];
-			}
+            this.handleSelectAll.apply(this, ['left'].concat(transfer__toConsumableArray(args)));
+        },
+        handleRightSelectAll: function handleRightSelectAll() {
+            for (var _len2 = arguments.length, args = Array(_len2), _key2 = 0; _key2 < _len2; _key2++) {
+                args[_key2] = arguments[_key2];
+            }
 
-			this.handleSelectAll.apply(this, ['left'].concat(transfer__toConsumableArray(args)));
-		},
-		handleRightSelectAll: function handleRightSelectAll() {
-			for (var _len2 = arguments.length, args = Array(_len2), _key2 = 0; _key2 < _len2; _key2++) {
-				args[_key2] = arguments[_key2];
-			}
-
-			this.handleSelectAll.apply(this, ['right'].concat(transfer__toConsumableArray(args)));
-		},
-		moveTo: function moveTo(direction) {
-			var targetKeys = this.targetKeys;
-			var key = direction === 'right' ? 'leftCheckedKeys' : 'rightCheckedKeys';
-			var moveKeys = this[key];
-			var newTargetKeys = direction === 'right' ? moveKeys.concat(targetKeys) : targetKeys.filter(function (targetKey) {
-				return !moveKeys.some(function (checkedKey) {
-					return targetKey === checkedKey;
-				});
-			});
-			this[key] = [];
-			this.$emit('change', newTargetKeys, direction, moveKeys);
-		},
-		moveToLeft: function moveToLeft() {
-			this.moveTo('left');
-		},
-		moveToRight: function moveToRight() {
-			this.moveTo('right');
-		},
-		handleLeftClear: function handleLeftClear() {
-			this.leftFilter = '';
-		},
-		handleRightClear: function handleRightClear() {
-			this.rightFilter = '';
-		},
-		handleLeftFilter: function handleLeftFilter(value) {
-			this.leftFilter = value;
-		},
-		handleRightFilter: function handleRightFilter(value) {
-			this.rightFilter = value;
-		}
-	},
-	components: {
-		list: components_transfer_list,
-		operation: components_transfer_operation
-	}
+            this.handleSelectAll.apply(this, ['right'].concat(transfer__toConsumableArray(args)));
+        },
+        moveTo: function moveTo(direction) {
+            var targetKeys = this.targetKeys;
+            var key = direction === 'right' ? 'leftCheckedKeys' : 'rightCheckedKeys';
+            var moveKeys = this[key];
+            var newTargetKeys = direction === 'right' ? moveKeys.concat(targetKeys) : targetKeys.filter(function (targetKey) {
+                return !moveKeys.some(function (checkedKey) {
+                    return targetKey === checkedKey;
+                });
+            });
+            this[key] = [];
+            this.$emit('change', newTargetKeys, direction, moveKeys);
+        },
+        moveToLeft: function moveToLeft() {
+            this.moveTo('left');
+        },
+        moveToRight: function moveToRight() {
+            this.moveTo('right');
+        },
+        handleLeftClear: function handleLeftClear() {
+            this.leftFilter = '';
+        },
+        handleRightClear: function handleRightClear() {
+            this.rightFilter = '';
+        },
+        handleLeftFilter: function handleLeftFilter(value) {
+            this.leftFilter = value;
+        },
+        handleRightFilter: function handleRightFilter(value) {
+            this.rightFilter = value;
+        }
+    }
 });
 // CONCATENATED MODULE: ./node_modules/vue-loader/lib/template-compiler?{"id":"data-v-4094397b","hasScoped":false}!./node_modules/vue-loader/lib/selector.js?type=template&index=0!./vb/components/transfer/transfer.vue
 var transfer_render = function() {
@@ -27147,7 +27836,7 @@ var carousel_prefixCls = 'ant-carousel';
             });
         },
         handleResize: function handleResize() {
-            this.listWidth = parseInt(getComputedStyle(this.$el, null).width);
+            this.listWidth = parseInt(getComputedStyle(this.$el, null).width, 10);
             this.updatePos();
             this.updateOffset();
         },
@@ -27547,7 +28236,7 @@ function tree_select_select__toConsumableArray(arr) { if (Array.isArray(arr)) { 
     mounted: function mounted() {
         var _this = this;
 
-        //document.addEventListener('click', () => this.open = false);
+        // document.addEventListener('click', () => this.open = false);
         this.container = this.popupContainer();
         this.$refs.dropdown.style.position = this.position;
         this.container.appendChild(this.$refs.dropdown);
@@ -28121,7 +28810,8 @@ if (false) {(function () {
         setCheck: function setCheck(clue) {
             var route = clue.split('-');
             var node = this.$refs.tree;
-            for (var i = 1; i < route.length - 1; i++) {
+            var i = 1;
+            for (; i < route.length - 1; i++) {
                 node = node.$children[route[i]];
             }
             var item = node.data[route[i]];
@@ -28237,12 +28927,12 @@ var directives_style_default = /*#__PURE__*/__webpack_require__.n(directives_sty
 // CONCATENATED MODULE: ./vb/directives/tooltip.js
 
 
-var tipVm = void 0;
+
 /* harmony default export */ var directives_tooltip = ({
-    install: function install(Vue, options) {
+    install: function install(Vue) {
         /* tip组件模板 */
         var TipComponent = Vue.extend({
-            template: '\n                <transition name="fade">\n                    <div :class="warpPlace" v-show="show">\n                        <div class="ant-tooltip-content">\n                            <div class="ant-tooltip-arrow"></div>\n                            <div class="ant-tooltip-inner">\n                                <span v-html="tip"></span>\n                            </div>\n                        </div>\n                    </div>\n                </transition>',
+            template: '\n                        <transition name="fade">\n                            <div :class="warpPlace" v-show="show">\n                                <div class="ant-tooltip-content">\n                                    <div class="ant-tooltip-arrow"></div>\n                                    <div class="ant-tooltip-inner">\n                                        <span v-html="tip"></span>\n                                    </div>\n                                </div>\n                            </div>\n                        </transition>',
             computed: {
                 warpPlace: function warpPlace() {
                     return ['ant-tooltip', 'ant-tooltip-placement-' + this.place];
@@ -28251,10 +28941,10 @@ var tipVm = void 0;
         });
 
         /**
-         * 获取元素的坐标位置
-         * @param el
-         * @returns {{top: number, left: number}}
-         */
+             * 获取元素的坐标位置
+             * @param el
+             * @returns {{top: number, left: number}}
+             */
         function getOffset(el) {
             var x = 0;
             var y = 0;
@@ -28268,8 +28958,8 @@ var tipVm = void 0;
         }
 
         /**
-         * 关闭方法
-         */
+             * 关闭方法
+             */
         function closeTooltip(el, binding) {
             var directClose = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : false;
 
@@ -28289,17 +28979,17 @@ var tipVm = void 0;
         }
 
         /**
-         * 显示方法
-         */
+             * 显示方法
+             */
         function openTooltip(el, binding) {
             if (!el) return;
 
             if (!el.vm) {
                 /* 创建一个新的tip组件实例,插入到body中 */
-                tipVm = el.vm = new TipComponent({
+                el.vm = new TipComponent({
                     data: {
-                        tip: el.bindingValue, /* 支持html内容 */
-                        show: true,
+                        tip: el.bindingValue /* 支持html内容 */
+                        , show: true,
                         place: binding.place
                     }
                 }).$mount();
@@ -28380,24 +29070,24 @@ var tipVm = void 0;
                         top = offset.top + eleHeight - tooltipHeight;
                         left = offset.left + eleWidth;
                         break;
-
+                    default:
                 }
                 // 设置位置
-                el.vm.$el.style['left'] = left + 'px';
-                el.vm.$el.style['top'] = top + 'px';
-                el.vm.$el.style['position'] = 'absolute';
+                el.vm.$el.style.left = left + 'px';
+                el.vm.$el.style.top = top + 'px';
+                el.vm.$el.style.position = 'absolute';
             }, 0);
         }
 
         /**
-         * 注册自定义指令tooltip
-         */
-        var tooltip = Vue.directive('tooltip', {
-            /**
-             * 指令第一次绑定到元素时调用
-             * @param el
-             * @param binding
+             * 注册自定义指令tooltip
              */
+        Vue.directive('tooltip', {
+            /**
+                     * 指令第一次绑定到元素时调用
+                     * @param el
+                     * @param binding
+                     */
             bind: function bind(el, binding) {
                 /* 准备工作 */
                 /* 识别触发事件 */
@@ -28411,7 +29101,7 @@ var tipVm = void 0;
                 /* 获取位置 */
                 /* todo 这里限制了修饰符的顺序 */
                 binding.place = object_keys_default()(binding.modifiers)[0] || 'top';
-                binding.controled = object_keys_default()(binding.modifiers)[1] == 'controlled' ? true : false;
+                binding.controled = object_keys_default()(binding.modifiers)[1] === 'controlled';
                 el.bindingValue = binding.value;
 
                 /* 绑定触发事件 */
@@ -28428,10 +29118,10 @@ var tipVm = void 0;
 
 
             /**
-             * 被绑定元素所在的模板更新时调用
-             * @param el
-             * @param binding
-             */
+                     * 被绑定元素所在的模板更新时调用
+                     * @param el
+                     * @param binding
+                     */
             update: function update(el, binding) {
                 /* 这里需要实时更新tooltip的值 */
                 el.bindingValue = binding.value;
@@ -28439,10 +29129,10 @@ var tipVm = void 0;
 
 
             /**
-             * 指令与元素解绑时调用
-             * @param el
-             * @param binding
-             */
+                     * 指令与元素解绑时调用
+                     * @param el
+                     * @param binding
+                     */
             unbind: function unbind(el, binding) {
                 /* 清理工作: 例如，删除 bind() 添加的事件监听器 */
                 el.removeEventListener(binding.openTrigger, el.openTooltip);
@@ -28689,8 +29379,8 @@ var vb_install = function install(Vue) {
     var opts = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
 
     if (install.installed) return;
-    locale.use(opts.locale);
-    locale.i18n(opts.i18n);
+    use(opts.locale);
+    i18n(opts.i18n);
 
     var _iteratorNormalCompletion2 = true;
     var _didIteratorError2 = false;
@@ -28834,7 +29524,7 @@ module.exports = __webpack_require__(139);
 
 var addToUnscopables = __webpack_require__(134)
   , step             = __webpack_require__(135)
-  , Iterators        = __webpack_require__(22)
+  , Iterators        = __webpack_require__(23)
   , toIObject        = __webpack_require__(12);
 
 // 22.1.3.4 Array.prototype.entries()
@@ -28972,7 +29662,7 @@ module.exports = __webpack_require__(2).Array.find;
 "use strict";
 
 // 22.1.3.8 Array.prototype.find(predicate, thisArg = undefined)
-var $export = __webpack_require__(6);
+var $export = __webpack_require__(7);
 var $find = __webpack_require__(97)(5);
 var KEY = 'find';
 var forced = true;
@@ -29083,7 +29773,7 @@ module.exports = __webpack_require__(2).Array.findIndex;
 "use strict";
 
 // 22.1.3.9 Array.prototype.findIndex(predicate, thisArg = undefined)
-var $export = __webpack_require__(6);
+var $export = __webpack_require__(7);
 var $find = __webpack_require__(97)(6);
 var KEY = 'findIndex';
 var forced = true;
@@ -29121,9 +29811,9 @@ module.exports = function (done, value) {
 "use strict";
 
 var LIBRARY = __webpack_require__(154);
-var $export = __webpack_require__(6);
+var $export = __webpack_require__(7);
 var redefine = __webpack_require__(69);
-var hide = __webpack_require__(23);
+var hide = __webpack_require__(24);
 var has = __webpack_require__(35);
 var Iterators = __webpack_require__(72);
 var $iterCreate = __webpack_require__(155);
@@ -29210,7 +29900,7 @@ var setToStringTag = __webpack_require__(104);
 var IteratorPrototype = {};
 
 // 25.1.2.1.1 %IteratorPrototype%[@@iterator]()
-__webpack_require__(23)(IteratorPrototype, __webpack_require__(13)('iterator'), function () { return this; });
+__webpack_require__(24)(IteratorPrototype, __webpack_require__(13)('iterator'), function () { return this; });
 
 module.exports = function (Constructor, NAME, next) {
   Constructor.prototype = create(IteratorPrototype, { next: descriptor(1, next) });
@@ -29378,7 +30068,7 @@ module.exports = __webpack_require__(2).String.includes;
 "use strict";
 // 21.1.3.7 String.prototype.includes(searchString, position = 0)
 
-var $export = __webpack_require__(6);
+var $export = __webpack_require__(7);
 var context = __webpack_require__(75);
 var INCLUDES = 'includes';
 
@@ -29419,7 +30109,7 @@ module.exports = __webpack_require__(2).String.startsWith;
 "use strict";
 // 21.1.3.18 String.prototype.startsWith(searchString [, position ])
 
-var $export = __webpack_require__(6);
+var $export = __webpack_require__(7);
 var toLength = __webpack_require__(36);
 var context = __webpack_require__(75);
 var STARTS_WITH = 'startsWith';
@@ -29452,7 +30142,7 @@ module.exports = __webpack_require__(2).String.endsWith;
 "use strict";
 // 21.1.3.6 String.prototype.endsWith(searchString [, endPosition])
 
-var $export = __webpack_require__(6);
+var $export = __webpack_require__(7);
 var toLength = __webpack_require__(36);
 var context = __webpack_require__(75);
 var ENDS_WITH = 'endsWith';
@@ -29484,7 +30174,7 @@ module.exports = __webpack_require__(2).String.repeat;
 /* 172 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var $export = __webpack_require__(6);
+var $export = __webpack_require__(7);
 
 $export($export.P, 'String', {
   // 21.1.3.13 String.prototype.repeat(count)
@@ -29507,7 +30197,7 @@ module.exports = __webpack_require__(2).Array.includes;
 "use strict";
 
 // https://github.com/tc39/Array.prototype.includes
-var $export = __webpack_require__(6);
+var $export = __webpack_require__(7);
 var $includes = __webpack_require__(102)(true);
 
 $export($export.P, 'Array', {
@@ -29534,7 +30224,7 @@ module.exports = __webpack_require__(2).String.padStart;
 "use strict";
 
 // https://github.com/tc39/proposal-string-pad-start-end
-var $export = __webpack_require__(6);
+var $export = __webpack_require__(7);
 var $pad = __webpack_require__(106);
 
 $export($export.P, 'String', {
@@ -29559,7 +30249,7 @@ module.exports = __webpack_require__(2).String.padEnd;
 "use strict";
 
 // https://github.com/tc39/proposal-string-pad-start-end
-var $export = __webpack_require__(6);
+var $export = __webpack_require__(7);
 var $pad = __webpack_require__(106);
 
 $export($export.P, 'String', {
@@ -29636,7 +30326,7 @@ module.exports = __webpack_require__(2).String.at;
 "use strict";
 
 // https://github.com/mathiasbynens/String.prototype.at
-var $export = __webpack_require__(6);
+var $export = __webpack_require__(7);
 var $at = __webpack_require__(186)(true);
 
 $export($export.P, 'String', {
@@ -29735,20 +30425,14 @@ $export($export.S + $export.F * !__webpack_require__(11), 'Object', {definePrope
 
 /***/ }),
 /* 196 */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-/* 197 */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(33);
-__webpack_require__(198);
+__webpack_require__(197);
 module.exports = __webpack_require__(3).Array.from;
 
 /***/ }),
-/* 198 */
+/* 197 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -29759,7 +30443,7 @@ var ctx            = __webpack_require__(27)
   , call           = __webpack_require__(109)
   , isArrayIter    = __webpack_require__(110)
   , toLength       = __webpack_require__(58)
-  , createProperty = __webpack_require__(199)
+  , createProperty = __webpack_require__(198)
   , getIterFn      = __webpack_require__(63);
 
 $export($export.S + $export.F * !__webpack_require__(111)(function(iter){ Array.from(iter); }), 'Array', {
@@ -29792,7 +30476,7 @@ $export($export.S + $export.F * !__webpack_require__(111)(function(iter){ Array.
 
 
 /***/ }),
-/* 199 */
+/* 198 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -29804,6 +30488,12 @@ module.exports = function(object, index, value){
   if(index in object)$defineProperty.f(object, index, createDesc(0, value));
   else object[index] = value;
 };
+
+/***/ }),
+/* 199 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
 
 /***/ }),
 /* 200 */
@@ -32087,7 +32777,7 @@ module.exports = __webpack_require__(235);
 
 var classof   = __webpack_require__(64)
   , ITERATOR  = __webpack_require__(4)('iterator')
-  , Iterators = __webpack_require__(22);
+  , Iterators = __webpack_require__(23);
 module.exports = __webpack_require__(3).isIterable = function(it){
   var O = Object(it);
   return O[ITERATOR] !== undefined
@@ -32187,7 +32877,7 @@ exports = module.exports = __webpack_require__(65)(undefined);
 
 
 // module
-exports.push([module.i, "\n.ant-select-selection__choice__remove[data-v-5338475b]{\n    top: 0\n}\n", ""]);
+exports.push([module.i, "\n.ant-select-selection__choice__remove[data-v-5338475b] {\n    top: 0\n}\n", ""]);
 
 // exports
 
@@ -32223,7 +32913,7 @@ var getKeys  = __webpack_require__(16)
   , $assign  = Object.assign;
 
 // should work with symbols and should have deterministic property order (V8 bug)
-module.exports = !$assign || __webpack_require__(21)(function(){
+module.exports = !$assign || __webpack_require__(22)(function(){
   var A = {}
     , B = {}
     , S = Symbol()
@@ -32409,7 +33099,7 @@ var global         = __webpack_require__(5)
   , $export        = __webpack_require__(8)
   , redefine       = __webpack_require__(90)
   , META           = __webpack_require__(257).KEY
-  , $fails         = __webpack_require__(21)
+  , $fails         = __webpack_require__(22)
   , shared         = __webpack_require__(61)
   , setToStringTag = __webpack_require__(41)
   , uid            = __webpack_require__(38)
@@ -32649,7 +33339,7 @@ var META     = __webpack_require__(38)('meta')
 var isExtensible = Object.isExtensible || function(){
   return true;
 };
-var FREEZE = !__webpack_require__(21)(function(){
+var FREEZE = !__webpack_require__(22)(function(){
   return isExtensible(Object.preventExtensions({}));
 });
 var setMeta = function(it){
@@ -33165,7 +33855,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 var getDayOfYear = __webpack_require__(277)
 var getISOWeek = __webpack_require__(281)
 var getISOYear = __webpack_require__(123)
-var parse = __webpack_require__(20)
+var parse = __webpack_require__(21)
 var isValid = __webpack_require__(284)
 var enLocale = __webpack_require__(285)
 
@@ -33496,7 +34186,7 @@ module.exports = format
 /* 277 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var parse = __webpack_require__(20)
+var parse = __webpack_require__(21)
 var startOfYear = __webpack_require__(278)
 var differenceInCalendarDays = __webpack_require__(279)
 
@@ -33529,7 +34219,7 @@ module.exports = getDayOfYear
 /* 278 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var parse = __webpack_require__(20)
+var parse = __webpack_require__(21)
 
 /**
  * @category Year Helpers
@@ -33609,7 +34299,7 @@ module.exports = differenceInCalendarDays
 /* 280 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var parse = __webpack_require__(20)
+var parse = __webpack_require__(21)
 
 /**
  * @category Day Helpers
@@ -33640,7 +34330,7 @@ module.exports = startOfDay
 /* 281 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var parse = __webpack_require__(20)
+var parse = __webpack_require__(21)
 var startOfISOWeek = __webpack_require__(84)
 var startOfISOYear = __webpack_require__(283)
 
@@ -33680,7 +34370,7 @@ module.exports = getISOWeek
 /* 282 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var parse = __webpack_require__(20)
+var parse = __webpack_require__(21)
 
 /**
  * @category Week Helpers
