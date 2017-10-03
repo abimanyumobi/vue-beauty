@@ -277,7 +277,7 @@
             </div>
             <div :class="prefix + '-description pull-left'">
                 <slot name="footerinfo" :total="total" pageNumber="pageNumber">
-                    共有{{total}}条数据
+                    Total {{total}}
                 </slot>
             </div>
         </div>
