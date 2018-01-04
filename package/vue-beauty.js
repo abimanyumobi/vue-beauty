@@ -9639,7 +9639,7 @@ if (false) {(function () {
         this.options = this.pageSizeOptions.map(function (item) {
             return {
                 value: item,
-                label: item + '\u6761/\u9875'
+                label: item + ' per page'
             };
         });
     },
@@ -24921,9 +24921,9 @@ var data_table_render = function() {
                   "footerinfo",
                   [
                     _vm._v(
-                      "\n                共有" +
+                      "\n                Total " +
                         _vm._s(_vm.total) +
-                        "条数据\n            "
+                        "\n            "
                     )
                   ],
                   { total: _vm.total, pageNumber: "pageNumber" }
@@ -29896,7 +29896,6 @@ try {
 var vb_install = function install(Vue) {
     var opts = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
 
-    console.log(Vue);
     if (install.installed) return;
     use(opts.locale);
     i18n(opts.i18n);
@@ -53726,7 +53725,7 @@ if (hadRuntime) {
 
 module.exports = {
 	"name": "vue-beauty",
-	"version": "2.0.0-beta.8",
+	"version": "2.0.0-beta.9",
 	"description": "Ant Design components built with Vue.js",
 	"author": "G7:FE-driver",
 	"main": "package/vue-beauty.min.js",
